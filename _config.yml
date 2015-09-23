@@ -9,13 +9,13 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://caporasolab.us" # the base hostname & protocol for your site
 
 author:
-  fullname:
-  googleplus:
+  fullname: Greg Caporaso
+  #googleplus:
   github: biocore
-  twitter: scikitbio
+  twitter: gregcaporaso
   # disqus: your_disqus_username
 
-# google_analytics: 'UA-XXXXXXXX-X'
+google_analytics: 'UA-6636235-10'
 
 # Build settings
 markdown: kramdown

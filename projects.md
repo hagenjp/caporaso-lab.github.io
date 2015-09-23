@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Projects
-subtitle: What we up to?
+subtitle: Bioinformatics software and large-scale microbiome research.
 permalink: /projects/
 color: red
 ---

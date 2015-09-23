@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Team
-subtitle: Just who the hell you think we are?
+subtitle: We're all fascinated with microbes.
 permalink: /team/
 color: green
 ---
