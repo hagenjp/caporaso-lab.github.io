@@ -10,7 +10,7 @@
                         {% if p.title == page.title %}
                             {% assign current = 'current' %}
                         {% endif %}
-                        <li class="menu__entry {{current}}"><a href="{{ p.permalink | prepend: site.baseurl }}">{{p.title}}</a></li>
+                        <li class="menu__entry {{current}}"><a href="{{ p.permalink | prepend: site.baseurl }}" style="border-color: {{p.color}}">{{p.title}}</a></li>
                     {% endif %}
                 {% endfor %}
             {% endfor %}

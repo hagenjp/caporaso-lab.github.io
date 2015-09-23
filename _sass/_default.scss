@@ -104,12 +104,13 @@ strong {
 }
 
 .menu__entry a {
+    color: $cloudy;
     font-weight: 400;
     padding-bottom: 3px;
 }
 
 .menu__entry a:hover {
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid $cloudy;
 }
 
 .menu__entry.current a {
