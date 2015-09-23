@@ -1,0 +1,30 @@
+---
+layout: page
+title: Publications
+subtitle: Our fingers hurt from typing.
+permalink: /publications/
+---
+<script src="/assets/js/pubmed.js"></script>
+<p>Publications (via <a target="_blank" href="http://www.ncbi.nlm.nih.gov/entrez/query.fcgi?db=pubmed&cmd=Search&term=%22Caporaso+JG%22%5BAuthor%5D">PubMed</a> | <a target="_blank" href="http://scholar.google.com/citations?hl=en&user=8wv9sLkAAAAJ">Google Scholar</a>) </p>
+<div id="publications">Loading</div>
+
+<script>
+    (function() {
+        var loading = true;
+
+        function dots() {
+            if(loading) {
+                document.getElementById('publications').innerHTML += '.';
+                setTimeout(dots, 100)
+            }
+        }
+        dots();
+
+        pubmed.createList("Caporaso%20JG[Author]")
+            .setMax(150)
+            .onComplete(function(){
+                loading = false;
+            })
+            .bind("publications");
+    })()
+</script>

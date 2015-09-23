@@ -96,6 +96,7 @@ strong {
 .menu__entry {
     display: inline-block;
     margin-right: 35px;
+    padding-bottom: 5px;
 
     &:last-child {
         margin-right: 0px;
@@ -104,6 +105,16 @@ strong {
 
 .menu__entry a {
     font-weight: 400;
+    padding-bottom: 3px;
+}
+
+.menu__entry a:hover {
+    border-bottom: 2px solid green;
+}
+
+.menu__entry.current a {
+    color: black;
+    border-bottom: 2px solid black;
 }
 
 .social-links {
