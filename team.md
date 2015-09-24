@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Team
-subtitle: We're all fascinated with microbes.
+subtitle: We have diverse backgrounds, but we all love microbes and computers.
 permalink: /team/
 color: green
 ---
