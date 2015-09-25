@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Contact Us
+title: Contact/Jobs
 subtitle:
 permalink: /contact/
 color: red
