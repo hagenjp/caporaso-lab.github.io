@@ -13,6 +13,17 @@
 #       - Thing 2
 #       - Thing 3
 
+- name: Greg Caporaso
+  title: Assistant Professor
+  pic: greg.png
+
+  twitter: gregcaporaso
+  github: gregcaporaso
+  interests:
+      - bioinformatics
+      - microbiomes
+      - education
+
 - name: Jai Ram Rideout
   title: Research Software Engineer
   pic: jai-ram-rideout.png

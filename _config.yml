@@ -1,9 +1,9 @@
 # Site settings
 title: Caporaso Lab
 description: >
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  The Caporaso Lab at Northern Arizona University. We focus on bioinformatics
+  software development, and applying bioinformatics to study the human
+  microbiome.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://caporasolab.us" # the base hostname & protocol for your site
