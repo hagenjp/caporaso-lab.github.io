@@ -2,7 +2,9 @@
 # - name: Your Name
 #   title: Your Position
 # # optional, but recommended:
-#   pic: yourface.png # put it in /assets/team/yourface.png
+# # picture should be no larger than 200x200px
+# # put it in /assets/team/yourface.png
+#   pic: yourface.png
 #   twitter: yourtwitter
 #   github: yourgithub
 #   site: http://example.com
@@ -20,3 +22,13 @@
       - API design
       - continuous integration
       - efficiency
+
+- name: Evan Bolyen
+  title: Student Research Software Engineer
+
+  twitter: ebolyen
+  github: ebolyen
+  interests:
+      - bioinformatics
+      - API design
+      - PL design

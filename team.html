@@ -9,7 +9,7 @@ color: dodgerblue
     {% for person in site.data.team %}
     <div class='person'>
     {% if person.pic %}
-        <img src='{{ person.pic }}' />
+        <img src='/assets/team/{{ person.pic }}' />
     {% else %}
         <img src='/assets/team/nobody.png'>
     {% endif %}
