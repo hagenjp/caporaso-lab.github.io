@@ -23,7 +23,7 @@ PO Box 4073<br>
 Flagstaff, AZ 86011-4073, USA.
 
 # E-mail
-gregcaporaso@gmail.com
+<gregcaporaso@gmail.com>
 
 # Phone and fax
 (928) 523-5845 (office)<br>
