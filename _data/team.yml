@@ -2,7 +2,7 @@
 # - name: Your Name
 #   title: Your Position
 # # optional, but recommended:
-# # picture should be no larger than 200x200px
+# # picture should be 200x200px
 # # put it in /assets/team/yourface.png
 #   pic: yourface.png
 #   twitter: yourtwitter
@@ -24,15 +24,15 @@
       - microbiomes
       - education
 
-- name: Jai Rideout
+- name: Jai Ram Rideout
   title: Research Software Engineer
-
+  pic: jai-ram-rideout.png
   twitter: jairideout
   github: jairideout
   interests:
-      - API design
+      - library API design
       - continuous integration
-      - efficiency
+      - performance/efficiency
 
 - name: Evan Bolyen
   title: Student Research Software Engineer
