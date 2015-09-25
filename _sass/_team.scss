@@ -9,7 +9,7 @@
 }
 
 .person {
-    width: 160px;
+    width: 220px;
     display: inline-block;
     position: relative;
     vertical-align: top;
@@ -26,8 +26,37 @@
 }
 
 .details__attribute {
+    text-align: left;
+}
+
+.details--name {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.details--title {
+    font-style: italic;
+    font-size: 1.2em;
+    margin: 10px 0;
+}
+
+.details--social {
+    font-size: 1.3em;
+}
+
+.details--interests {
+    margin: 10px 0;
 }
 
 .details__label {
-    font-weight: bold;
+    // font-weight: bold;
+}
+
+.attribute__interest {
+    // &:after {
+    //     content: ',';
+    // }
+    // &:last-of-type:after {
+    //     content: '';
+    // }
 }
