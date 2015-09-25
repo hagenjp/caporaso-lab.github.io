@@ -3,7 +3,7 @@ layout: page
 title: Contact Us
 subtitle:
 permalink: /contact/
-color: dodgerblue
+color: red
 ---
 
 # Jobs

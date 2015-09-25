@@ -3,7 +3,7 @@ layout: page
 title: Projects
 subtitle: Software, microbiome research, and bioinformatics education.
 permalink: /projects/
-color: red
+color: green
 ---
 
 # Software

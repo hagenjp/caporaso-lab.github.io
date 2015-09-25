@@ -1,0 +1,33 @@
+.team {
+    text-align: justify;
+}
+
+.team__stretch {
+    display: inline-block;
+    width: 100%;
+    line-height: 0;
+}
+
+.person {
+    width: 160px;
+    display: inline-block;
+    position: relative;
+    vertical-align: top;
+    margin: 10px 0;
+}
+
+.person img {
+    margin: 0px auto;
+}
+
+.details {
+    list-style: none;
+    padding: 0px;
+}
+
+.details__attribute {
+}
+
+.details__label {
+    font-weight: bold;
+}

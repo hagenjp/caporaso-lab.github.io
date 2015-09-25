@@ -1,0 +1,44 @@
+- name: Person 1
+  pic: /assets/team/nobody.png
+  title: Some Title
+  twitter: person1
+  github: person1
+  website: http://example.com
+
+- name: Person 2
+  pic: /assets/team/nobody.png
+  title: Some Title 2
+  twitter: person2
+
+- name: Person 3
+  pic: /assets/team/nobody.png
+  title: Some Title 3
+  github: person3
+
+- name: Person 4
+  pic: /assets/team/nobody.png
+  title: Some Title 4
+  website: http://example.com
+
+- name: Person 5
+  pic: /assets/team/nobody.png
+  title: Some Title
+  twitter: person5
+  github: person5
+  website: http://example.com
+
+- name: Person 6
+  pic: /assets/team/nobody.png
+  title: Some Title 6
+  website: http://example.com
+
+- name: Person 7
+  pic: /assets/team/nobody.png
+  title: Some Title 7
+  website: http://example.com
+
+- name: Person 8
+  pic: /assets/team/nobody.png
+  title: Some Title 8
+  github: person8
+  website: http://example.com

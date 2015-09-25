@@ -1,6 +1,6 @@
 /* =Base */
 body {
-    font-family: 'Inconsolata', ;
+    font-family: 'Inconsolata', Arial, sans-serif;
     color: $iron;
     background-color: $dorian;
 }
@@ -11,7 +11,7 @@ a {
     text-decoration: none;
 
     &:hover {
-
+        text-decoration: underline;
     }
 }
 
@@ -73,6 +73,10 @@ strong {
     overflow: hidden;
 }
 
+.header a:hover {
+    text-decoration: none;
+}
+
 .navigation {
     float:left;
 }
@@ -91,16 +95,14 @@ strong {
     margin-top: 6px;
     padding: 0px;
     list-style-type: none;
+    line-height: 2em;
+    text-align: justify;
 }
 
 .menu__entry {
     display: inline-block;
     margin-right: 35px;
     padding-bottom: 5px;
-
-    &:last-child {
-        margin-right: 0px;
-    }
 }
 
 .menu__entry a {
@@ -111,6 +113,7 @@ strong {
 
 .menu__entry a:hover {
     border-bottom: 2px solid $cloudy;
+    text-decoration: none;
 }
 
 .menu__entry.current a {
@@ -171,7 +174,6 @@ strong {
 
 .post-teaser__title {
     font-size: 22px;
-    color: $iron;
 }
 
 .post-teaser__date {
@@ -190,9 +192,9 @@ strong {
 
 /* =Explore */
 .explore {
-    text-align: center;
+    text-align: right;
     color: $cloudy;
-    margin-top: 140px;
+    margin-top: 80px;
 }
 
 .explore__devider {
@@ -266,6 +268,17 @@ strong {
         width: 80%;
     }
 
+    .menu:after {
+        width: 100%;
+        display: inline-block;
+        content: "";
+        line-height: 0;
+    }
+
+    .menu__entry {
+        margin: 0 10px;
+    }
+
     .navigation,
     .social-links {
         @include centered-block();
@@ -273,12 +286,7 @@ strong {
 
     .social-links {
         font-size: 30px;
-        margin-top: 35px;
-    }
-
-    .page-title {
-        margin-top: 80px;
-        margin-bottom: 60px;
+        margin-top: -0.5em;
     }
 
     .page-title__text {
@@ -302,6 +310,7 @@ strong {
     }
 
     .explore {
+        text-align: center;
         margin-top: 80px;
     }
 

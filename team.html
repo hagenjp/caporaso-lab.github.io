@@ -1,0 +1,28 @@
+---
+layout: page
+title: Team
+subtitle: We have diverse backgrounds, but we all love microbes and computers.
+permalink: /team/
+color: dodgerblue
+---
+<div class='team'>
+    {% for person in site.data.team %}
+    <div class='person'>
+        <img src='{{ person.pic }}' />
+        <ul class='details'>
+            <li class='details__attribute'>{{ person.name }}</li>
+            <li class='details__attribute'>{{ person.title }}</li>
+        {% if person.twitter %}
+            <li class='details__attribute'><span class='details__label'>Twitter:</span> <a href="https://twitter.com/{{person.twitter}}" target='_blank'>@{{ person.twitter }}</a></li>
+        {% endif %}
+        {% if person.github %}
+            <li class='details__attribute'><span class='details__label'>GitHub:</span> <a href="https://github.com/{{person.github}}" target='_blank'>@{{ person.github }}</a></li>
+        {% endif %}
+        {% if person.website %}
+            <li class='details__attribute'><span class='details__label'>Site:</span> <a href="{{person.website}}" target='_blank'>{{ person.website }}</a></li>
+        {% endif %}
+        </ul>
+    </div>
+    {% endfor %}
+    <span class='team__stretch'></span>
+</div>
