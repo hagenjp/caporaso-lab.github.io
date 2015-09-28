@@ -3,7 +3,7 @@
 #   title: Your Position
 # # optional, but recommended:
 # # picture should be 200x200px
-# # put it in /assets/team/yourface.png
+# # put it in /assets/team/your-name.png
 #   pic: yourface.png
 #   twitter: yourtwitter
 #   github: yourgithub
@@ -18,7 +18,6 @@
   title: Assistant Professor
   pic: greg.png
   cv: https://docs.google.com/document/d/18TA9AzwRloj4RFNwxgVyxYeQEiJGuWNwCDSJhdoParQ/pub
-
   twitter: gregcaporaso
   github: gregcaporaso
   interests:
@@ -38,10 +37,39 @@
 
 - name: Evan Bolyen
   title: Student Research Software Engineer
-
   twitter: ebolyen
   github: ebolyen
   interests:
       - bioinformatics
       - API design
       - PL design
+
+- name: Arron Shiffer
+  title: PhD Student
+  twitter: ArronShiffer
+  github: shiffer1
+
+- name: Karen Schwarzberg
+  title: Postdoctoral Scholar
+  twitter: SnurpsNotSmurfs
+  github: kschwarzberg
+
+- name: Anders Pitman
+  title: Student Research Software Engineer
+  twitter: anderspitman
+  github: anderspitman
+  site: http://anderspitman.com
+
+- name: William Mercurio
+  title: Student Research Scientist
+  github: wmercurio
+
+- name: John Chase
+  title: Biological Data Scientist
+  twitter: ChaseJc33
+  github: johnchase
+
+- name: Katy Califf
+  title: Postdoctoral Scholar
+  twitter: kjcaliff
+  github:  kcaliff
