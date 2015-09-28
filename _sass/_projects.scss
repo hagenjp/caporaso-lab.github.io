@@ -1,0 +1,41 @@
+.project {
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.project__container {
+    float: left;
+    width: 600px;
+    margin-right: 50px;
+
+}
+
+.project__header {
+
+}
+
+.project__title {
+    font-size: 26px;
+    font-weight: bold;
+
+}
+
+.project__social {
+    font-size: 20px;
+    line-height: 26px;
+    float: right;
+}
+
+.project__summary {
+
+}
+
+.project__image {
+    font-size: 100px;
+    height: 100px;
+    float: left;
+}
+
+.project__image a {
+    text-decoration: none;
+}

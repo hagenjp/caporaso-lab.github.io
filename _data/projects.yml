@@ -1,0 +1,59 @@
+- name: Software
+  default-icon: fa-code
+  projects:
+      - name: scikit-bio
+        summary: >
+            scikit-bio is an open-source, BSD-licensed, Python package providing
+            data structures, algorithms, and educational resources for
+            bioinformatics
+#       paper: someday....
+        github: biocore/scikit-bio
+        twitter: scikitbio
+        site: http://scikit-bio.org
+
+      - name: qiime
+        summary: >
+            This is a summary
+        github: biocore/qiime
+        site: http://qiime.org
+
+      - name: keemei
+        summary: >
+            This is a summary
+        site: http://keemei.qiime.org
+
+      - name: caul-id
+        summary: >
+            This is a summary
+
+- name: Microbiome research
+  default-icon: fa-flask
+  projects:
+      - name: Office Project 1
+        summary: >
+            This is a summary
+
+      - name: Office Project 2
+        summary: >
+            This is a summary
+
+      - name: Autism/FMT
+        summary: >
+            This is a summary
+
+      - name: Excercise
+        summary: >
+            This is a summary
+
+- name: Bioinformatics education
+  default-icon: fa-pencil-square-o
+  projects:
+      - name: An Introduction to Applied Bioinformatics
+        summary: >
+            This is a summary
+        site: http://readiab.org
+
+      - name: Teaching
+        summary: >
+            This is a summary
+        site: /teaching
