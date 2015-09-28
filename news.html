@@ -5,61 +5,13 @@ subtitle: Blog posts and articles from around the Internet.
 permalink: /news/
 color: purple
 ---
-
-<ul class="list-posts">
-        <li class="post-teaser">
-            <a href="https://www.mozillascience.org/an-introduction-to-applied-bioinformatics-at-mozsprint" target="_blank">
-                <span class="post-teaser__title">An Introduction to Applied Bioinformatics at #mozsprint</span>
-                <span class="post-teaser__date">Mozilla Science Lab Blog, 30 June 2015</span>
-            </a>
-        </li>
-        <li class="post-teaser">
-            <a href="http://microbe.net/2015/03/17/scipy-2015-computational-life-and-medical-sciences-mini-symposium-call-for-abstracts/" target="_blank">
-                <span class="post-teaser__title">SciPy 2015: Call for Abstracts</span>
-                <span class="post-teaser__date">microbe.net, 17 March 2015</span>
-            </a>
-        </li>
-        <li class="post-teaser">
-            <a href="http://caporasolab.us/califf-et-al-final.pdf" target="_blank">
-                <span class="post-teaser__title">The Human Microbiome: Getting Personal</span>
-                <span class="post-teaser__date">Microbe Magazine, November 2014</span>
-            </a>
-        </li>
-        <li class="post-teaser">
-            <a href="http://microbe.net/2014/09/23/announcing-the-scikit-bio-cookbook-recipe-of-the-week-series/" target="_blank">
-                <span class="post-teaser__title">scikit-bio cookbook "recipe-of-the-week"</span>
-                <span class="post-teaser__date">microbe.net, 23 September 2014</span>
-            </a>
-        </li>
-        <li class="post-teaser">
-            <a href="http://microbe.net/2014/05/01/teaching-bioinformatics-using-ipython-notebooks/" target="_blank">
-                <span class="post-teaser__title">Teaching bioinformatics using IPython Notebooks</span>
-                <span class="post-teaser__date">microbe.net, 1 May 2014</span>
-            </a>
-        </li>
-        <li class="post-teaser">
-            <a href="http://knau.org/post/brain-food-its-microbial-world-afterall#stream/0" target="_blank">
-                <span class="post-teaser__title">Brain Food: It's A Microbial World Afterall</span>
-                <span class="post-teaser__date">KNAU: National Public Radio, 7 November 2013</span>
-            </a>
-        </li>
-        <li class="post-teaser">
-            <a href="https://nau.edu/research/feature-stories/the-student-microbiome-project/" target="_blank">
-                <span class="post-teaser__title">The Student Microbiome Project</span>
-                <span class="post-teaser__date">NAU Research, 6 May 2013</span>
-            </a>
-        </li>
-</ul>
-
-<!--
 <ul class="list-posts">
     {% for post in site.posts %}
         <li class="post-teaser">
-            <a href="{{ post.url | prepend: site.baseurl }}">
+            {% if post.site %}<a href="{{post.site}}" target="_blank">{% else %}<a href="{{ post.url | prepend: site.baseurl }}">{% endif %}
                 <span class="post-teaser__title">{{ post.title }}</span>
-                <span class="post-teaser__date">{{ post.date | date: "%d %B %Y" }}</span>
+                <span class="post-teaser__date">{% if post.sitename %}{{post.sitename}}, {% endif %}{{ post.date | date: "%d %B %Y" }}</span>
             </a>
         </li>
     {% endfor %}
 </ul>
--->
