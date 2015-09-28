@@ -9,9 +9,9 @@ color: dodgerblue
     {% for person in site.data.team %}
     <div class='person'>
     {% if person.pic %}
-        <img src='/assets/team/{{ person.pic }}' />
+        <img src='/assets/team/{{ person.pic }}'/>
     {% else %}
-        <img src='/assets/team/nobody.png'>
+        <a class='fa fa-user-secret' title='{{ person.name }} is too cool for a picture :-(' style='font-size: 200px; text-decoration:none;'></a>
     {% endif %}
         <ul class='details'>
             <li class='details__attribute details--name'>{{ person.name }}</li>
