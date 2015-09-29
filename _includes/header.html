@@ -4,7 +4,7 @@
 
         <ul class="menu">{% for title in site.data.navigation %}{% for p in site.pages %}{% if p.title == title %}{% assign current = nil %}{% if p.title == page.title %}{% assign current = 'current' %}{% endif %}
             <li class="menu__entry {{current}}"><a href="{{ p.permalink | prepend: site.baseurl }}" style="border-color: {{p.color}}">{{p.title}}</a></li>{% endif %}{% endfor %}{% endfor %}
-            <li class="menu__entry"><a href="{{ '/teaching' | prepend: site.baseurl }}">Teaching</a>
+            <li class="menu__entry"><a href="{{ '/teaching' | prepend: site.baseurl }}" target="_blank">Teaching</a>
         </ul>
     </div>
 
