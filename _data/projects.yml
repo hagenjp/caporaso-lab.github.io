@@ -33,25 +33,27 @@
     # #         This is a summary
     #      site: https://github.com/johnchase/cual-id
 
-- name: Microbiome research
+- name: Representative microbiome projects
   default-icon: fa-flask
   projects:
       - name: Longitudinal and spatial characterization of microbial communities in offices
         summary: >
             As North Americans we spend the vast majority of our time indoors.
-            We know that microbial communities cohabit our homes, offices,
-            vehicles, and hospitals (among other indoor spaces). While typically
-            harmless, under certain circumstances these communities can have a
-            negative impact on the health of building inhabitants. This study
-            investigates the effect of climate and building parameters on how
-            and what microbes establish in office buildings.
+            We know that microbial communities cohabit our indoor spaces,
+            including our homes and offices, but we know very little about
+            what factors drive effect the microbial communities that establish
+            in these environments. This study investigates the effect of climate
+            and building parameters on how and what microbes establish in office
+            buildings.
 
       - name: Moisture, wetting, and fungal growth measurement on common indoor surfaces.
         summary: >
             This project aims to characterize, both qualitatively and
             quantitiatively, the fungal communities that establish on drywall
-            surfaces under different wetting regimes. In this project we'll
-            simulate different sources of water such as flooding and leaks.
+            surfaces when they're exposed to moisture. We'll simulate different
+            sources of water infiltration in built environments, such as
+            flooding and leaks, and characterize fungal communities on drywall
+            in real environments that have been damaged by moisture.
 
       - name: The human gut microbiota and its viruses - Keys to treating autism?
         summary: >
@@ -61,6 +63,14 @@
             are examining changes in behavior, GI symptoms and the gut microbial
             and viral communities before and after administration of the FMT
             treatment over 18 weeks.
+
+      - name: Microbes, bile acids and colorectal cancer
+        summary: >
+            In this study we're testing a mechanistic hypothesis about how
+            treatment of colorectal adenoma and cancer (CRA and CRC) patients
+            with Ursodeoxycholic acid (UDCA) reduces the recurrance of CRA by
+            profiling gut microbial communities and bile acids before and after
+            treatment with UDCA.
 
     #   - name: Excercise Microbiome Project
     #     summary: >
@@ -76,10 +86,17 @@
             and application.
         site: http://readiab.org
 
-      - name: Teaching
+      - name: Northern Arizona University
         summary: >
             Dr. Caporaso's Northern Arizona University bioinformatics teaching
             website. This site contains all of Dr. Caporaso's teaching materials
             as well as information on current, past and future bioinformatics
             course offerings at NAU.
         site: /teaching
+
+      - name: QIIME workshops
+        summary: >
+            We regularly teach QIIME workshops at conferences and universities
+            around the world. These are hands-on, and work best when they're
+            designed to be 2-3 days for approximately 30 students.
+        site: https://github.com/biocore/qiime/wiki/Official-QIIME-workshops
