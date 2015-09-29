@@ -5,7 +5,7 @@
         summary: >
             scikit-bio is an open-source, BSD-licensed, Python package providing
             data structures, algorithms, and educational resources for
-            bioinformatics
+            bioinformatics.
 #       paper: someday....
         github: biocore/scikit-bio
         twitter: scikitbio
@@ -14,17 +14,19 @@
       - name: QIIME
         summary: >
             QIIME is an open-source, GPL-licensed platform for the analysis and
-            comparison of microbial communities (or microbiomes) based DNA
+            comparison of microbial communities (or microbiomes) based on DNA
             sequence data. QIIME is very widely used, having been cited over
             3200 times since its publication in 2010.
         github: biocore/qiime
         site: http://qiime.org
         paper: http://www.ncbi.nlm.nih.gov/pubmed/20383131
 
-    #    - name: keemei
-    # #     summary: >
-    # #         This is a summary
-    #      site: http://keemei.qiime.org
+      - name: Keemei
+        summary: >
+            Keemei is an open-source Google Sheets add-on for validating
+            bioinformatics metadata, including QIIME mapping files.
+        github: biocore/Keemei
+        site: http://keemei.qiime.org
     #
     #    - name: cual-id
     # #     summary: >
