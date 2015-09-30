@@ -48,15 +48,8 @@
     margin: 10px 0;
 }
 
-.details__label {
-    // font-weight: bold;
-}
-
-.attribute__interest {
-    // &:after {
-    //     content: ',';
-    // }
-    // &:last-of-type:after {
-    //     content: '';
-    // }
+@media (max-width: 574px) {
+    .team {
+        text-align: center;
+    }
 }

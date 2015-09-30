@@ -10,10 +10,10 @@ url: "http://caporasolab.us" # the base hostname & protocol for your site
 
 author:
   fullname: Greg Caporaso
-  #googleplus:
-  github: biocore
+  # googleplus:
+  # github:
   twitter: gregcaporaso
-  # disqus: your_disqus_username
+  # disqus:
 
 google_analytics: 'UA-6636235-10'
 

@@ -5,19 +5,17 @@
 
 .project__container {
     float: left;
-    width: 600px;
-    margin-right: 50px;
+    max-width: 650px;
 
 }
 
 .project__header {
-
+    margin-bottom: 5px;
 }
 
 .project__title {
     font-size: 26px;
     font-weight: bold;
-
 }
 
 .project__social {
@@ -27,15 +25,26 @@
 }
 
 .project__summary {
-
+    text-align: justify;
 }
 
 .project__image {
     font-size: 100px;
     height: 100px;
-    float: left;
+    float: right;
 }
 
 .project__image a {
     text-decoration: none;
+}
+
+@media (max-width: 800px) {
+    .project__title {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .project__image {
+        display: none;
+    }
 }

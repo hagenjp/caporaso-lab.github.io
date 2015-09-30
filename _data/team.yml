@@ -25,6 +25,44 @@
       - microbiomes
       - education
 
+- name: Evan Bolyen
+  title: Student Research Software Engineer
+  twitter: ebolyen
+  github: ebolyen
+  interests:
+      - bioinformatics
+      - API design
+      - PL design
+
+- name: Katy Califf
+  pic: katy.png
+  title: Postdoctoral Scholar
+  twitter: kjcaliff
+  github:  kcaliff
+  interests:
+      - evolutionary biology
+      - disease ecology
+      - conservation genetics
+
+- name: John Chase
+  title: Biological Data Scientist
+  twitter: ChaseJc33
+  github: johnchase
+  interests:
+      - data analysis
+      - genetics
+      - programming
+
+- name: William Mercurio
+  title: Student Research Scientist
+  github: wmercurio
+
+- name: Anders Pitman
+  title: Student Research Software Engineer
+  twitter: anderspitman
+  github: anderspitman
+  site: http://anderspitman.com
+
 - name: Jai Ram Rideout
   title: Research Software Engineer
   pic: jai-ram-rideout.png
@@ -35,41 +73,19 @@
       - continuous integration
       - performance/efficiency
 
-- name: Evan Bolyen
-  title: Student Research Software Engineer
-  twitter: ebolyen
-  github: ebolyen
-  interests:
-      - bioinformatics
-      - API design
-      - PL design
-
-- name: Arron Shiffer
-  title: PhD Student
-  twitter: ArronShiffer
-  github: shiffer1
-
 - name: Karen Schwarzberg
   title: Postdoctoral Scholar
   twitter: SnurpsNotSmurfs
   github: kschwarzberg
+  interests:
+      - microbiomes
+      - data analysis
+      - food science
 
-- name: Anders Pitman
-  title: Student Research Software Engineer
-  twitter: anderspitman
-  github: anderspitman
-  site: http://anderspitman.com
-
-- name: William Mercurio
-  title: Student Research Scientist
-  github: wmercurio
-
-- name: John Chase
-  title: Biological Data Scientist
-  twitter: ChaseJc33
-  github: johnchase
-
-- name: Katy Califf
-  title: Postdoctoral Scholar
-  twitter: kjcaliff
-  github:  kcaliff
+- name: Arron Shiffer
+  title: PhD Student
+  github: shiffer1
+  interests:
+      - bioinformatics
+      - excercise
+      - microbiome

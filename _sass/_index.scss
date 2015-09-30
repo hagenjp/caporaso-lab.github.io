@@ -1,0 +1,30 @@
+.index {
+    overflow: hidden;
+    &:after {
+        content: "";
+        clear: both;
+    }
+}
+
+.index__bumper {
+    font-size: 20px;
+    line-height: 26px;
+    max-width: 450px;
+    float: left;
+}
+
+.index__twitter {
+    float: right;
+}
+
+@media (max-width: 800px) {
+    .index__twitter {
+        display: none;
+    }
+
+    .index__bumper {
+        text-align: justify;
+        max-width: none;
+        float: none;
+    }
+}

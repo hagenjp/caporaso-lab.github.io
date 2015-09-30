@@ -1,3 +1,11 @@
+# available tags:
+# site: <url>
+# video: <url>
+# slides: <url>
+# paper: <url>
+# github: <github-id>
+# twitter: <twitter-id>
+
 - name: Software
   default-icon: fa-code
   projects:
@@ -6,7 +14,7 @@
             scikit-bio is an open-source, BSD-licensed, Python package providing
             data structures, algorithms, and educational resources for
             bioinformatics.
-#       paper: someday....
+        video: https://www.youtube.com/watch?v=ZpgkRQooGqo
         github: biocore/scikit-bio
         twitter: scikitbio
         site: http://scikit-bio.org
@@ -27,11 +35,6 @@
             bioinformatics metadata, including QIIME mapping files.
         github: biocore/Keemei
         site: http://keemei.qiime.org
-    #
-    #    - name: cual-id
-    # #     summary: >
-    # #         This is a summary
-    #      site: https://github.com/johnchase/cual-id
 
 - name: Representative microbiome projects
   default-icon: fa-flask
@@ -71,10 +74,6 @@
             with Ursodeoxycholic acid (UDCA) reduces the recurrance of CRA by
             profiling gut microbial communities and bile acids before and after
             treatment with UDCA.
-
-    #   - name: Excercise Microbiome Project
-    #     summary: >
-    #         This is a summary
 
 - name: Bioinformatics education
   default-icon: fa-pencil-square-o

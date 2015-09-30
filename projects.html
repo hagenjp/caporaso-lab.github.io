@@ -6,7 +6,7 @@ permalink: /projects/
 color: green
 ---
 {% for section in site.data.projects %}
-    <h1>{{section.name}}</h1>
+    <h1 id="{{section.name | downcase | replace:' ','_' }}">{{section.name}}</h1>
     {% for project in section.projects %}
         <div class="project">
             <div class="project__container">
@@ -19,6 +19,12 @@ color: green
                         {% endif %}
                     </span>
                     <span class="project__social">
+                    {% if project.video %}
+                        <a href="{{project.video}}" target="_blank"><i class="fa fa-youtube-play"></i></a>
+                    {% endif %}
+                    {% if project.slides %}
+                        <a href="{{project.slides}}" target="_blank"><i class="fa fa-area-chart"></i></a>
+                    {% endif %}
                     {% if project.paper %}
                         <a href="{{project.paper}}" target="_blank"><i class="fa fa-book"></i></a>
                     {% endif %}
