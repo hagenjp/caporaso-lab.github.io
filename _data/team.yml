@@ -53,6 +53,15 @@
       - genetics
       - programming
 
+- name: Kestrel Gorlick
+  title: Student Research Software Engineer
+  pic: kestrel-gorlick.png
+  github: kleptobismol
+  interests:
+      - software development
+      - genetics
+      - epidemiology
+
 - name: William Mercurio
   title: Student Research Scientist
   github: wmercurio
@@ -77,15 +86,6 @@
       - library API design
       - continuous integration
       - performance/efficiency
-
-- name: Kestrel Gorlick
-  title: Student Research Software Engineer
-  pic: kestrel-gorlick.png
-  github: kleptobismol
-  interests:
-      - software development
-      - genetics
-      - epidemiology
 
 - name: Karen Schwarzberg
   title: Postdoctoral Scholar
