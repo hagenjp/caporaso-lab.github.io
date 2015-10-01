@@ -58,10 +58,15 @@
   github: wmercurio
 
 - name: Anders Pitman
-  title: Student Research Software Engineer
+  title: Student Bioinformatics Software Engineer
+  pic: anders-pitman.png
   twitter: anderspitman
   github: anderspitman
   site: http://anderspitman.com
+  interests:
+      - bioinformatics
+      - data visualization
+      - parallel computing
 
 - name: Jai Ram Rideout
   title: Research Software Engineer
