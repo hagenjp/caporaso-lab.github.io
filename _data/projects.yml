@@ -43,7 +43,6 @@
             barcodes for use in any project containing multiple samples.
         github: johnchase/cual-id
 
-
 - name: Representative microbiome projects
   default-icon: fa-flask
   projects:
