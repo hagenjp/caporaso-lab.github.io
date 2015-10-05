@@ -36,6 +36,14 @@
         github: biocore/Keemei
         site: http://keemei.qiime.org
 
+      - name: cual-id
+        summary: >
+            cual-id is an open-source, BSD-licensed, Python package for
+            creating and managing unique, correctable, sample identifiers and
+            barcodes for use in any project containing multiple samples.
+        github: johnchase/cual-id
+
+
 - name: Representative microbiome projects
   default-icon: fa-flask
   projects:
