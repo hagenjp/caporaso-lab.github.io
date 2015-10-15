@@ -42,6 +42,7 @@
             creating and managing unique, correctable sample identifiers and
             barcodes for use in any project containing multiple samples.
         github: johnchase/cual-id
+        paper: https://peerj.com/preprints/1431/
 
 - name: Representative microbiome projects
   default-icon: fa-flask
