@@ -11,7 +11,7 @@
   projects:
       - name: scikit-bio
         summary: >
-            scikit-bio is an open-source, BSD-licensed, Python package providing
+            scikit-bio is an open-source, BSD-licensed Python package providing
             data structures, algorithms, and educational resources for
             bioinformatics.
         video: https://www.youtube.com/watch?v=ZpgkRQooGqo
@@ -35,6 +35,13 @@
             bioinformatics metadata, including QIIME mapping files.
         github: biocore/Keemei
         site: http://keemei.qiime.org
+
+      - name: cual-id
+        summary: >
+            cual-id is an open-source, BSD-licensed Python package for
+            creating and managing unique, correctable sample identifiers and
+            barcodes for use in any project containing multiple samples.
+        github: johnchase/cual-id
 
 - name: Representative microbiome projects
   default-icon: fa-flask
