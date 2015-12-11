@@ -15,7 +15,7 @@ students. E-mail Dr. Caporaso if you'd like to apply for a position.
 
 All lab member office hours are open to the public. These are held in ARD 220 (see the map below).
 
-    <iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=49fk5nt75q2j7f7sma4br11nic%40group.calendar.google.com&amp;color=%231B887A&amp;ctz=America%2FPhoenix" style="border-width:0" width="600" height="300" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=49fk5nt75q2j7f7sma4br11nic%40group.calendar.google.com&amp;color=%231B887A&amp;ctz=America%2FPhoenix" style="border-width:0" width="600" height="300" frameborder="0" scrolling="no"></iframe>
 
 # FedEx and UPS
 J. Gregory Caporaso, Ph.D.<br>
