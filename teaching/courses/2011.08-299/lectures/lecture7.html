@@ -28,12 +28,12 @@
     <link rel="next" title="Lecture 8: Simple model of evolution and introduction to sequence alignment" href="lecture8.html" />
     <link rel="prev" title="Lecture 6: Molecular evolution" href="lecture6.html" /> 
   </head>
-  <body>
-      <div class="header"><h1 class="heading"><a href="../../../index.html">
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Lecture 7: Molecular evolution and introduction to sequence searching and phylogenetic inference</span></h2>
       </div>
-      <div class="topnav">
+      <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
         «&#160;&#160;<a href="lecture6.html">Lecture 6: Molecular evolution</a>
@@ -69,24 +69,24 @@
 <span class="n">l4</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="s">&quot;darwin&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Try each of these and print the list (<tt class="docutils literal"><span class="pre">print</span> <span class="pre">l</span></tt>) to see what the resulting list looks like. How would you create a list like <tt class="docutils literal"><span class="pre">l2</span></tt> or <tt class="docutils literal"><span class="pre">l3</span></tt> with the items in reverse order? There are a few ways &#8211; google this and try out of them.</p>
+<p>Try each of these and print the list (<code class="docutils literal"><span class="pre">print</span> <span class="pre">l</span></code>) to see what the resulting list looks like. How would you create a list like <code class="docutils literal"><span class="pre">l2</span></code> or <code class="docutils literal"><span class="pre">l3</span></code> with the items in reverse order? There are a few ways &#8211; google this and try out of them.</p>
 </div>
 <div class="section" id="adding-an-element-to-a-list">
 <h3>Adding an element to a list<a class="headerlink" href="#adding-an-element-to-a-list" title="Permalink to this headline">¶</a></h3>
-<p>You can add an element to a list using the <tt class="docutils literal"><span class="pre">append</span></tt> method of the list. For example, to add to list <tt class="docutils literal"><span class="pre">l1</span></tt>:</p>
+<p>You can add an element to a list using the <code class="docutils literal"><span class="pre">append</span></code> method of the list. For example, to add to list <code class="docutils literal"><span class="pre">l1</span></code>:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">l1</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>If you <tt class="docutils literal"><span class="pre">print</span> <span class="pre">l1</span></tt> before and after running this command you&#8217;ll see that you added a new entry to the end of <tt class="docutils literal"><span class="pre">l1</span></tt>.</p>
+<p>If you <code class="docutils literal"><span class="pre">print</span> <span class="pre">l1</span></code> before and after running this command you&#8217;ll see that you added a new entry to the end of <code class="docutils literal"><span class="pre">l1</span></code>.</p>
 </div>
 <div class="section" id="accessing-elements-of-a-list">
 <h3>Accessing elements of a list<a class="headerlink" href="#accessing-elements-of-a-list" title="Permalink to this headline">¶</a></h3>
-<p>Once you&#8217;ve created a list you can access the <cite>elements</cite> of that list by their <cite>index</cite> in the list. These indexes begin at zero, so the first element in <tt class="docutils literal"><span class="pre">l1</span></tt> is accessed as <tt class="docutils literal"><span class="pre">l1[0]</span></tt>. What happens if you access an element that doesn&#8217;t exist? For example, <tt class="docutils literal"><span class="pre">l1[99]</span></tt>. Try it out. You can also access the end of the list by using negative indices such as <tt class="docutils literal"><span class="pre">l1[-1]</span></tt>, <tt class="docutils literal"><span class="pre">l1[-2]</span></tt>, and so on.</p>
+<p>Once you&#8217;ve created a list you can access the <cite>elements</cite> of that list by their <cite>index</cite> in the list. These indexes begin at zero, so the first element in <code class="docutils literal"><span class="pre">l1</span></code> is accessed as <code class="docutils literal"><span class="pre">l1[0]</span></code>. What happens if you access an element that doesn&#8217;t exist? For example, <code class="docutils literal"><span class="pre">l1[99]</span></code>. Try it out. You can also access the end of the list by using negative indices such as <code class="docutils literal"><span class="pre">l1[-1]</span></code>, <code class="docutils literal"><span class="pre">l1[-2]</span></code>, and so on.</p>
 </div>
 </div>
 <div class="section" id="working-with-for-loops">
 <h2>Working with for loops<a class="headerlink" href="#working-with-for-loops" title="Permalink to this headline">¶</a></h2>
-<p>We briefly talked about <tt class="docutils literal"><span class="pre">for</span></tt> loops at the end of our last class. These are useful for applying the same piece of code several times.</p>
+<p>We briefly talked about <code class="docutils literal"><span class="pre">for</span></code> loops at the end of our last class. These are useful for applying the same piece of code several times.</p>
 <div class="section" id="common-methods-for-acting-on-lists-with-for-loops">
 <h3>Common methods for acting on lists with for loops<a class="headerlink" href="#common-methods-for-acting-on-lists-with-for-loops" title="Permalink to this headline">¶</a></h3>
 <p>Frequently you need to iterate over all entries in a list and apply some operation to that entry. Here&#8217;s a common way to do that:</p>
@@ -96,18 +96,18 @@
 <span class="k">print</span> <span class="n">l</span>
 </pre></div>
 </div>
-<p>What does the <tt class="docutils literal"><span class="pre">len</span></tt> function do here? What does this block of code do as a whole? <tt class="docutils literal"><span class="pre">i</span></tt> is commonly used to represent the index in a list, as in the above example.</p>
-<p>If you don&#8217;t need to actually modify a list, you can access the entries with a <tt class="docutils literal"><span class="pre">for</span></tt> loop directly. For example:</p>
+<p>What does the <code class="docutils literal"><span class="pre">len</span></code> function do here? What does this block of code do as a whole? <code class="docutils literal"><span class="pre">i</span></code> is commonly used to represent the index in a list, as in the above example.</p>
+<p>If you don&#8217;t need to actually modify a list, you can access the entries with a <code class="docutils literal"><span class="pre">for</span></code> loop directly. For example:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">l</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">entry</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">entry</span>
 </pre></div>
 </div>
-<p>Here <tt class="docutils literal"><span class="pre">e</span></tt> is iteratively set to each entry in l, and an operation (<tt class="docutils literal"><span class="pre">print</span></tt> in this case) is applied to that entry. In this example I&#8217;m referring to each element in the list as <tt class="docutils literal"><span class="pre">entry</span></tt>. You should always pick a descriptive name like this for your variables &#8211; it makes reading your code easier.</p>
+<p>Here <code class="docutils literal"><span class="pre">e</span></code> is iteratively set to each entry in l, and an operation (<code class="docutils literal"><span class="pre">print</span></code> in this case) is applied to that entry. In this example I&#8217;m referring to each element in the list as <code class="docutils literal"><span class="pre">entry</span></code>. You should always pick a descriptive name like this for your variables &#8211; it makes reading your code easier.</p>
 </div>
 <div class="section" id="iterating-over-multiple-lists-at-the-same-time">
 <h3>Iterating over multiple lists at the same time<a class="headerlink" href="#iterating-over-multiple-lists-at-the-same-time" title="Permalink to this headline">¶</a></h3>
-<p>There are cases where you may want to iterate over two (or more) lists with the same number of entries at the same time. The <tt class="docutils literal"><span class="pre">zip</span></tt> function is useful for this. For example, imagine you wanted to iterate over two sequences to count the number of positions they differed in:</p>
+<p>There are cases where you may want to iterate over two (or more) lists with the same number of entries at the same time. The <code class="docutils literal"><span class="pre">zip</span></code> function is useful for this. For example, imagine you wanted to iterate over two sequences to count the number of positions they differed in:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">sequence1</span> <span class="o">=</span> <span class="s">&#39;ACCTT&#39;</span>
 <span class="n">sequence2</span> <span class="o">=</span> <span class="s">&#39;AGCTA&#39;</span>
 <span class="n">difference_count</span> <span class="o">=</span> <span class="mi">0</span>
@@ -117,7 +117,7 @@
 <span class="k">return</span> <span class="n">difference_count</span>
 </pre></div>
 </div>
-<p>If this doesn&#8217;t make sense try typing the above but adding a print statement just after the <tt class="docutils literal"><span class="pre">for</span></tt> loop begins that will print <tt class="docutils literal"><span class="pre">base1</span></tt> and <tt class="docutils literal"><span class="pre">base2</span></tt>. That should clear up what is happening.</p>
+<p>If this doesn&#8217;t make sense try typing the above but adding a print statement just after the <code class="docutils literal"><span class="pre">for</span></code> loop begins that will print <code class="docutils literal"><span class="pre">base1</span></code> and <code class="docutils literal"><span class="pre">base2</span></code>. That should clear up what is happening.</p>
 </div>
 </div>
 <div class="section" id="related-python-idioms">
@@ -138,7 +138,7 @@
 </div>
 <div class="section" id="enumerating-the-entries-in-a-list">
 <h3>Enumerating the entries in a list<a class="headerlink" href="#enumerating-the-entries-in-a-list" title="Permalink to this headline">¶</a></h3>
-<p>Another common thing you&#8217;ll need to do is enumerate the entries in a list and iterate over the entries and the index of that entry. You can do this using the <tt class="docutils literal"><span class="pre">enumerate</span></tt> function in your <tt class="docutils literal"><span class="pre">for</span></tt> loop. For example:</p>
+<p>Another common thing you&#8217;ll need to do is enumerate the entries in a list and iterate over the entries and the index of that entry. You can do this using the <code class="docutils literal"><span class="pre">enumerate</span></code> function in your <code class="docutils literal"><span class="pre">for</span></code> loop. For example:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">sequence_number</span><span class="p">,</span><span class="n">sequence</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">sequences</span><span class="p">):</span>
     <span class="k">print</span> <span class="s">&quot;&gt;seq</span><span class="si">%d</span><span class="se">\n</span><span class="si">%s</span><span class="se">\n</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">sequence_number</span><span class="p">,</span><span class="n">sequence</span><span class="p">)</span>
 </pre></div>
@@ -150,7 +150,7 @@
 
 
       </div>
-      <div class="bottomnav">
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
         «&#160;&#160;<a href="lecture6.html">Lecture 6: Molecular evolution</a>
@@ -162,10 +162,10 @@
 
       </div>
 
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2012, J Gregory Caporaso.
-      Last updated on Dec 11, 2015.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Last updated on Jan 14, 2016.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

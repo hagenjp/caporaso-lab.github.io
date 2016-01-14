@@ -25,12 +25,12 @@
     <script type="text/javascript" src="../../static/doctools.js"></script>
     <link rel="top" title="bioinformatics@nau" href="../../index.html" /> 
   </head>
-  <body>
-      <div class="header"><h1 class="heading"><a href="../../index.html">
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Homework assignments</span></h2>
       </div>
-      <div class="topnav">
+      <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
         <a class="uplink" href="../../index.html">Contents</a>
@@ -48,21 +48,21 @@
 </div>
 <div class="section" id="turning-in-your-homework-by-email">
 <h2>Turning in your homework by email<a class="headerlink" href="#turning-in-your-homework-by-email" title="Permalink to this headline">¶</a></h2>
-<p>Your homework must always be turned in with a standardized name. That name should be <tt class="docutils literal"><span class="pre">&lt;nau_id&gt;_&lt;homework_id&gt;.&lt;extension&gt;</span></tt>, where <tt class="docutils literal"><span class="pre">&lt;nau_id&gt;</span></tt> is your NAU identifier (for example, mine is <tt class="docutils literal"><span class="pre">jgc53</span></tt>), and <tt class="docutils literal"><span class="pre">&lt;homework_id&gt;</span></tt> and <tt class="docutils literal"><span class="pre">&lt;extension&gt;</span></tt> are provided on a per-assignment basis.</p>
+<p>Your homework must always be turned in with a standardized name. That name should be <code class="docutils literal"><span class="pre">&lt;nau_id&gt;_&lt;homework_id&gt;.&lt;extension&gt;</span></code>, where <code class="docutils literal"><span class="pre">&lt;nau_id&gt;</span></code> is your NAU identifier (for example, mine is <code class="docutils literal"><span class="pre">jgc53</span></code>), and <code class="docutils literal"><span class="pre">&lt;homework_id&gt;</span></code> and <code class="docutils literal"><span class="pre">&lt;extension&gt;</span></code> are provided on a per-assignment basis.</p>
 <p>Unless otherwise noted, homework must be turned in by email to <a class="reference external" href="mailto:alk224&#37;&#52;&#48;nau&#46;edu">alk224<span>&#64;</span>nau<span>&#46;</span>edu</a> before class on the day it is due.</p>
 </div>
 <div class="section" id="turning-in-your-homework-via-the-cluster">
 <h2>Turning in your homework via the cluster<a class="headerlink" href="#turning-in-your-homework-via-the-cluster" title="Permalink to this headline">¶</a></h2>
-<p>You can also turn in your programming assignments by placing them in a specific location on the cluster. If your assignment file is called <tt class="docutils literal"><span class="pre">jgc53_translate.py</span></tt> you could do this as follows:</p>
+<p>You can also turn in your programming assignments by placing them in a specific location on the cluster. If your assignment file is called <code class="docutils literal"><span class="pre">jgc53_translate.py</span></code> you could do this as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre>chmod o-rwx jgc53_translate.py
 cp jgc53_translate.py /mnt/assignments/translate/
 </pre></div>
 </div>
-<p>Note that the directory that you&#8217;re turning your files in to will always be <tt class="docutils literal"><span class="pre">/mnt/assignments/&lt;homework_id&gt;/</span></tt>, where <tt class="docutils literal"><span class="pre">&lt;homework_id&gt;</span></tt> is replaced with the current <tt class="docutils literal"><span class="pre">homework_id</span></tt>. You should <tt class="docutils literal"><span class="pre">cp</span></tt>, not <tt class="docutils literal"><span class="pre">mv</span></tt>, the file so you retain a backup of it (and on that note, also remember to copy the file to your local hard drive as a backup).</p>
+<p>Note that the directory that you&#8217;re turning your files in to will always be <code class="docutils literal"><span class="pre">/mnt/assignments/&lt;homework_id&gt;/</span></code>, where <code class="docutils literal"><span class="pre">&lt;homework_id&gt;</span></code> is replaced with the current <code class="docutils literal"><span class="pre">homework_id</span></code>. You should <code class="docutils literal"><span class="pre">cp</span></code>, not <code class="docutils literal"><span class="pre">mv</span></code>, the file so you retain a backup of it (and on that note, also remember to copy the file to your local hard drive as a backup).</p>
 </div>
 <div class="section" id="accessing-the-cluster">
 <h2>Accessing the cluster<a class="headerlink" href="#accessing-the-cluster" title="Permalink to this headline">¶</a></h2>
-<p>For the remaining assignments this semester we&#8217;ll use an Amazon Cloud based cluster. You should have received a key file (<tt class="docutils literal"><span class="pre">&lt;nau-id&gt;.rsa</span></tt>) and ip address by email. (I won&#8217;t post the ip address here for security reasons.) Use the key file and the ip address to connect as follows:</p>
+<p>For the remaining assignments this semester we&#8217;ll use an Amazon Cloud based cluster. You should have received a key file (<code class="docutils literal"><span class="pre">&lt;nau-id&gt;.rsa</span></code>) and ip address by email. (I won&#8217;t post the ip address here for security reasons.) Use the key file and the ip address to connect as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre>ssh -i &lt;key-file&gt; &lt;nau-id&gt;@&lt;ip-address&gt;
 </pre></div>
 </div>
@@ -70,7 +70,7 @@ cp jgc53_translate.py /mnt/assignments/translate/
 <div class="highlight-python"><div class="highlight"><pre>ssh -i jgc53.rsa jgc53@&lt;ip-address&gt;
 </pre></div>
 </div>
-<p>Where <tt class="docutils literal"><span class="pre">&lt;ip-address&gt;</span></tt> is replaced with the IP address that was provided by email.</p>
+<p>Where <code class="docutils literal"><span class="pre">&lt;ip-address&gt;</span></code> is replaced with the IP address that was provided by email.</p>
 <p>To move files in and out of the instance, I recommend using <a class="reference external" href="http://www.cyberduck.ch">Cyberduck</a>. You can find <a class="reference external" href="http://qiime.org/tutorials/working_with_aws.html#working-with-cyberduck">instructions for connecting to AWS with Cyberduck here</a>. Instead of the public DNS entry, you&#8217;ll use the IP address referenced above. You can also experiment with <a class="reference external" href="http://qiime.org/tutorials/working_with_aws.html#working-with-command-line-tools">command line tools to move data in and out of the cluster</a>.</p>
 </div>
 <div class="section" id="final-project-13-dec-2012-9-30am">
@@ -88,14 +88,14 @@ cp jgc53_translate.py /mnt/assignments/translate/
 <ol class="arabic simple">
 <li>Create an account with the <a class="reference external" href="http://www.microbio.me/qiime">QIIME Database</a>.</li>
 <li>On logging in, choose &#8216;Create a New Meta-Analysis&#8217;. Name your meta-analysis and hit &#8216;Next&#8217;. Click &#8216;Perform Meta-analysis&#8217;</li>
-<li>Next, you&#8217;ll choose the studies you want to include. Choose <tt class="docutils literal"><span class="pre">Kelley_office_contamination</span></tt> (<a class="reference external" href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0037849">cite</a>), <tt class="docutils literal"><span class="pre">Flores_restroom_surface_biogeography</span></tt> (<a class="reference external" href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0028132">cite</a>), and <tt class="docutils literal"><span class="pre">CaporasoIlluminaPNAS2011_5prime</span></tt> (<a class="reference external" href="http://www.pnas.org/content/108/suppl.1/4516.long">cite</a>). Then do the following: uncheck &#8220;Show Common Fields Only&#8221;; Select Metadata Fields: &#8220;All&#8221;; Hit &#8216;&gt;&gt;&#8217; to copy all metadata fields to your mapping file; Hit &#8220;Continue&#8221;.</li>
+<li>Next, you&#8217;ll choose the studies you want to include. Choose <code class="docutils literal"><span class="pre">Kelley_office_contamination</span></code> (<a class="reference external" href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0037849">cite</a>), <code class="docutils literal"><span class="pre">Flores_restroom_surface_biogeography</span></code> (<a class="reference external" href="http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0028132">cite</a>), and <code class="docutils literal"><span class="pre">CaporasoIlluminaPNAS2011_5prime</span></code> (<a class="reference external" href="http://www.pnas.org/content/108/suppl.1/4516.long">cite</a>). Then do the following: uncheck &#8220;Show Common Fields Only&#8221;; Select Metadata Fields: &#8220;All&#8221;; Hit &#8216;&gt;&gt;&#8217; to copy all metadata fields to your mapping file; Hit &#8220;Continue&#8221;.</li>
 <li>Select &#8220;Processing Method: Serial&#8221;; Check &#8220;Taxonomy Summary&#8221;&#8221;, then expand &#8220;Optional parameters (sort_otu_table.py), and set &#8220;Category to sory by&#8221; to STUDY_TITLE; Check &#8220;Beta-Diversity&#8221;, expand &#8220;Optional Parameters (rarefaction.py), and set &#8220;Rarified at&#8221; to 500 seqs/sample, then expand &#8220;Optional Parameters (beta_diversity.py), and set &#8220;Metrics to use&#8221; to bray_curtis, weighted_unifrac, unweighted_unifrac, euclidean; choose 3d PCOA plots (no optional parameters). Click &#8220;Submit&#8221;.</li>
 <li>This may take a while to run. When it&#8217;s done, you can begin to explore the results via the database website. Download the &#8220;Zip Archive&#8221; to address the questions below.</li>
 </ol>
 <p>You will turn in a maximum of a three page paper describing your analysis, including a brief introduction (describe what specific types of samples are under investigation here as well as some background on the studies the samples were derived from), description of your methods, and description of your results. Focus your results on the following questions:</p>
 <ol class="arabic simple">
-<li>Do the four distance metrics you applied result in similar PCoA plots? Compare these visually, and present a distance matrix of Procrustes M^2 values between the four principal coordinate matrices generated by the QIIME DB (<tt class="docutils literal"><span class="pre">*_pc.txt</span></tt>) as a table in your paper and discuss your conclusions from this analysis. This will involve running a bunch of commands, reviewing the output of each, and using that output to compile a 4x4 distance matrix (e.g., in Excel).</li>
-<li>What does the clustering pattern in your weighted UniFrac PCoA plot tell you about the likely sources of the indoor microbial communities from the different studies (as judged by the similarity of the indoor communities to the diverse set of samples in the <tt class="docutils literal"><span class="pre">CaporasoIlluminaPNAS2011_5prime</span></tt> study)? Include the most informative view of your PCoA, with a color legend, in your paper to support this analysis.</li>
+<li>Do the four distance metrics you applied result in similar PCoA plots? Compare these visually, and present a distance matrix of Procrustes M^2 values between the four principal coordinate matrices generated by the QIIME DB (<code class="docutils literal"><span class="pre">*_pc.txt</span></code>) as a table in your paper and discuss your conclusions from this analysis. This will involve running a bunch of commands, reviewing the output of each, and using that output to compile a 4x4 distance matrix (e.g., in Excel).</li>
+<li>What does the clustering pattern in your weighted UniFrac PCoA plot tell you about the likely sources of the indoor microbial communities from the different studies (as judged by the similarity of the indoor communities to the diverse set of samples in the <code class="docutils literal"><span class="pre">CaporasoIlluminaPNAS2011_5prime</span></code> study)? Include the most informative view of your PCoA, with a color legend, in your paper to support this analysis.</li>
 </ol>
 <p>On an additional page (in addition to your three page paper) please provide feedback on the following questions on the usability of the QIIME database. (This is absolutely required! The QIIME DB is in beta testing status right now, and in exchange for getting to use it for this project to expose you to new tools, I agreed to require you to provide input that is useful in testing of the system.)</p>
 <ol class="arabic simple">
@@ -107,23 +107,23 @@ cp jgc53_translate.py /mnt/assignments/translate/
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">See the Procrustes tutorial <a class="reference external" href="http://qiime.org/tutorials/procrustes_analysis.html#performing-procrustes-analysis">here</a>. Since your principal coordinate matrices were already generated for you by the QIIME DB, you&#8217;ll pick up the tutorial with <tt class="docutils literal"><span class="pre">transform_coordinate_matrices.py</span></tt>. Do some research on Procrustes analysis to learn how to interpret these results. (Hint: search for the PROTEST method.)</p>
+<p class="last">See the Procrustes tutorial <a class="reference external" href="http://qiime.org/tutorials/procrustes_analysis.html#performing-procrustes-analysis">here</a>. Since your principal coordinate matrices were already generated for you by the QIIME DB, you&#8217;ll pick up the tutorial with <code class="docutils literal"><span class="pre">transform_coordinate_matrices.py</span></code>. Do some research on Procrustes analysis to learn how to interpret these results. (Hint: search for the PROTEST method.)</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">UniFrac clustering analysis: modifying the mapping file (e.g., in Excel) to create a single metadata column that is informative across all samples will help here. You would need to run <tt class="docutils literal"><span class="pre">make_3d_plots.py</span></tt> with your new mapping file to generate a new PCoA plot. I created a new column in my mapping file called <tt class="docutils literal"><span class="pre">Study_detail</span></tt> that combined the <tt class="docutils literal"><span class="pre">Surface</span></tt> and <tt class="docutils literal"><span class="pre">ENV_FEATURE</span></tt> columns.</p>
+<p class="last">UniFrac clustering analysis: modifying the mapping file (e.g., in Excel) to create a single metadata column that is informative across all samples will help here. You would need to run <code class="docutils literal"><span class="pre">make_3d_plots.py</span></code> with your new mapping file to generate a new PCoA plot. I created a new column in my mapping file called <code class="docutils literal"><span class="pre">Study_detail</span></code> that combined the <code class="docutils literal"><span class="pre">Surface</span></code> and <code class="docutils literal"><span class="pre">ENV_FEATURE</span></code> columns.</p>
 </div>
 </div>
 <div class="section" id="final-project-option-2-building-a-tree-of-life-programming-assignment">
 <h2>Final Project Option 2: Building a tree of life (programming assignment)<a class="headerlink" href="#final-project-option-2-building-a-tree-of-life-programming-assignment" title="Permalink to this headline">¶</a></h2>
 <p>In this assignment you will make use of the PyCogent software package to automate the process of constructing a phylogenetic tree from a set of genes. This will including querying NCBI to obtain sequences, performing a multiple sequence alignment, building a phylogenetic tree, writing a newick string containing that tree to file, and writing a visualization of that tree to a PDF file.</p>
-<p>Your script must define a function called <tt class="docutils literal"><span class="pre">obtain_sequences_and_build_tree</span></tt> that takes:
+<p>Your script must define a function called <code class="docutils literal"><span class="pre">obtain_sequences_and_build_tree</span></code> that takes:
 1. a list of queries (as strings) to be run against NCBI;
 2. a list of query labels (also as strings) to label the sequences resulting from each query in the final tree;
 3. the filepath where the output newick string should be written;
 4. the filepath where the output pdf should be written;
-5. an optional parameter <tt class="docutils literal"><span class="pre">n</span></tt> which defines how many randomly chosen query results should be chosen for each of the queries. The default value for <tt class="docutils literal"><span class="pre">n</span></tt> should be 5.</p>
-<p>Your <tt class="docutils literal"><span class="pre">obtain_sequences_and_build_tree</span></tt> function must return a phylogenetic tree derived from <tt class="docutils literal"><span class="pre">n</span></tt> aligned representatives of each of the queries passed via parameter 1. Your function definition should look exactly like this, where you replace <tt class="docutils literal"><span class="pre">#</span> <span class="pre">do</span> <span class="pre">a</span> <span class="pre">bunch</span> <span class="pre">of</span> <span class="pre">work</span></tt> with your code:</p>
+5. an optional parameter <code class="docutils literal"><span class="pre">n</span></code> which defines how many randomly chosen query results should be chosen for each of the queries. The default value for <code class="docutils literal"><span class="pre">n</span></code> should be 5.</p>
+<p>Your <code class="docutils literal"><span class="pre">obtain_sequences_and_build_tree</span></code> function must return a phylogenetic tree derived from <code class="docutils literal"><span class="pre">n</span></code> aligned representatives of each of the queries passed via parameter 1. Your function definition should look exactly like this, where you replace <code class="docutils literal"><span class="pre">#</span> <span class="pre">do</span> <span class="pre">a</span> <span class="pre">bunch</span> <span class="pre">of</span> <span class="pre">work</span></code> with your code:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">obtain_sequences_and_build_tree</span><span class="p">(</span><span class="n">queries</span><span class="p">,</span>
                                     <span class="n">query_labels</span><span class="p">,</span>
                                     <span class="n">output_newick_fp</span><span class="p">,</span>
@@ -133,7 +133,7 @@ cp jgc53_translate.py /mnt/assignments/translate/
     <span class="k">return</span> <span class="n">tree</span>
 </pre></div>
 </div>
-<p>As part of your analysis, you should filter any sequences that have one or more <tt class="docutils literal"><span class="pre">N</span></tt> characters in them. Each sequence label in the output tree should begin with the query label corresponding to that sequence. <tt class="docutils literal"><span class="pre">tree</span></tt> should be a PyCogent <tt class="docutils literal"><span class="pre">PhyloNode</span></tt> object (the output of <tt class="docutils literal"><span class="pre">cogent.app.fasttree.build_tree_from_alignment</span></tt>).</p>
+<p>As part of your analysis, you should filter any sequences that have one or more <code class="docutils literal"><span class="pre">N</span></code> characters in them. Each sequence label in the output tree should begin with the query label corresponding to that sequence. <code class="docutils literal"><span class="pre">tree</span></code> should be a PyCogent <code class="docutils literal"><span class="pre">PhyloNode</span></code> object (the output of <code class="docutils literal"><span class="pre">cogent.app.fasttree.build_tree_from_alignment</span></code>).</p>
 <p>In your script, you should call the function you define as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">obtain_sequences_and_build_tree</span><span class="p">(</span>
      <span class="p">[</span><span class="s">&#39;&quot;small subunit rRNA&quot;[ti] AND archaea[orgn]&#39;</span><span class="p">,</span>
@@ -145,10 +145,10 @@ cp jgc53_translate.py /mnt/assignments/translate/
      <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>where <tt class="docutils literal"><span class="pre">&lt;nau-id&gt;</span></tt> is replaced with your NAU identifier. This should perform all of the analysis steps and write the newick file and PDF to the directory where you are running the script from. You&#8217;ll turn in the script, the newick file, and the PDF.</p>
+<p>where <code class="docutils literal"><span class="pre">&lt;nau-id&gt;</span></code> is replaced with your NAU identifier. This should perform all of the analysis steps and write the newick file and PDF to the directory where you are running the script from. You&#8217;ll turn in the script, the newick file, and the PDF.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Homework id: <tt class="docutils literal"><span class="pre">tol</span></tt>; Extension: <tt class="docutils literal"><span class="pre">py</span></tt>, <tt class="docutils literal"><span class="pre">tre</span></tt> and <tt class="docutils literal"><span class="pre">pdf</span></tt>; For this assignment, the files I turn in would be named <tt class="docutils literal"><span class="pre">jgc53_tol.py</span></tt>, <tt class="docutils literal"><span class="pre">jgc53_tol.tre</span></tt> and <tt class="docutils literal"><span class="pre">jgc53_tol.pdf</span></tt>.</p>
+<p class="last">Homework id: <code class="docutils literal"><span class="pre">tol</span></code>; Extension: <code class="docutils literal"><span class="pre">py</span></code>, <code class="docutils literal"><span class="pre">tre</span></code> and <code class="docutils literal"><span class="pre">pdf</span></code>; For this assignment, the files I turn in would be named <code class="docutils literal"><span class="pre">jgc53_tol.py</span></code>, <code class="docutils literal"><span class="pre">jgc53_tol.tre</span></code> and <code class="docutils literal"><span class="pre">jgc53_tol.pdf</span></code>.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -160,12 +160,12 @@ cp jgc53_translate.py /mnt/assignments/translate/
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Remember that you can call <tt class="docutils literal"><span class="pre">dir()</span></tt> on an object to find out what methods are available to that object. One of the methods associated with your tree object will help you generate a newick formatted tree.</p>
+<p class="last">Remember that you can call <code class="docutils literal"><span class="pre">dir()</span></code> on an object to find out what methods are available to that object. One of the methods associated with your tree object will help you generate a newick formatted tree.</p>
 </div>
 </div>
 <div class="section" id="programming-assignment-3-4-dec-2012">
 <h2>Programming Assignment 3 (4 Dec 2012)<a class="headerlink" href="#programming-assignment-3-4-dec-2012" title="Permalink to this headline">¶</a></h2>
-<p>You will write a program that extracts latitude and longitude information from a <a class="reference external" href="http://qiime.org/documentation/file_formats.html#metadata-mapping-files">QIIME-compatible mapping file</a>, and writes that to a <a class="reference external" href="https://developers.google.com/kml/documentation/kml_tut">Keyhole Markup Language (kml) file</a>, which can be opened in <a class="reference external" href="http://www.google.com/earth/index.html">Google Earth</a>. To achieve this you&#8217;ll need to understand the QIIME mapping file format so you can parse it, the <tt class="docutils literal"><span class="pre">kml</span></tt> file format so you can write it, and the basics of file reading and writing in python so you can read the mapping file, process the input, and write the kml file.</p>
+<p>You will write a program that extracts latitude and longitude information from a <a class="reference external" href="http://qiime.org/documentation/file_formats.html#metadata-mapping-files">QIIME-compatible mapping file</a>, and writes that to a <a class="reference external" href="https://developers.google.com/kml/documentation/kml_tut">Keyhole Markup Language (kml) file</a>, which can be opened in <a class="reference external" href="http://www.google.com/earth/index.html">Google Earth</a>. To achieve this you&#8217;ll need to understand the QIIME mapping file format so you can parse it, the <code class="docutils literal"><span class="pre">kml</span></code> file format so you can write it, and the basics of file reading and writing in python so you can read the mapping file, process the input, and write the kml file.</p>
 <p>Your script should take two command line arguments: the input mapping file, and the name of the output file to write. For example, I would call my script as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre>jgc53_coordinates.py glen_canyon_map.tsv jgc53_coordinates.kml
 </pre></div>
@@ -173,11 +173,11 @@ cp jgc53_translate.py /mnt/assignments/translate/
 <p>You can obtain the mapping file from <a class="reference external" href="https://docs.google.com/spreadsheet/ccc?key=0AvglGXLayhG7dDNCWnUwSHhWNmxKODZISWx6VzBqU0E">here</a> (choose &#8216;File &gt; Download as &gt; Plain text&#8217; to save as tab-separated text). You can see an example of what the output file should look like <a class="reference external" href="https://gist.github.com/4121975">here</a>.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Homework id: <tt class="docutils literal"><span class="pre">coordinates</span></tt>; Extension: <tt class="docutils literal"><span class="pre">py</span></tt> and <tt class="docutils literal"><span class="pre">kml</span></tt>; For this assignment, the files I turn in would be named <tt class="docutils literal"><span class="pre">jgc53_coordinates.py</span></tt> and <tt class="docutils literal"><span class="pre">jgc53_coordinates.kml</span></tt>.</p>
+<p class="last">Homework id: <code class="docutils literal"><span class="pre">coordinates</span></code>; Extension: <code class="docutils literal"><span class="pre">py</span></code> and <code class="docutils literal"><span class="pre">kml</span></code>; For this assignment, the files I turn in would be named <code class="docutils literal"><span class="pre">jgc53_coordinates.py</span></code> and <code class="docutils literal"><span class="pre">jgc53_coordinates.kml</span></code>.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Be sure to download, install, and use <a class="reference external" href="http://www.google.com/earth/index.html">Google Earth</a> to confirm that your <tt class="docutils literal"><span class="pre">kml</span></tt> file is written correctly, and that the points end up in the right place (i.e, Utah).</p>
+<p class="last">Be sure to download, install, and use <a class="reference external" href="http://www.google.com/earth/index.html">Google Earth</a> to confirm that your <code class="docutils literal"><span class="pre">kml</span></code> file is written correctly, and that the points end up in the right place (i.e, Utah).</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -186,11 +186,11 @@ cp jgc53_translate.py /mnt/assignments/translate/
 </div>
 <div class="section" id="programming-assignment-2-15-nov-2012">
 <h2>Programming Assignment 2 (15 Nov 2012)<a class="headerlink" href="#programming-assignment-2-15-nov-2012" title="Permalink to this headline">¶</a></h2>
-<p>Write a program that makes use of a <tt class="docutils literal"><span class="pre">for</span></tt> loop and a dictionary to translate an RNA sequence to a protein for all four orientations of the input sequence (forward, reverse, forward complement, reverse complement, where forward refers to the sequence that was passed in). This program should query a user for an input RNA sequence and print the translated protein sequences to the screen. If a stop codon is encountered in the RNA sequence, an <tt class="docutils literal"><span class="pre">*</span></tt> should be inserted in the translated sequence, and translation should continue.</p>
+<p>Write a program that makes use of a <code class="docutils literal"><span class="pre">for</span></code> loop and a dictionary to translate an RNA sequence to a protein for all four orientations of the input sequence (forward, reverse, forward complement, reverse complement, where forward refers to the sequence that was passed in). This program should query a user for an input RNA sequence and print the translated protein sequences to the screen. If a stop codon is encountered in the RNA sequence, an <code class="docutils literal"><span class="pre">*</span></code> should be inserted in the translated sequence, and translation should continue.</p>
 <p>Assume that you will only receive IUPAC RNA bases (either upper or lower case) as input. In other words, you don&#8217;t need to handle non-RNA characters in the input sequence. You can also assume that the length of an input sequence will be a multiple of three, so you only need to handle full-length codon sequences.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Homework id: <tt class="docutils literal"><span class="pre">translate</span></tt>; Extension: <tt class="docutils literal"><span class="pre">py</span></tt>; For this assignment, the file I turn in would be named <tt class="docutils literal"><span class="pre">jgc53_translate.py</span></tt>.</p>
+<p class="last">Homework id: <code class="docutils literal"><span class="pre">translate</span></code>; Extension: <code class="docutils literal"><span class="pre">py</span></code>; For this assignment, the file I turn in would be named <code class="docutils literal"><span class="pre">jgc53_translate.py</span></code>.</p>
 </div>
 <p>To get every third base, you can build a for loop that looks like the following. Use a variation on this to identify each codon:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">s</span> <span class="o">=</span> <span class="s">&quot;ACCTTTAGGACCCGG&quot;</span>
@@ -216,7 +216,7 @@ G*PG
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">One step in this process is going to be building a dictionary where you can look up codons to get the amino acid that they code for (or the <tt class="docutils literal"><span class="pre">*</span></tt> in the case of stop codons). You should pull the genetic code off the web from somewhere, and refer to the <cite>Generating dictionaries</cite> section of Chapter 9 of <cite>Practical Computing for Biologists</cite>. You&#8217;ll go back to your regular expressions for this process.</p>
+<p class="last">One step in this process is going to be building a dictionary where you can look up codons to get the amino acid that they code for (or the <code class="docutils literal"><span class="pre">*</span></code> in the case of stop codons). You should pull the genetic code off the web from somewhere, and refer to the <cite>Generating dictionaries</cite> section of Chapter 9 of <cite>Practical Computing for Biologists</cite>. You&#8217;ll go back to your regular expressions for this process.</p>
 </div>
 </div>
 <div class="section" id="programming-assignment-1-8-nov-2012">
@@ -237,26 +237,26 @@ G*PG
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">To reverse a string <tt class="docutils literal"><span class="pre">s</span></tt>, you can use the command <tt class="docutils literal"><span class="pre">s_rev</span> <span class="pre">=</span> <span class="pre">s[::-1]</span></tt> We&#8217;ll talk about this syntax within the next couple of weeks - for now, just treat this command as magic.</p>
+<p class="last">To reverse a string <code class="docutils literal"><span class="pre">s</span></code>, you can use the command <code class="docutils literal"><span class="pre">s_rev</span> <span class="pre">=</span> <span class="pre">s[::-1]</span></code> We&#8217;ll talk about this syntax within the next couple of weeks - for now, just treat this command as magic.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">To perform real division using integers, add the following line at the beginning of your file (just after the <cite>shebang</cite> line): <tt class="docutils literal"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">division</span></tt></p>
+<p class="last">To perform real division using integers, add the following line at the beginning of your file (just after the <cite>shebang</cite> line): <code class="docutils literal"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">division</span></code></p>
 </div>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Homework id: <tt class="docutils literal"><span class="pre">sequence_stats</span></tt>; Extension: <tt class="docutils literal"><span class="pre">py</span></tt>; For this assignment, the file I turn in would be named <tt class="docutils literal"><span class="pre">jgc53_sequence_stats.py</span></tt>.</p>
+<p class="last">Homework id: <code class="docutils literal"><span class="pre">sequence_stats</span></code>; Extension: <code class="docutils literal"><span class="pre">py</span></code>; For this assignment, the file I turn in would be named <code class="docutils literal"><span class="pre">jgc53_sequence_stats.py</span></code>.</p>
 </div>
 </div>
 <div class="section" id="qiime-analysis-25-oct-2012">
 <h2>QIIME analysis (25 Oct 2012)<a class="headerlink" href="#qiime-analysis-25-oct-2012" title="Permalink to this headline">¶</a></h2>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">This assignment involves large data files. You will need to work in your <cite>scratch</cite> directory, or you will run out of space. On logging into the cluster change to <tt class="docutils literal"><span class="pre">/mnt/&lt;nau-id&gt;</span></tt> where <tt class="docutils literal"><span class="pre">&lt;nau-id&gt;</span></tt> is your NAU identifier. For example, I would do this by running the command: <tt class="docutils literal"><span class="pre">cd</span> <span class="pre">/mnt/jgc53</span></tt>.</p>
+<p class="last">This assignment involves large data files. You will need to work in your <cite>scratch</cite> directory, or you will run out of space. On logging into the cluster change to <code class="docutils literal"><span class="pre">/mnt/&lt;nau-id&gt;</span></code> where <code class="docutils literal"><span class="pre">&lt;nau-id&gt;</span></code> is your NAU identifier. For example, I would do this by running the command: <code class="docutils literal"><span class="pre">cd</span> <span class="pre">/mnt/jgc53</span></code>.</p>
 </div>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Remember that the <tt class="docutils literal"><span class="pre">screen</span></tt> command will be important to allow your analyses to continue running if your network connection is interrupted. You can find <a class="reference external" href="http://www.ibm.com/developerworks/aix/library/au-gnu_screen/">details on screen here</a>.</p>
+<p class="last">Remember that the <code class="docutils literal"><span class="pre">screen</span></code> command will be important to allow your analyses to continue running if your network connection is interrupted. You can find <a class="reference external" href="http://www.ibm.com/developerworks/aix/library/au-gnu_screen/">details on screen here</a>.</p>
 </div>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
@@ -266,7 +266,7 @@ G*PG
 <dl class="docutils">
 <dt>Data analysis: You will perform a complete QIIME analysis of the data set presented in Fierer et al, and turn in the following items:</dt>
 <dd><ul class="first last simple">
-<li>A 3 page (maximum!) paper describing your analysis. Write this as if you&#8217;re submitting to a journal, so should contain an <cite>Introduction</cite> section describing the hypotheses being addressed and the strategy for addressing these (refer to <a class="reference external" href="http://www.pnas.org/content/107/14/6477.long">Fierer et al</a>), a <cite>Methods</cite> section containing a brief description of your bioinformatics methods (e.g., what version of QIIME, what type of OTU picking was used) and how the data was generated (e.g., sequencing platform), and a <cite>Results</cite> section describing the results of your analysis. Your 2-3 pages should include a beta diversity PCoA plot (generated by <a class="reference external" href="http://qiime.org/scripts/beta_diversity_through_plots.html">beta_diversity_through_plots.py</a>; focus on Unweighted UniFrac, which is what we discussed in class) in a view that supports your conclusions, and an alpha rarefaction plot (generated by <a class="reference external" href="http://qiime.org/scripts/alpha_rarefaction.html">alpha_rarefaction.py</a>). You should also include a table that lists the five OTUs that are most significantly different across the <cite>Subject</cite> category in your mapping file (generated by <a class="reference external" href="http://qiime.org/scripts/otu_category_significance.html">otu_category_significance.py</a>). Figures and tables should take up no more than one total page of your paper. This paper must be turned in as a PDF - <tt class="docutils literal"><span class="pre">.doc</span></tt> or other word processing formats will not be accepted.</li>
+<li>A 3 page (maximum!) paper describing your analysis. Write this as if you&#8217;re submitting to a journal, so should contain an <cite>Introduction</cite> section describing the hypotheses being addressed and the strategy for addressing these (refer to <a class="reference external" href="http://www.pnas.org/content/107/14/6477.long">Fierer et al</a>), a <cite>Methods</cite> section containing a brief description of your bioinformatics methods (e.g., what version of QIIME, what type of OTU picking was used) and how the data was generated (e.g., sequencing platform), and a <cite>Results</cite> section describing the results of your analysis. Your 2-3 pages should include a beta diversity PCoA plot (generated by <a class="reference external" href="http://qiime.org/scripts/beta_diversity_through_plots.html">beta_diversity_through_plots.py</a>; focus on Unweighted UniFrac, which is what we discussed in class) in a view that supports your conclusions, and an alpha rarefaction plot (generated by <a class="reference external" href="http://qiime.org/scripts/alpha_rarefaction.html">alpha_rarefaction.py</a>). You should also include a table that lists the five OTUs that are most significantly different across the <cite>Subject</cite> category in your mapping file (generated by <a class="reference external" href="http://qiime.org/scripts/otu_category_significance.html">otu_category_significance.py</a>). Figures and tables should take up no more than one total page of your paper. This paper must be turned in as a PDF - <code class="docutils literal"><span class="pre">.doc</span></code> or other word processing formats will not be accepted.</li>
 <li>Evenly sampled OTU table (generated by <a class="reference external" href="http://qiime.org/scripts/beta_diversity_through_plots.html">beta_diversity_through_plots.py</a>). This should be provided as a gzipped <cite>.biom</cite> file.</li>
 <li>Text file containing the full list of commands that you ran to generate the above data, noting any problems that you ran into along the way.</li>
 </ul>
@@ -290,58 +290,58 @@ process_sff.py -i ./
 <p>The steps in the <a class="reference external" href="http://qiime.org/svn_documentation/tutorials/tutorial.html">QIIME Overview Tutorial</a> are the next place to go from here... Good luck!</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p>Homework id: <tt class="docutils literal"><span class="pre">qiime</span></tt>; Extension: <tt class="docutils literal"><span class="pre">biom</span></tt>, <tt class="docutils literal"><span class="pre">pdf</span></tt>, and <tt class="docutils literal"><span class="pre">txt</span></tt>; For this assignment, the files I turn in would be named &lt;userid&gt;_qiime_otu_table_even.biom, &lt;userid&gt;_qiime_paper.pdf and &lt;userid&gt;_qiime_analysis_notes.txt.</p>
+<p>Homework id: <code class="docutils literal"><span class="pre">qiime</span></code>; Extension: <code class="docutils literal"><span class="pre">biom</span></code>, <code class="docutils literal"><span class="pre">pdf</span></code>, and <code class="docutils literal"><span class="pre">txt</span></code>; For this assignment, the files I turn in would be named &lt;userid&gt;_qiime_otu_table_even.biom, &lt;userid&gt;_qiime_paper.pdf and &lt;userid&gt;_qiime_analysis_notes.txt.</p>
 <p class="last">E-mail your files as three separate attachments to <a class="reference external" href="mailto:alk224&#37;&#52;&#48;nau&#46;edu">alk224<span>&#64;</span>nau<span>&#46;</span>edu</a>.</p>
 </div>
 </div>
 <div class="section" id="shell-script-due-9-oct-2012">
 <h2>Shell script (due 9 Oct 2012)<a class="headerlink" href="#shell-script-due-9-oct-2012" title="Permalink to this headline">¶</a></h2>
-<p>In this assignment you will automate retrieval and processing of PDB files with a shell (<tt class="docutils literal"><span class="pre">bash</span></tt>) script, and turn that script in. We will run that script and grade you on the results. Your script should perform the following steps:</p>
+<p>In this assignment you will automate retrieval and processing of PDB files with a shell (<code class="docutils literal"><span class="pre">bash</span></code>) script, and turn that script in. We will run that script and grade you on the results. Your script should perform the following steps:</p>
 <ol class="arabic simple">
-<li>Create a new directory called <tt class="docutils literal"><span class="pre">&lt;nau-id&gt;_pdb_files</span></tt> (e.g., mine would be called <tt class="docutils literal"><span class="pre">jgc53_pdb_files</span></tt>).</li>
-<li>Create a file in that directory called <tt class="docutils literal"><span class="pre">pdb_retrieval.log</span></tt> which contains:</li>
+<li>Create a new directory called <code class="docutils literal"><span class="pre">&lt;nau-id&gt;_pdb_files</span></code> (e.g., mine would be called <code class="docutils literal"><span class="pre">jgc53_pdb_files</span></code>).</li>
+<li>Create a file in that directory called <code class="docutils literal"><span class="pre">pdb_retrieval.log</span></code> which contains:</li>
 </ol>
 <blockquote>
 <div><ol class="loweralpha simple">
-<li>the time the script began running (including descriptive text like <cite>Logging started at:</cite> <tt class="docutils literal"><span class="pre">&lt;time&gt;</span></tt>) - this should only be the time, not the date (use google and <tt class="docutils literal"><span class="pre">man</span></tt> to figure out the formatting)</li>
-<li>the time the script completed running (again with descriptive text like <cite>Logging ended at:</cite> <tt class="docutils literal"><span class="pre">&lt;time&gt;</span></tt>) - this should only be the time, not the date (use google and <tt class="docutils literal"><span class="pre">man</span></tt> to figure out the formatting)</li>
+<li>the time the script began running (including descriptive text like <cite>Logging started at:</cite> <code class="docutils literal"><span class="pre">&lt;time&gt;</span></code>) - this should only be the time, not the date (use google and <code class="docutils literal"><span class="pre">man</span></code> to figure out the formatting)</li>
+<li>the time the script completed running (again with descriptive text like <cite>Logging ended at:</cite> <code class="docutils literal"><span class="pre">&lt;time&gt;</span></code>) - this should only be the time, not the date (use google and <code class="docutils literal"><span class="pre">man</span></code> to figure out the formatting)</li>
 <li>the URLs of the files that were downloaded</li>
-<li>the date of the download (so in case of future changes to the files on the PDB you know what versions of the files you obtained) - this should only be the date, not the time (use google and <tt class="docutils literal"><span class="pre">man</span></tt> to figure out the formatting)</li>
+<li>the date of the download (so in case of future changes to the files on the PDB you know what versions of the files you obtained) - this should only be the date, not the time (use google and <code class="docutils literal"><span class="pre">man</span></code> to figure out the formatting)</li>
 <li>any other information that you think might be important to log.</li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple" start="3">
-<li>Download the following PDB records as PDB files in <tt class="docutils literal"><span class="pre">.gz</span></tt> format: <tt class="docutils literal"><span class="pre">4DA7</span></tt>, <tt class="docutils literal"><span class="pre">1HSG</span></tt>,  <tt class="docutils literal"><span class="pre">1ZQA</span></tt>, <tt class="docutils literal"><span class="pre">2RNM</span></tt>, <tt class="docutils literal"><span class="pre">1RCX</span></tt>, <tt class="docutils literal"><span class="pre">1GFL</span></tt>,  <tt class="docutils literal"><span class="pre">2WDK</span></tt> (Hint: first go to the Protein Data Bank website and find the link to those records. Then figure out how to generalize that link to match different records.)</li>
-<li>Unzip all of the <tt class="docutils literal"><span class="pre">.gz</span></tt> files. (Hint: a wildcard expression is useful here.)</li>
-<li>Extract the line(s) containing PMIDs (PubMed Identifiers) for each of the records (Hint: Use <tt class="docutils literal"><span class="pre">egrep</span></tt> for this, and review the files to figure out where that information is) and write those lines to a new file called <tt class="docutils literal"><span class="pre">pmids.txt</span></tt>.</li>
-<li>Extract the line(s) containing TITLE for each of the records (Hint: Use <tt class="docutils literal"><span class="pre">egrep</span></tt> for this, and review the files to figure out where that information is) and write those lines to a new file called <tt class="docutils literal"><span class="pre">titles.txt</span></tt>.</li>
-<li>Zip all of the PDB files in the directory with <tt class="docutils literal"><span class="pre">gzip</span></tt>.</li>
+<li>Download the following PDB records as PDB files in <code class="docutils literal"><span class="pre">.gz</span></code> format: <code class="docutils literal"><span class="pre">4DA7</span></code>, <code class="docutils literal"><span class="pre">1HSG</span></code>,  <code class="docutils literal"><span class="pre">1ZQA</span></code>, <code class="docutils literal"><span class="pre">2RNM</span></code>, <code class="docutils literal"><span class="pre">1RCX</span></code>, <code class="docutils literal"><span class="pre">1GFL</span></code>,  <code class="docutils literal"><span class="pre">2WDK</span></code> (Hint: first go to the Protein Data Bank website and find the link to those records. Then figure out how to generalize that link to match different records.)</li>
+<li>Unzip all of the <code class="docutils literal"><span class="pre">.gz</span></code> files. (Hint: a wildcard expression is useful here.)</li>
+<li>Extract the line(s) containing PMIDs (PubMed Identifiers) for each of the records (Hint: Use <code class="docutils literal"><span class="pre">egrep</span></code> for this, and review the files to figure out where that information is) and write those lines to a new file called <code class="docutils literal"><span class="pre">pmids.txt</span></code>.</li>
+<li>Extract the line(s) containing TITLE for each of the records (Hint: Use <code class="docutils literal"><span class="pre">egrep</span></code> for this, and review the files to figure out where that information is) and write those lines to a new file called <code class="docutils literal"><span class="pre">titles.txt</span></code>.</li>
+<li>Zip all of the PDB files in the directory with <code class="docutils literal"><span class="pre">gzip</span></code>.</li>
 </ol>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p>Homework id: <tt class="docutils literal"><span class="pre">shellscript</span></tt>; Extension: <tt class="docutils literal"><span class="pre">sh</span></tt>; For this assignment, the script file I turn in would be named <tt class="docutils literal"><span class="pre">jgc53_shellscript.sh</span></tt>. Note that you will not turn in any files in the <tt class="docutils literal"><span class="pre">pdb_files</span></tt> directory: we&#8217;ll generate those using your script.</p>
+<p>Homework id: <code class="docutils literal"><span class="pre">shellscript</span></code>; Extension: <code class="docutils literal"><span class="pre">sh</span></code>; For this assignment, the script file I turn in would be named <code class="docutils literal"><span class="pre">jgc53_shellscript.sh</span></code>. Note that you will not turn in any files in the <code class="docutils literal"><span class="pre">pdb_files</span></code> directory: we&#8217;ll generate those using your script.</p>
 <p class="last">E-mail your shell script as an attachment to <a class="reference external" href="mailto:alk224&#37;&#52;&#48;nau&#46;edu">alk224<span>&#64;</span>nau<span>&#46;</span>edu</a>.</p>
 </div>
 </div>
 <div class="section" id="regular-expressions-due-18-sept-2012">
 <h2>Regular Expressions (due 18 Sept 2012)<a class="headerlink" href="#regular-expressions-due-18-sept-2012" title="Permalink to this headline">¶</a></h2>
-<p>Download the EMP minimal mapping file <a class="reference download internal" href="../../_downloads/emp_11sept2012_minimal_mapping_file.txt.gz"><tt class="xref download docutils literal"><span class="pre">here</span></tt></a> - you&#8217;ll need to unzip that file to get started. You can read about the <a class="reference external" href="http://qiime.org/documentation/file_formats.html#metadata-mapping-files">file format here</a>.</p>
-<p>Perform the reformatting steps described below. You&#8217;ll turn in two metadata mapping files, one for the human-associated samples and one for all other samples (this splitting is one of the formatting steps described below). You&#8217;ll also turn in a <em>patterns file</em>, which will be a text file containing list of the search and replace patterns that were applied to perform the reformatting, including &#8220;comment&#8221; lines before each pair of patterns describing what the following pattern does. Comment lines <em>must</em> begin with the <tt class="docutils literal"><span class="pre">#</span></tt> symbol so they can be computationally differentiated from non-comment lines.</p>
+<p>Download the EMP minimal mapping file <a class="reference download internal" href="../../_downloads/emp_11sept2012_minimal_mapping_file.txt.gz"><code class="xref download docutils literal"><span class="pre">here</span></code></a> - you&#8217;ll need to unzip that file to get started. You can read about the <a class="reference external" href="http://qiime.org/documentation/file_formats.html#metadata-mapping-files">file format here</a>.</p>
+<p>Perform the reformatting steps described below. You&#8217;ll turn in two metadata mapping files, one for the human-associated samples and one for all other samples (this splitting is one of the formatting steps described below). You&#8217;ll also turn in a <em>patterns file</em>, which will be a text file containing list of the search and replace patterns that were applied to perform the reformatting, including &#8220;comment&#8221; lines before each pair of patterns describing what the following pattern does. Comment lines <em>must</em> begin with the <code class="docutils literal"><span class="pre">#</span></code> symbol so they can be computationally differentiated from non-comment lines.</p>
 <p>Each line in your <em>patterns file</em> should contain exactly one regular expression pattern: for each task you should have the search pattern on one line, followed by the replace pattern on the next line. These patterns must work in either TextWrangler or jEdit (I don&#8217;t care which, but your patterns must work in one of the two).</p>
 <p>The tasks you must achieve are as follows:</p>
 <ol class="arabic simple">
-<li>Replace all fields where full text is <tt class="docutils literal"><span class="pre">no_data</span></tt> with <tt class="docutils literal"><span class="pre">NA</span></tt></li>
-<li>Reorder the columns so the final output is in this order: <tt class="docutils literal"><span class="pre">SampleID</span></tt>, <tt class="docutils literal"><span class="pre">BarcodeSequence</span></tt>, <tt class="docutils literal"><span class="pre">LinkerPrimerSequence</span></tt>, <tt class="docutils literal"><span class="pre">LATITUDE</span></tt>, <tt class="docutils literal"><span class="pre">LONGITUDE</span></tt>, <tt class="docutils literal"><span class="pre">PRINCIPAL_INVESTIGATOR</span></tt>, <tt class="docutils literal"><span class="pre">COUNTRY</span></tt>, <tt class="docutils literal"><span class="pre">STUDY_ID</span></tt>, [intermediate fields: order doesn&#8217;t matter], <tt class="docutils literal"><span class="pre">Description</span></tt></li>
-<li>Append <tt class="docutils literal"><span class="pre">emp.summer2012.</span></tt> to the beginning of each line except the header line.</li>
-<li>Reformat <tt class="docutils literal"><span class="pre">RUN_DATE</span></tt> entries to contain full year (four digits rather than two)</li>
-<li>Create two new fields from <tt class="docutils literal"><span class="pre">PCR_PRIMERS</span></tt> field: <tt class="docutils literal"><span class="pre">FWD_PCR_PRIMER</span></tt> and <tt class="docutils literal"><span class="pre">REV_PCR_PRIMER</span></tt> where each field contains the primer nucleotide sequence only (ie., including only the IUPAC nucleotide characters).</li>
-<li>Remove these columns: <tt class="docutils literal"><span class="pre">EMP_PERSON</span></tt>, <tt class="docutils literal"><span class="pre">PRINCIPAL_INVESTIGATOR_CONTACT</span></tt></li>
+<li>Replace all fields where full text is <code class="docutils literal"><span class="pre">no_data</span></code> with <code class="docutils literal"><span class="pre">NA</span></code></li>
+<li>Reorder the columns so the final output is in this order: <code class="docutils literal"><span class="pre">SampleID</span></code>, <code class="docutils literal"><span class="pre">BarcodeSequence</span></code>, <code class="docutils literal"><span class="pre">LinkerPrimerSequence</span></code>, <code class="docutils literal"><span class="pre">LATITUDE</span></code>, <code class="docutils literal"><span class="pre">LONGITUDE</span></code>, <code class="docutils literal"><span class="pre">PRINCIPAL_INVESTIGATOR</span></code>, <code class="docutils literal"><span class="pre">COUNTRY</span></code>, <code class="docutils literal"><span class="pre">STUDY_ID</span></code>, [intermediate fields: order doesn&#8217;t matter], <code class="docutils literal"><span class="pre">Description</span></code></li>
+<li>Append <code class="docutils literal"><span class="pre">emp.summer2012.</span></code> to the beginning of each line except the header line.</li>
+<li>Reformat <code class="docutils literal"><span class="pre">RUN_DATE</span></code> entries to contain full year (four digits rather than two)</li>
+<li>Create two new fields from <code class="docutils literal"><span class="pre">PCR_PRIMERS</span></code> field: <code class="docutils literal"><span class="pre">FWD_PCR_PRIMER</span></code> and <code class="docutils literal"><span class="pre">REV_PCR_PRIMER</span></code> where each field contains the primer nucleotide sequence only (ie., including only the IUPAC nucleotide characters).</li>
+<li>Remove these columns: <code class="docutils literal"><span class="pre">EMP_PERSON</span></code>, <code class="docutils literal"><span class="pre">PRINCIPAL_INVESTIGATOR_CONTACT</span></code></li>
 <li>Split the full metadata file into two subfiles: one for human-associated samples, and one for all other samples.</li>
-<li><tt class="docutils literal"><span class="pre">TAXONID</span></tt> and <tt class="docutils literal"><span class="pre">PMID</span></tt> refer to NCBI database entries. What do these mean? Thinking ahead, how might you automatically extract these the information that these terms refer to? Do some research... (NOTE: nothing to turn in for this one, but I will call on people in class to share their ideas.)</li>
+<li><code class="docutils literal"><span class="pre">TAXONID</span></code> and <code class="docutils literal"><span class="pre">PMID</span></code> refer to NCBI database entries. What do these mean? Thinking ahead, how might you automatically extract these the information that these terms refer to? Do some research... (NOTE: nothing to turn in for this one, but I will call on people in class to share their ideas.)</li>
 </ol>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p>Homework id: <tt class="docutils literal"><span class="pre">regex</span></tt>; Extension: <tt class="docutils literal"><span class="pre">txt</span></tt>; For this assignment, the patterns file I turn in would be named <tt class="docutils literal"><span class="pre">jgc53_regex.txt</span></tt>. The metadata mapping files should be named <tt class="docutils literal"><span class="pre">&lt;nau_id&gt;_human_emp_11sept2012_minimal_mapping_file.txt</span></tt> and <tt class="docutils literal"><span class="pre">&lt;nau_id&gt;_other_emp_11sept2012_minimal_mapping_file.txt</span></tt> where <tt class="docutils literal"><span class="pre">&lt;nau_id&gt;</span></tt> is your NAU identifier. Mine would be <tt class="docutils literal"><span class="pre">jgc53_human_emp_11sept2012_minimal_mapping_file.txt</span></tt> and <tt class="docutils literal"><span class="pre">jgc53_other_emp_11sept2012_minimal_mapping_file.txt</span></tt>.</p>
+<p>Homework id: <code class="docutils literal"><span class="pre">regex</span></code>; Extension: <code class="docutils literal"><span class="pre">txt</span></code>; For this assignment, the patterns file I turn in would be named <code class="docutils literal"><span class="pre">jgc53_regex.txt</span></code>. The metadata mapping files should be named <code class="docutils literal"><span class="pre">&lt;nau_id&gt;_human_emp_11sept2012_minimal_mapping_file.txt</span></code> and <code class="docutils literal"><span class="pre">&lt;nau_id&gt;_other_emp_11sept2012_minimal_mapping_file.txt</span></code> where <code class="docutils literal"><span class="pre">&lt;nau_id&gt;</span></code> is your NAU identifier. Mine would be <code class="docutils literal"><span class="pre">jgc53_human_emp_11sept2012_minimal_mapping_file.txt</span></code> and <code class="docutils literal"><span class="pre">jgc53_other_emp_11sept2012_minimal_mapping_file.txt</span></code>.</p>
 <p class="last">E-mail these three files as attachments to <a class="reference external" href="mailto:alk224&#37;&#52;&#48;nau&#46;edu">alk224<span>&#64;</span>nau<span>&#46;</span>edu</a>.</p>
 </div>
 </div>
@@ -353,7 +353,7 @@ process_sff.py -i ./
 <p>Be creative - there are many ways to achieve this.</p>
 <div class="admonition important">
 <p class="first admonition-title">Important</p>
-<p class="last">Homework id: <tt class="docutils literal"><span class="pre">gc_content</span></tt>; Extension: <tt class="docutils literal"><span class="pre">pdf</span></tt>; For this first assignment, the file I turn in would be named <tt class="docutils literal"><span class="pre">jgc53_gc_content.pdf</span></tt>.</p>
+<p class="last">Homework id: <code class="docutils literal"><span class="pre">gc_content</span></code>; Extension: <code class="docutils literal"><span class="pre">pdf</span></code>; For this first assignment, the file I turn in would be named <code class="docutils literal"><span class="pre">jgc53_gc_content.pdf</span></code>.</p>
 </div>
 </div>
 <div class="section" id="text-editor-due-30-aug-2012">
@@ -364,7 +364,7 @@ process_sff.py -i ./
 
 
       </div>
-      <div class="bottomnav">
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
         <a class="uplink" href="../../index.html">Contents</a>
@@ -372,10 +372,10 @@ process_sff.py -i ./
 
       </div>
 
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2012, J Gregory Caporaso.
-      Last updated on Dec 11, 2015.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Last updated on Jan 14, 2016.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

@@ -28,12 +28,12 @@
     <link rel="next" title="Lecture 5: DNA to Protein; part 2: mRNA to Protein" href="lecture5.html" />
     <link rel="prev" title="Lecture 3: From DNA to protein (part 1): DNA to mRNA" href="lecture3.html" /> 
   </head>
-  <body>
-      <div class="header"><h1 class="heading"><a href="../../../index.html">
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Lecture 4: From DNA to protein (part1, continued), and python programming</span></h2>
       </div>
-      <div class="topnav">
+      <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
         «&#160;&#160;<a href="lecture3.html">Lecture 3: From DNA to protein (part 1): DNA to mRNA</a>
@@ -61,15 +61,15 @@
 <div class="section" id="printing-key-concepts">
 <h3>Printing: key concepts<a class="headerlink" href="#printing-key-concepts" title="Permalink to this headline">¶</a></h3>
 <ul>
-<li><p class="first">Several types of quotes can be used: <tt class="docutils literal"><span class="pre">&quot;</span></tt>, <tt class="docutils literal"><span class="pre">'</span></tt>, <tt class="docutils literal"><span class="pre">'''</span></tt>, and <tt class="docutils literal"><span class="pre">&quot;&quot;&quot;</span></tt></p>
+<li><p class="first">Several types of quotes can be used: <code class="docutils literal"><span class="pre">&quot;</span></code>, <code class="docutils literal"><span class="pre">'</span></code>, <code class="docutils literal"><span class="pre">'''</span></code>, and <code class="docutils literal"><span class="pre">&quot;&quot;&quot;</span></code></p>
 </li>
-<li><p class="first">Strings can be join with <tt class="docutils literal"><span class="pre">+</span></tt> or continued across lines by ending a line with a <tt class="docutils literal"><span class="pre">,</span></tt></p>
+<li><p class="first">Strings can be join with <code class="docutils literal"><span class="pre">+</span></code> or continued across lines by ending a line with a <code class="docutils literal"><span class="pre">,</span></code></p>
 </li>
-<li><p class="first">Several special characters in strings: tab (<tt class="docutils literal"><span class="pre">\t</span></tt>) and new line (<tt class="docutils literal"><span class="pre">\n</span></tt>)</p>
+<li><p class="first">Several special characters in strings: tab (<code class="docutils literal"><span class="pre">\t</span></code>) and new line (<code class="docutils literal"><span class="pre">\n</span></code>)</p>
 </li>
 <li><p class="first">To print a <cite>literal character</cite> you <cite>escape</cite> it with a <cite>\</cite></p>
 </li>
-<li><p class="first"><tt class="docutils literal"><span class="pre">%s</span></tt> versus <tt class="docutils literal"><span class="pre">%r</span></tt>: the former prints a string while the latter prints python&#8217;s internal representation of a string (hence the surrounding singe quotes). Try this:</p>
+<li><p class="first"><code class="docutils literal"><span class="pre">%s</span></code> versus <code class="docutils literal"><span class="pre">%r</span></code>: the former prints a string while the latter prints python&#8217;s internal representation of a string (hence the surrounding singe quotes). Try this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="s">&quot;this is a test comparing </span><span class="si">%s</span><span class="s"> to </span><span class="si">%r</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="s">&quot;hello&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -87,8 +87,8 @@
 </div>
 </div>
 <div class="section" id="exercise-13-the-sys-module-and-argv">
-<h3>Exercise 13: the <tt class="docutils literal"><span class="pre">sys</span></tt> module and <tt class="docutils literal"><span class="pre">argv</span></tt><a class="headerlink" href="#exercise-13-the-sys-module-and-argv" title="Permalink to this headline">¶</a></h3>
-<p><tt class="docutils literal"><span class="pre">argv</span></tt> allows you to take parameters from the command line. This is useful for allowing your python scripts (ie., your python <tt class="docutils literal"><span class="pre">.py</span></tt> files) to do different things with different inputs. Here&#8217;s a script that makes use of <tt class="docutils literal"><span class="pre">argv</span></tt> to reverse complement a sequence provided on the command line:</p>
+<h3>Exercise 13: the <code class="docutils literal"><span class="pre">sys</span></code> module and <code class="docutils literal"><span class="pre">argv</span></code><a class="headerlink" href="#exercise-13-the-sys-module-and-argv" title="Permalink to this headline">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">argv</span></code> allows you to take parameters from the command line. This is useful for allowing your python scripts (ie., your python <code class="docutils literal"><span class="pre">.py</span></code> files) to do different things with different inputs. Here&#8217;s a script that makes use of <code class="docutils literal"><span class="pre">argv</span></code> to reverse complement a sequence provided on the command line:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 <span class="n">script_name</span><span class="p">,</span> <span class="n">sequence</span> <span class="o">=</span> <span class="n">argv</span>
 <span class="k">print</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;G&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
@@ -97,7 +97,7 @@
 <p>For some help with the third line of that script refer back to the <a class="reference external" href="./lecture2.html">Lecture 2 outline</a>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Advanced users should check out the <tt class="docutils literal"><span class="pre">optparse</span></tt> module for interacting with command line arguments. This is what&#8217;s used in PyCogent and QIIME to create very complex command line interfaces which include things like optional and required arguments and help text for scripts.</p>
+<p class="last">Advanced users should check out the <code class="docutils literal"><span class="pre">optparse</span></code> module for interacting with command line arguments. This is what&#8217;s used in PyCogent and QIIME to create very complex command line interfaces which include things like optional and required arguments and help text for scripts.</p>
 </div>
 </div>
 <div class="section" id="exercise-13-packing-and-unpacking-variables">
@@ -120,7 +120,7 @@
 </div>
 <div class="section" id="exercise-15-files">
 <h3>Exercise 15: files<a class="headerlink" href="#exercise-15-files" title="Permalink to this headline">¶</a></h3>
-<p>On the subject of opening files, let&#8217;s look at a standard bioinformatics file type: the <tt class="docutils literal"><span class="pre">fasta</span></tt> file. You&#8217;ll run into these a lot so it&#8217;s important to understand what they look like. Here&#8217;s an example of a valid fasta file:</p>
+<p>On the subject of opening files, let&#8217;s look at a standard bioinformatics file type: the <code class="docutils literal"><span class="pre">fasta</span></code> file. You&#8217;ll run into these a lot so it&#8217;s important to understand what they look like. Here&#8217;s an example of a valid fasta file:</p>
 <div class="highlight-python"><div class="highlight"><pre>&gt;sequence1 Homo sapiens
 ACCGGAGGACCGTACGACTAGCATCACGACTACGACTACAGCATCACGACTACGACTACGACG
 ACTACGCACTACTTTTGACACTACGACACACCTAGCTCCGACTACGACGACTGACCGCGATCA
@@ -136,10 +136,10 @@ GCATCAGCACGAACAGCACC
 sequence
 </pre></div>
 </div>
-<p><tt class="docutils literal"><span class="pre">&gt;</span></tt>: indicates the beginning of a new sequence record [REQUIRED]</p>
-<p><tt class="docutils literal"><span class="pre">sequence_identifier</span></tt>: this is an identifier that is unique within this file and contains no spaces [REQUIRED]</p>
-<p><tt class="docutils literal"><span class="pre">comment</span> <span class="pre">or</span> <span class="pre">description</span></tt>: everything after the first space is considered a comment or description &#8211; this is arbitrary and optional text [OPTIONAL]</p>
-<p><tt class="docutils literal"><span class="pre">sequence</span></tt>: this is the nucleic acid or protein sequence [REQUIRED]</p>
+<p><code class="docutils literal"><span class="pre">&gt;</span></code>: indicates the beginning of a new sequence record [REQUIRED]</p>
+<p><code class="docutils literal"><span class="pre">sequence_identifier</span></code>: this is an identifier that is unique within this file and contains no spaces [REQUIRED]</p>
+<p><code class="docutils literal"><span class="pre">comment</span> <span class="pre">or</span> <span class="pre">description</span></code>: everything after the first space is considered a comment or description &#8211; this is arbitrary and optional text [OPTIONAL]</p>
+<p><code class="docutils literal"><span class="pre">sequence</span></code>: this is the nucleic acid or protein sequence [REQUIRED]</p>
 <p>Let&#8217;s integrate file writing with our reverse complement script. We&#8217;ll take a sequence, a sequence name, and an output file name as input and write the reverse complement of the sequence to file:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 <span class="n">script_name</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">sequence_name</span><span class="p">,</span> <span class="n">output_fasta_fp</span> <span class="o">=</span> <span class="n">argv</span>
@@ -154,12 +154,12 @@ sequence
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">I&#8217;m calling my output file name <tt class="docutils literal"><span class="pre">output_fasta_fp</span></tt> here. The <tt class="docutils literal"><span class="pre">fp</span></tt> is shorthand for <cite>filepath</cite>, or the location of the file on the system. By default the file gets written to the <cite>current working directory</cite> (look this term up if it&#8217;s unfamiliar) but you can also specify other places to write the file. For example, on my Apple laptop I could specify <tt class="docutils literal"><span class="pre">/Users/caporaso/Desktop/my.fasta</span></tt> to write the file to my desktop.</p>
+<p class="last">I&#8217;m calling my output file name <code class="docutils literal"><span class="pre">output_fasta_fp</span></code> here. The <code class="docutils literal"><span class="pre">fp</span></code> is shorthand for <cite>filepath</cite>, or the location of the file on the system. By default the file gets written to the <cite>current working directory</cite> (look this term up if it&#8217;s unfamiliar) but you can also specify other places to write the file. For example, on my Apple laptop I could specify <code class="docutils literal"><span class="pre">/Users/caporaso/Desktop/my.fasta</span></code> to write the file to my desktop.</p>
 </div>
 </div>
 <div class="section" id="exercises-18-to-21-functions">
 <h3>Exercises 18 to 21: Functions<a class="headerlink" href="#exercises-18-to-21-functions" title="Permalink to this headline">¶</a></h3>
-<p>Now let&#8217;s spend a little time on functions. Functions are self-contained pieces of code that (usually) take something as input and (usually) return something as output. Let&#8217;s define a <tt class="docutils literal"><span class="pre">reverse_complement</span></tt> function:</p>
+<p>Now let&#8217;s spend a little time on functions. Functions are self-contained pieces of code that (usually) take something as input and (usually) return something as output. Let&#8217;s define a <code class="docutils literal"><span class="pre">reverse_complement</span></code> function:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">reverse_complement</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;G&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
@@ -177,12 +177,12 @@ sequence
 <div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">reverse_complement</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>This is because <tt class="docutils literal"><span class="pre">reverse_complement</span></tt> returns a string, and <tt class="docutils literal"><span class="pre">print</span></tt> takes a string as an argument.</p>
+<p>This is because <code class="docutils literal"><span class="pre">reverse_complement</span></code> returns a string, and <code class="docutils literal"><span class="pre">print</span></code> takes a string as an argument.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last"><strong>The reverse complement function that we implemented here is incomplete and dangerous.</strong> The reason for this is that it doesn&#8217;t do anything with characters other than <tt class="docutils literal"><span class="pre">A</span></tt>, <tt class="docutils literal"><span class="pre">C</span></tt>, <tt class="docutils literal"><span class="pre">G</span></tt>, and <tt class="docutils literal"><span class="pre">T</span></tt>. Try passing a <tt class="docutils literal"><span class="pre">M</span></tt> somewhere in your sequence. What happens? The reason why this is dangerous is because <tt class="docutils literal"><span class="pre">M</span></tt> (and several other characters) are often used in nucleic acid sequences, despite not being one of the four DNA bases. These other characters are known as <cite>degenerate bases</cite>, and represent more than one possible choice of a base. For example, you may see a sequence that looks like <tt class="docutils literal"><span class="pre">GTTMATCCATCGTGCGTC</span></tt>. This means that the fourth base can either be an <tt class="docutils literal"><span class="pre">A</span></tt> or a <tt class="docutils literal"><span class="pre">C</span></tt>, so the correct reverse complement of <tt class="docutils literal"><span class="pre">M</span></tt> is actually <tt class="docutils literal"><span class="pre">K</span></tt> (the degenerate base representing <tt class="docutils literal"><span class="pre">T</span></tt> or <tt class="docutils literal"><span class="pre">G</span></tt>). Review this list of the <a class="reference external" href="http://www.bioinformatics.org/sms/iupac.html">IUPAC nucleotide bases</a>. What&#8217;s the reverse complement of <tt class="docutils literal"><span class="pre">H</span></tt>? How about <tt class="docutils literal"><span class="pre">W</span></tt>? <strong>We&#8217;ll soon implement a safer version of reverse complement.</strong></p>
+<p class="last"><strong>The reverse complement function that we implemented here is incomplete and dangerous.</strong> The reason for this is that it doesn&#8217;t do anything with characters other than <code class="docutils literal"><span class="pre">A</span></code>, <code class="docutils literal"><span class="pre">C</span></code>, <code class="docutils literal"><span class="pre">G</span></code>, and <code class="docutils literal"><span class="pre">T</span></code>. Try passing a <code class="docutils literal"><span class="pre">M</span></code> somewhere in your sequence. What happens? The reason why this is dangerous is because <code class="docutils literal"><span class="pre">M</span></code> (and several other characters) are often used in nucleic acid sequences, despite not being one of the four DNA bases. These other characters are known as <cite>degenerate bases</cite>, and represent more than one possible choice of a base. For example, you may see a sequence that looks like <code class="docutils literal"><span class="pre">GTTMATCCATCGTGCGTC</span></code>. This means that the fourth base can either be an <code class="docutils literal"><span class="pre">A</span></code> or a <code class="docutils literal"><span class="pre">C</span></code>, so the correct reverse complement of <code class="docutils literal"><span class="pre">M</span></code> is actually <code class="docutils literal"><span class="pre">K</span></code> (the degenerate base representing <code class="docutils literal"><span class="pre">T</span></code> or <code class="docutils literal"><span class="pre">G</span></code>). Review this list of the <a class="reference external" href="http://www.bioinformatics.org/sms/iupac.html">IUPAC nucleotide bases</a>. What&#8217;s the reverse complement of <code class="docutils literal"><span class="pre">H</span></code>? How about <code class="docutils literal"><span class="pre">W</span></code>? <strong>We&#8217;ll soon implement a safer version of reverse complement.</strong></p>
 </div>
-<p>We can also define a <tt class="docutils literal"><span class="pre">transcribe</span></tt> function to simulate the process of transcription. That one is pretty simple - it looks like this:</p>
+<p>We can also define a <code class="docutils literal"><span class="pre">transcribe</span></code> function to simulate the process of transcription. That one is pretty simple - it looks like this:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">transcribe</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;U&#39;</span><span class="p">)</span>
 </pre></div>
@@ -198,7 +198,7 @@ sequence
 
 
       </div>
-      <div class="bottomnav">
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
         «&#160;&#160;<a href="lecture3.html">Lecture 3: From DNA to protein (part 1): DNA to mRNA</a>
@@ -210,10 +210,10 @@ sequence
 
       </div>
 
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2012, J Gregory Caporaso.
-      Last updated on Dec 11, 2015.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Last updated on Jan 14, 2016.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

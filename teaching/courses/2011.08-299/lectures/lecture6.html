@@ -28,12 +28,12 @@
     <link rel="next" title="Lecture 7: Molecular evolution and introduction to sequence searching and phylogenetic inference" href="lecture7.html" />
     <link rel="prev" title="Lecture 5: DNA to Protein; part 2: mRNA to Protein" href="lecture5.html" /> 
   </head>
-  <body>
-      <div class="header"><h1 class="heading"><a href="../../../index.html">
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Lecture 6: Molecular evolution</span></h2>
       </div>
-      <div class="topnav">
+      <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
         «&#160;&#160;<a href="lecture5.html">Lecture 5: DNA to Protein; part 2: mRNA to Protein</a>
@@ -57,20 +57,20 @@
 <h2>Coding: loops and lists<a class="headerlink" href="#coding-loops-and-lists" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="importing-functions-from-other-files">
 <h3>Importing functions from other files<a class="headerlink" href="#importing-functions-from-other-files" title="Permalink to this headline">¶</a></h3>
-<p>A useful topic to briefly cover here is how to import functions, objects, etc. from other python files. To do that you can use the <tt class="docutils literal"><span class="pre">import</span></tt> statement. Today we&#8217;re going to look at this to import from the <tt class="docutils literal"><span class="pre">random</span></tt> module and the <tt class="docutils literal"><span class="pre">__future__</span></tt> module, and model the idea of genetic drift.</p>
+<p>A useful topic to briefly cover here is how to import functions, objects, etc. from other python files. To do that you can use the <code class="docutils literal"><span class="pre">import</span></code> statement. Today we&#8217;re going to look at this to import from the <code class="docutils literal"><span class="pre">random</span></code> module and the <code class="docutils literal"><span class="pre">__future__</span></code> module, and model the idea of genetic drift.</p>
 <p>Start a python terminal and enter the following line:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span>
 </pre></div>
 </div>
-<p>This performs floating point division when starting with integers, so <tt class="docutils literal"><span class="pre">1/2</span></tt> will equal <tt class="docutils literal"><span class="pre">0.5</span></tt> (a floating point value) rather than <tt class="docutils literal"><span class="pre">0</span></tt> (an integer value).</p>
+<p>This performs floating point division when starting with integers, so <code class="docutils literal"><span class="pre">1/2</span></code> will equal <code class="docutils literal"><span class="pre">0.5</span></code> (a floating point value) rather than <code class="docutils literal"><span class="pre">0</span></code> (an integer value).</p>
 <div class="admonition warning">
 <p class="first admonition-title">Warning</p>
-<p class="last">It&#8217;s a good idea to <cite>always</cite> add <tt class="docutils literal"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">division</span></tt> to the top of your python scripts. Python 3 will include <cite>true division</cite>, but until then not adding this import statement can lead to bugs. Note that in python&#8217;s default division <em>values are truncated, not rounded</em> so, for example, <tt class="docutils literal"><span class="pre">11/4</span> <span class="pre">==</span> <span class="pre">2</span></tt>, not <tt class="docutils literal"><span class="pre">3</span></tt> as you would expect if python were rounding.</p>
+<p class="last">It&#8217;s a good idea to <cite>always</cite> add <code class="docutils literal"><span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">division</span></code> to the top of your python scripts. Python 3 will include <cite>true division</cite>, but until then not adding this import statement can lead to bugs. Note that in python&#8217;s default division <em>values are truncated, not rounded</em> so, for example, <code class="docutils literal"><span class="pre">11/4</span> <span class="pre">==</span> <span class="pre">2</span></code>, not <code class="docutils literal"><span class="pre">3</span></code> as you would expect if python were rounding.</p>
 </div>
 </div>
 <div class="section" id="genetic-drift-programming-example">
 <h3>Genetic drift programming example<a class="headerlink" href="#genetic-drift-programming-example" title="Permalink to this headline">¶</a></h3>
-<p>This example illustrates the concept of genetic drift in a population of genotypes. Imagine we start with four genotypes, <tt class="docutils literal"><span class="pre">A</span></tt>, <tt class="docutils literal"><span class="pre">B</span></tt>, <tt class="docutils literal"><span class="pre">C</span></tt>, and <tt class="docutils literal"><span class="pre">D</span></tt> and 10,000 individuals. First, let&#8217;s define a starting population with the following genotype frequencies:</p>
+<p>This example illustrates the concept of genetic drift in a population of genotypes. Imagine we start with four genotypes, <code class="docutils literal"><span class="pre">A</span></code>, <code class="docutils literal"><span class="pre">B</span></code>, <code class="docutils literal"><span class="pre">C</span></code>, and <code class="docutils literal"><span class="pre">D</span></code> and 10,000 individuals. First, let&#8217;s define a starting population with the following genotype frequencies:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">genotype_frequencies</span> <span class="o">=</span> <span class="p">[</span><span class="s">&#39;A&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">5000</span> <span class="o">+</span> <span class="p">[</span><span class="s">&#39;B&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">2500</span> <span class="o">+</span> <span class="p">[</span><span class="s">&#39;C&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1250</span> <span class="o">+</span> <span class="p">[</span><span class="s">&#39;D&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1250</span>
 </pre></div>
 </div>
@@ -95,13 +95,13 @@ C: 0.1250
 D: 0.1250
 </pre></div>
 </div>
-<p>Next we&#8217;re going to import the <tt class="docutils literal"><span class="pre">sample</span></tt> function from the <tt class="docutils literal"><span class="pre">random</span></tt> module. Given a list (<tt class="docutils literal"><span class="pre">population</span></tt>) and a number of elements (<tt class="docutils literal"><span class="pre">k</span></tt>) to select, <tt class="docutils literal"><span class="pre">sample</span></tt> randomly samples (without replacement) <tt class="docutils literal"><span class="pre">k</span></tt> elements from the list and returns those as a new list. So, if we sample the full population and summarize the genotype composition, we should get the same result &#8211; let&#8217;s test it out:</p>
+<p>Next we&#8217;re going to import the <code class="docutils literal"><span class="pre">sample</span></code> function from the <code class="docutils literal"><span class="pre">random</span></code> module. Given a list (<code class="docutils literal"><span class="pre">population</span></code>) and a number of elements (<code class="docutils literal"><span class="pre">k</span></code>) to select, <code class="docutils literal"><span class="pre">sample</span></code> randomly samples (without replacement) <code class="docutils literal"><span class="pre">k</span></code> elements from the list and returns those as a new list. So, if we sample the full population and summarize the genotype composition, we should get the same result &#8211; let&#8217;s test it out:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">sample</span>
 <span class="n">new_genotype_frequencies</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">genotype_frequencies</span><span class="p">,</span><span class="mi">10000</span><span class="p">)</span>
 <span class="n">summarize_composition</span><span class="p">(</span><span class="n">new_genotype_frequencies</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Now, let&#8217;s simulate genetic drift. Imagine we have a population of organisms with the genotype frequencies represented in our <tt class="docutils literal"><span class="pre">genotype_frequencies</span></tt> list. Regardless of which of these genotypes confers the most selective advantage a random removal of a large component from the population has the ability to affect the resulting genotypic composition.</p>
+<p>Now, let&#8217;s simulate genetic drift. Imagine we have a population of organisms with the genotype frequencies represented in our <code class="docutils literal"><span class="pre">genotype_frequencies</span></code> list. Regardless of which of these genotypes confers the most selective advantage a random removal of a large component from the population has the ability to affect the resulting genotypic composition.</p>
 <p>Simulate an event that randomly kills off 10% of the total population, and look at the resulting genotype composition:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">new_genotype_frequencies</span> <span class="o">=</span> <span class="n">sample</span><span class="p">(</span><span class="n">genotype_frequencies</span><span class="p">,</span><span class="mi">9000</span><span class="p">)</span>
 <span class="n">summarize_composition</span><span class="p">(</span><span class="n">new_genotype_frequencies</span><span class="p">)</span>
@@ -111,7 +111,7 @@ D: 0.1250
 </div>
 <div class="section" id="working-with-loops-the-for-loop">
 <h3>Working with loops: the for loop<a class="headerlink" href="#working-with-loops-the-for-loop" title="Permalink to this headline">¶</a></h3>
-<p>In the next set of assignments you&#8217;ll be introduced to loops. These allow you to perform an operation many times using a slightly different input each time. To continue our sequencing processing script, let&#8217;s add a few new features that make use of a <tt class="docutils literal"><span class="pre">for</span></tt> loop.  We&#8217;ll add a feature to our sequence processing script that allows a user to pass several sequences on the command line:</p>
+<p>In the next set of assignments you&#8217;ll be introduced to loops. These allow you to perform an operation many times using a slightly different input each time. To continue our sequencing processing script, let&#8217;s add a few new features that make use of a <code class="docutils literal"><span class="pre">for</span></code> loop.  We&#8217;ll add a feature to our sequence processing script that allows a user to pass several sequences on the command line:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
 <span class="n">script_name</span><span class="p">,</span> <span class="n">sequences</span> <span class="o">=</span> <span class="n">argv</span>
 
@@ -132,7 +132,7 @@ D: 0.1250
 
 
       </div>
-      <div class="bottomnav">
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
         «&#160;&#160;<a href="lecture5.html">Lecture 5: DNA to Protein; part 2: mRNA to Protein</a>
@@ -144,10 +144,10 @@ D: 0.1250
 
       </div>
 
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2012, J Gregory Caporaso.
-      Last updated on Dec 11, 2015.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Last updated on Jan 14, 2016.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>

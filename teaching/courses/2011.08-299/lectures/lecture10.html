@@ -28,12 +28,12 @@
     <link rel="next" title="Lecture 11: Alignments and phylogenetic trees" href="lecture11.html" />
     <link rel="prev" title="Lecture 9: Sequence alignment algorithms" href="lecture9.html" /> 
   </head>
-  <body>
-      <div class="header"><h1 class="heading"><a href="../../../index.html">
+  <body role="document">
+      <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Lecture 10: Sequence alignment algorithms (continued)</span></h2>
       </div>
-      <div class="topnav">
+      <div class="topnav" role="navigation" aria-label="top navigation">
       
         <p>
         «&#160;&#160;<a href="lecture9.html">Lecture 9: Sequence alignment algorithms</a>
@@ -68,12 +68,12 @@
 </div>
 <div class="section" id="dictionaries">
 <h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
-<p>A key concept is introduced in LPTHW exercise 40: the dictionary or <tt class="docutils literal"><span class="pre">dict</span></tt>. These allow for efficient look-ups of <cite>values</cite> associated with a <cite>key</cite>, and are used constantly in python.</p>
+<p>A key concept is introduced in LPTHW exercise 40: the dictionary or <code class="docutils literal"><span class="pre">dict</span></code>. These allow for efficient look-ups of <cite>values</cite> associated with a <cite>key</cite>, and are used constantly in python.</p>
 <p>Some of the key features associated with dictionaries include creating dictionaries, setting and resetting the values for certain keys, and looking up the values of certain keys. Dictionaries are created as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="n">base_comps</span> <span class="o">=</span> <span class="p">{</span><span class="s">&#39;A&#39;</span><span class="p">:</span><span class="s">&#39;T&#39;</span><span class="p">,</span> <span class="s">&#39;G&#39;</span><span class="p">:</span><span class="s">&#39;C&#39;</span><span class="p">,</span> <span class="s">&#39;T&#39;</span><span class="p">:</span><span class="s">&#39;A&#39;</span><span class="p">,</span> <span class="s">&#39;C&#39;</span><span class="p">:</span><span class="s">&#39;G&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>This <tt class="docutils literal"><span class="pre">dict</span></tt> would be said to <cite>map</cite> each of the four DNA bases to its complement. You can do <cite>lookups</cite> on this dictionary as follows:</p>
+<p>This <code class="docutils literal"><span class="pre">dict</span></code> would be said to <cite>map</cite> each of the four DNA bases to its complement. You can do <cite>lookups</cite> on this dictionary as follows:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">base_comps</span><span class="p">[</span><span class="s">&#39;A&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
@@ -86,13 +86,13 @@
 <span class="k">del</span> <span class="n">base_comps</span><span class="p">[</span><span class="s">&#39;T&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>You can also check whether a key is contained in a dictionary using <tt class="docutils literal"><span class="pre">in</span></tt>. For example, try these:</p>
+<p>You can also check whether a key is contained in a dictionary using <code class="docutils literal"><span class="pre">in</span></code>. For example, try these:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="s">&#39;A&#39;</span> <span class="ow">in</span> <span class="n">base_comps</span>
 
 <span class="s">&#39;W&#39;</span> <span class="ow">in</span> <span class="n">base_comps</span>
 </pre></div>
 </div>
-<p>You&#8217;ll notice that if you access an entry that is not in a dictionary you&#8217;ll get a <tt class="docutils literal"><span class="pre">KeyError</span></tt>. The error messages that you get when a <tt class="docutils literal"><span class="pre">KeyError</span></tt> is <cite>thrown</cite> may not always be very intuitive so adding a little additional error handling is a good idea. One way to do this is with an if/else statement, where you check for the presence of a key in a dictionary:</p>
+<p>You&#8217;ll notice that if you access an entry that is not in a dictionary you&#8217;ll get a <code class="docutils literal"><span class="pre">KeyError</span></code>. The error messages that you get when a <code class="docutils literal"><span class="pre">KeyError</span></code> is <cite>thrown</cite> may not always be very intuitive so adding a little additional error handling is a good idea. One way to do this is with an if/else statement, where you check for the presence of a key in a dictionary:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">base_comps</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">base_comps</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
@@ -100,7 +100,7 @@
     <span class="nb">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>More commonly, expert python users will <cite>catch</cite> and handle the error if it happens using a <tt class="docutils literal"><span class="pre">try/except</span></tt>. The following is a very common python idiom, so I want to introduce it in case you run into it in other code. Don&#8217;t worry about integrating into your code too much for now - wait until you learn a little about <tt class="docutils literal"><span class="pre">Exceptions</span></tt> in python:</p>
+<p>More commonly, expert python users will <cite>catch</cite> and handle the error if it happens using a <code class="docutils literal"><span class="pre">try/except</span></code>. The following is a very common python idiom, so I want to introduce it in case you run into it in other code. Don&#8217;t worry about integrating into your code too much for now - wait until you learn a little about <code class="docutils literal"><span class="pre">Exceptions</span></code> in python:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">try</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">base_comps</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
@@ -198,7 +198,7 @@
     <span class="n">match_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_row</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can now print out <tt class="docutils literal"><span class="pre">match_matrix</span></tt>. You can do that in a simply way with the following code:</p>
+<p>You can now print out <code class="docutils literal"><span class="pre">match_matrix</span></code>. You can do that in a simply way with the following code:</p>
 <div class="highlight-python"><div class="highlight"><pre><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">match_matrix</span><span class="p">:</span>
     <span class="k">print</span> <span class="n">row</span>
 </pre></div>
@@ -219,13 +219,13 @@
     <span class="k">print</span> <span class="n">line_format</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">base</span><span class="p">]</span> <span class="o">+</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="n">row</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>The formatting sting <tt class="docutils literal"><span class="pre">%6s</span></tt> prints a string using exactly six characters (padded with spaces), so that allows us to nicely align the columns.</p>
+<p>The formatting sting <code class="docutils literal"><span class="pre">%6s</span></code> prints a string using exactly six characters (padded with spaces), so that allows us to nicely align the columns.</p>
 </div>
 </div>
 
 
       </div>
-      <div class="bottomnav">
+      <div class="bottomnav" role="navigation" aria-label="bottom navigation">
       
         <p>
         «&#160;&#160;<a href="lecture9.html">Lecture 9: Sequence alignment algorithms</a>
@@ -237,10 +237,10 @@
 
       </div>
 
-    <div class="footer">
+    <div class="footer" role="contentinfo">
         &copy; Copyright 2012, J Gregory Caporaso.
-      Last updated on Dec 11, 2015.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.2.2.
+      Last updated on Jan 14, 2016.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
     </div>
   </body>
 </html>
