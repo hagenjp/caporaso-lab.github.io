@@ -64,6 +64,12 @@
       - genetics
       - epidemiology
 
+- name: Jorden Kreps
+  title: Student Research Software Engineer
+  pic: jorden.png
+  twitter: JordenKreps
+  github: jakereps
+
 - name: William Mercurio
   title: Student Research Scientist
   github: wmercurio
