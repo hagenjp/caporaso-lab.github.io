@@ -41,7 +41,7 @@ color: green
                 </div>
             </div>
         {% if project.pic %}
-            <img class="project__image" src="{{project.pic}}" />
+            <img class="project__image" src="/assets/projects/{{ project.pic }}" />
         {% else %}
             <div class="project__image">
                 <a class='fa {{section.default-icon}}'></a>

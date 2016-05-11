@@ -18,6 +18,7 @@
         github: biocore/scikit-bio
         twitter: scikitbio
         site: http://scikit-bio.org
+        pic: skbio.png
 
       - name: QIIME
         summary: >
@@ -28,6 +29,7 @@
         github: biocore/qiime
         site: http://qiime.org
         paper: http://www.ncbi.nlm.nih.gov/pubmed/20383131
+        pic: qiime.png
 
       - name: Keemei
         summary: >
@@ -35,6 +37,7 @@
             bioinformatics metadata, including QIIME mapping files.
         github: biocore/Keemei
         site: http://keemei.qiime.org
+        pic: keemei.png
 
       - name: cual-id
         summary: >
@@ -42,7 +45,7 @@
             creating and managing unique, correctable sample identifiers and
             barcodes for use in any project containing multiple samples.
         github: johnchase/cual-id
-        paper: https://peerj.com/preprints/1431/
+        paper: http://msystems.asm.org/content/1/1/e00010-15
 
 - name: Representative microbiome projects
   default-icon: fa-flask
@@ -92,6 +95,7 @@
             concepts of bioinformatics in the context of their implementation
             and application.
         site: http://readiab.org
+        pic: iab.png
 
       - name: Northern Arizona University
         summary: >
@@ -100,6 +104,7 @@
             as well as information on current, past and future bioinformatics
             course offerings at NAU.
         site: /teaching
+        pic: nau.png
 
       - name: QIIME workshops
         summary: >
@@ -107,3 +112,4 @@
             around the world. These are hands-on, and work best when they're
             designed to be 2-3 days for approximately 30 students.
         site: https://github.com/biocore/qiime/wiki/Official-QIIME-workshops
+        pic: qiime.png
