@@ -15,7 +15,7 @@
 #       - Thing 3
 
 - name: Greg Caporaso
-  title: Assistant Professor
+  title: Associate Professor
   pic: greg.png
   cv: https://docs.google.com/document/d/18TA9AzwRloj4RFNwxgVyxYeQEiJGuWNwCDSJhdoParQ/pub
   twitter: gregcaporaso
@@ -26,7 +26,7 @@
       - education
 
 - name: Evan Bolyen
-  title: Student Research Software Engineer
+  title: Research Software Engineer
   pic: evan.png
   twitter: ebolyen
   github: ebolyen
