@@ -1,0 +1,35 @@
+# # required:
+# - name: Your Name
+#   title: Former Position
+# # optional, but recommended:
+# # picture should be 200x200px
+# # put it in /assets/team/your-name.png
+#   pic: yourface.png
+#   twitter: yourtwitter
+#   github: yourgithub
+#   site: http://example.com
+#   cv: http://example.com/my-cv.pdf
+#   currently:
+#       place: New Example Lab
+#       url: example.com
+
+- name: Katy Califf
+  pic: katy.png
+  title: Postdoctoral Scholar
+  twitter: kjcaliff
+  github:  kcaliff
+
+- name: John Chase
+  pic: john.png
+  title: Biological Data Scientist
+  twitter: ChaseJc33
+  github: johnchase
+  currently:
+      url: http://biota.com
+      place: Biota Technology
+
+- name: Karen Schwarzberg Lipson
+  title: Postdoctoral Scholar
+  pic: schwarzberg.png
+  twitter: SnurpsNotSmurfs
+  github: kschwarzberg
