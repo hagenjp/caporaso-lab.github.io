@@ -35,6 +35,16 @@
       - API design
       - PL design
 
+- name: Matthew Dillon
+  title: Research Software Engineer
+  pic: dillon.jpg
+  github: thermokarst
+  twitter: matthewrdillon
+  interests:
+      - web applications
+      - database design
+      - ux/ui
+
 - name: Kestrel Gorlick
   title: Student Research Software Engineer
   pic: kestrel-gorlick.png
