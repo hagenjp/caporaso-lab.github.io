@@ -94,7 +94,9 @@
             team will study the link between changes in physical activity and
             the gut microbiome and will provide initial data for investigation
             into the possible causes of change to the healthy human gut
-            microbiome over time. 
+            microbiome over time.
+        pic: EXMPlogo.png
+
 
 - name: Bioinformatics education
   default-icon: fa-pencil-square-o
