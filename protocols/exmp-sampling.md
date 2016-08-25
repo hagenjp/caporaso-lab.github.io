@@ -7,10 +7,9 @@ color: "#593001"        #poop brown
 
 #                   EXMP Fecal Sampling Instructions
 
+*This protocol, including much of the text and all photos, was initially created by [The American Gut Project](http://americangut.org).*
 
 Please read through all of these instructions *BEFORE* you begin collecting a fecal sample.
-
-Trillions of harmless or beneficial microorganisms (tiny living things such as bacteria) live on and within our bodies. During and after birth, our bodies begin to accumulate this diverse community of microorganisms. The composition of this community differs between people and the scientific community is still exploring why this is. There is evidence that our microbial communities are influenced by our parents, our physical environment, what we eat and potentially even our genes. Our resident microbes occupy many body habitats, including the skin and mucosal surfaces, and the gastrointestinal tract.
 
 As part of this study, you will be asked to donate fecal samples of your microorganisms that will be collected on sterile cotton tipped swabs (i.e., “Q­tips”).  You will perform the sampling. Ziploc bags containing swabs will be distributed at the initial meeting (2 kits) and after that weekly from the drop off location.
 
@@ -35,11 +34,11 @@ You will be provided kits to collect fecal swab samples, these should be collect
   5.	Return the swab to the Ziploc bag.
   6.	Be sure to wash your hands with soap and water after sampling to avoid contamination.  
   7. Submit your sample ID via the Per Sample Event Questionnaire.
-  8. Take to the drop off point at the ARD building (room 220) at NAU within 48 hours of sampling.
-  *	If you are not able to reach a drop off location within 48 hours, store the samples in a cool (approximately room temperature) dry place out of the reach of children and indicate that it has been more than 48 hours since collection on the sample bag.
+  8. Take your sample to the drop off point at the NAU ARD building (room 220) between the hours of 8AM-5PM. This needs to be done within 48 hours of sampling. For the ease of the participant, during the exercise intervention, samples can be dropped off at the exercise class.
+  *	If you are not able to reach a drop off location within 48 hours, store the samples in a cool  dry place (approximately room temperature) out of the reach of children and indicate that it has been more than 48 hours since collection on the sample bag.
   *	Note: these samples are unlikely to be useable and hence it will not count toward your sample count. This will affect your eligibility for compensation if this occurs more than twice.
 
-Please see Appendix A and the video link <https://vimeo.com/62393487> for additional information on how much sample to collect and proper care of the swabs. Appendix A and the video were obtained from the American Gut Project. <https://microbio.me/AmericanGut>
+Please see Appendix A and the video link <https://vimeo.com/62393487> for additional information on how much sample to collect and proper care of the swabs. *Appendix A and the video were obtained from the American Gut Project. <https://microbio.me/AmericanGut>*
 
 <iframe src="https://player.vimeo.com/video/62393487" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 <p><a href="https://vimeo.com/62393487">American Gut - Handling Your SWABS</a> from <a href="https://vimeo.com/user16100300">shelley schlender</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
