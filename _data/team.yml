@@ -45,24 +45,11 @@
       - database design
       - ux/ui
 
-- name: Kestrel Gorlick
-  title: Student Research Software Engineer
-  pic: kestrel-gorlick.png
-  github: kleptobismol
-  interests:
-      - software development
-      - genetics
-      - epidemiology
-
 - name: Jorden Kreps
   title: Student Research Software Engineer
   pic: jorden.png
   twitter: JordenKreps
   github: jakereps
-
-- name: William Mercurio
-  title: Student Research Scientist
-  github: wmercurio
 
 - name: Anders Pitman
   title: Student Bioinformatics Software Engineer

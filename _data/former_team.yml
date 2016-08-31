@@ -33,3 +33,16 @@
   pic: schwarzberg.png
   twitter: SnurpsNotSmurfs
   github: kschwarzberg
+
+- name: Kestrel Gorlick
+  title: Student Research Software Engineer
+  pic: kestrel-gorlick.png
+  github: kleptobismol
+  currently:
+      place: University of Arizona, Department of Computer Science (Bachelor's student)
+
+- name: William Mercurio
+  title: Student Research Scientist
+  github: wmercurio
+  currently:
+      place: University of Colorado at Boulder, Department of Molecular, Cellular and Developmental Biology (PhD student)
