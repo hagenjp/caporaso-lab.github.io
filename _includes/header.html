@@ -1,6 +1,10 @@
 <header class="header">
     <div class="navigation">
         <a href="/" class="logo">{{ site.title }}</a>
+        <span>
+            <a href="http://www.mggen.nau.edu/">Pathogen and Microbiome Institute</a>,
+            <a href="http://www.nau.edu/">Northern Arizona University</a>
+        </span>
 
         <ul class="menu">{% for title in site.data.navigation %}{% for p in site.pages %}{% if p.title == title %}{% assign current = nil %}{% if p.title == page.title %}{% assign current = 'current' %}{% endif %}
             <li class="menu__entry {{current}}"><a href="{{ p.permalink | prepend: site.baseurl }}" style="border-color: {{p.color}}">{{p.title}}</a></li>{% endif %}{% endfor %}{% endfor %}
