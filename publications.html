@@ -5,26 +5,4 @@ subtitle: Publications via <a target="_blank" href="http://www.ncbi.nlm.nih.gov/
 permalink: /publications/
 color: orange
 ---
-<script src="/assets/js/pubmed.js"></script>
-<div id="publications">Loading</div>
 
-<script>
-    (function() {
-        var loading = true;
-
-        function dots() {
-            if(loading) {
-                document.getElementById('publications').innerHTML += '.';
-                setTimeout(dots, 100)
-            }
-        }
-        dots();
-
-        pubmed.createList("Caporaso%20JG[Author]")
-            .setMax(150)
-            .onComplete(function(){
-                loading = false;
-            })
-            .bind("publications");
-    })()
-</script>
