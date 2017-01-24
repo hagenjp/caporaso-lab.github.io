@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Lecture 4: From DNA to protein (part1, continued), and python programming &mdash; bioinformatics@nau</title>
+    <title>Lecture 4: From DNA to protein (part1, continued), and python programming &#8212; bioinformatics@nau</title>
     
     <link rel="stylesheet" href="../../../static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../../static/pygments.css" type="text/css" />
@@ -17,14 +17,14 @@
         VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../../static/jquery.js"></script>
     <script type="text/javascript" src="../../../static/underscore.js"></script>
     <script type="text/javascript" src="../../../static/doctools.js"></script>
-    <link rel="top" title="bioinformatics@nau" href="../../../index.html" />
-    <link rel="up" title="Lecture outlines" href="index.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Lecture 5: DNA to Protein; part 2: mRNA to Protein" href="lecture5.html" />
     <link rel="prev" title="Lecture 3: From DNA to protein (part 1): DNA to mRNA" href="lecture3.html" /> 
   </head>
@@ -70,7 +70,7 @@
 <li><p class="first">To print a <cite>literal character</cite> you <cite>escape</cite> it with a <cite>\</cite></p>
 </li>
 <li><p class="first"><code class="docutils literal"><span class="pre">%s</span></code> versus <code class="docutils literal"><span class="pre">%r</span></code>: the former prints a string while the latter prints python&#8217;s internal representation of a string (hence the surrounding singe quotes). Try this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="s">&quot;this is a test comparing </span><span class="si">%s</span><span class="s"> to </span><span class="si">%r</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s">&quot;hello&quot;</span><span class="p">,</span><span class="s">&quot;hello&quot;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s2">&quot;this is a test comparing </span><span class="si">%s</span><span class="s2"> to </span><span class="si">%r</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="s2">&quot;hello&quot;</span><span class="p">,</span><span class="s2">&quot;hello&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -79,19 +79,19 @@
 <div class="section" id="variables">
 <h3>Variables<a class="headerlink" href="#variables" title="Permalink to this headline">¶</a></h3>
 <p>Variables: a name associated with some value (a number, a string, a list...) for the purposes of storage and reference. These can generally be changed as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
-<span class="k">print</span> <span class="n">a</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<span class="nb">print</span> <span class="n">a</span>
 <span class="n">a</span> <span class="o">=</span> <span class="mi">43</span>
-<span class="k">print</span> <span class="n">a</span>
+<span class="nb">print</span> <span class="n">a</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="exercise-13-the-sys-module-and-argv">
 <h3>Exercise 13: the <code class="docutils literal"><span class="pre">sys</span></code> module and <code class="docutils literal"><span class="pre">argv</span></code><a class="headerlink" href="#exercise-13-the-sys-module-and-argv" title="Permalink to this headline">¶</a></h3>
 <p><code class="docutils literal"><span class="pre">argv</span></code> allows you to take parameters from the command line. This is useful for allowing your python scripts (ie., your python <code class="docutils literal"><span class="pre">.py</span></code> files) to do different things with different inputs. Here&#8217;s a script that makes use of <code class="docutils literal"><span class="pre">argv</span></code> to reverse complement a sequence provided on the command line:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">argv</span>
 <span class="n">script_name</span><span class="p">,</span> <span class="n">sequence</span> <span class="o">=</span> <span class="n">argv</span>
-<span class="k">print</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;G&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>For some help with the third line of that script refer back to the <a class="reference external" href="./lecture2.html">Lecture 2 outline</a>.</p>
@@ -103,37 +103,37 @@
 <div class="section" id="exercise-13-packing-and-unpacking-variables">
 <h3>Exercise 13: Packing and unpacking variables<a class="headerlink" href="#exercise-13-packing-and-unpacking-variables" title="Permalink to this headline">¶</a></h3>
 <p>Exercise 13 also shows how to set multiple variables in one step. This is purely used for convenience and clarity of code. The following code block do the exact same thing:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">46</span>
-<span class="k">print</span> <span class="n">a</span>
-<span class="k">print</span> <span class="n">b</span>
-<span class="k">print</span> <span class="n">c</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="mi">42</span><span class="p">,</span> <span class="mi">44</span><span class="p">,</span> <span class="mi">46</span>
+<span class="nb">print</span> <span class="n">a</span>
+<span class="nb">print</span> <span class="n">b</span>
+<span class="nb">print</span> <span class="n">c</span>
 </pre></div>
 </div>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">42</span>
 <span class="n">b</span> <span class="o">=</span> <span class="mi">44</span>
 <span class="n">c</span> <span class="o">=</span> <span class="mi">46</span>
-<span class="k">print</span> <span class="n">a</span>
-<span class="k">print</span> <span class="n">b</span>
-<span class="k">print</span> <span class="n">c</span>
+<span class="nb">print</span> <span class="n">a</span>
+<span class="nb">print</span> <span class="n">b</span>
+<span class="nb">print</span> <span class="n">c</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="exercise-15-files">
 <h3>Exercise 15: files<a class="headerlink" href="#exercise-15-files" title="Permalink to this headline">¶</a></h3>
 <p>On the subject of opening files, let&#8217;s look at a standard bioinformatics file type: the <code class="docutils literal"><span class="pre">fasta</span></code> file. You&#8217;ll run into these a lot so it&#8217;s important to understand what they look like. Here&#8217;s an example of a valid fasta file:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;sequence1 Homo sapiens
-ACCGGAGGACCGTACGACTAGCATCACGACTACGACTACAGCATCACGACTACGACTACGACG
-ACTACGCACTACTTTTGACACTACGACACACCTAGCTCCGACTACGACGACTGACCGCGATCA
-GCAGCATCAGCACGATCAGCACG
-&gt;sequence2 Pan troglodytes
-ACCGGAGGACCGTACGACTAGCATCACGACTACGACTACAGCATCACGACTACGACTACGACG
-ACTACGCACTACTTTAGACACTACGCACCTAGCTCCGACTACGACGACTGACCGCGATCAGCT
-GCATCAGCACGAACAGCACC
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">sequence1</span> <span class="n">Homo</span> <span class="n">sapiens</span>
+<span class="n">ACCGGAGGACCGTACGACTAGCATCACGACTACGACTACAGCATCACGACTACGACTACGACG</span>
+<span class="n">ACTACGCACTACTTTTGACACTACGACACACCTAGCTCCGACTACGACGACTGACCGCGATCA</span>
+<span class="n">GCAGCATCAGCACGATCAGCACG</span>
+<span class="o">&gt;</span><span class="n">sequence2</span> <span class="n">Pan</span> <span class="n">troglodytes</span>
+<span class="n">ACCGGAGGACCGTACGACTAGCATCACGACTACGACTACAGCATCACGACTACGACTACGACG</span>
+<span class="n">ACTACGCACTACTTTAGACACTACGCACCTAGCTCCGACTACGACGACTGACCGCGATCAGCT</span>
+<span class="n">GCATCAGCACGAACAGCACC</span>
 </pre></div>
 </div>
 <p>Here&#8217;s a breakdown of what the fields represent:</p>
-<div class="highlight-python"><div class="highlight"><pre>&gt;sequence_identifier comment or description
-sequence
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">&gt;</span><span class="n">sequence_identifier</span> <span class="n">comment</span> <span class="ow">or</span> <span class="n">description</span>
+<span class="n">sequence</span>
 </pre></div>
 </div>
 <p><code class="docutils literal"><span class="pre">&gt;</span></code>: indicates the beginning of a new sequence record [REQUIRED]</p>
@@ -141,14 +141,14 @@ sequence
 <p><code class="docutils literal"><span class="pre">comment</span> <span class="pre">or</span> <span class="pre">description</span></code>: everything after the first space is considered a comment or description &#8211; this is arbitrary and optional text [OPTIONAL]</p>
 <p><code class="docutils literal"><span class="pre">sequence</span></code>: this is the nucleic acid or protein sequence [REQUIRED]</p>
 <p>Let&#8217;s integrate file writing with our reverse complement script. We&#8217;ll take a sequence, a sequence name, and an output file name as input and write the reverse complement of the sequence to file:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">argv</span>
 <span class="n">script_name</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">sequence_name</span><span class="p">,</span> <span class="n">output_fasta_fp</span> <span class="o">=</span> <span class="n">argv</span>
 
-<span class="n">output_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_fasta_fp</span><span class="p">,</span><span class="s">&#39;w&#39;</span><span class="p">)</span>
-<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;&gt;</span><span class="si">%s</span><span class="s">&#39;</span> <span class="o">%</span> <span class="n">sequence_name</span><span class="p">)</span>
-<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
-<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;G&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s">&#39;</span><span class="se">\n</span><span class="s">&#39;</span><span class="p">)</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_fasta_fp</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
+<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;&gt;</span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">sequence_name</span><span class="p">)</span>
+<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">output_file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
 <span class="n">output_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -160,21 +160,21 @@ sequence
 <div class="section" id="exercises-18-to-21-functions">
 <h3>Exercises 18 to 21: Functions<a class="headerlink" href="#exercises-18-to-21-functions" title="Permalink to this headline">¶</a></h3>
 <p>Now let&#8217;s spend a little time on functions. Functions are self-contained pieces of code that (usually) take something as input and (usually) return something as output. Let&#8217;s define a <code class="docutils literal"><span class="pre">reverse_complement</span></code> function:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">reverse_complement</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;A&#39;</span><span class="p">,</span><span class="s">&#39;t&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;G&#39;</span><span class="p">,</span><span class="s">&#39;c&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;C&#39;</span><span class="p">,</span><span class="s">&#39;g&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">reverse_complement</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;t&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span><span class="s1">&#39;a&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span><span class="s1">&#39;c&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span><span class="s1">&#39;g&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">upper</span><span class="p">()[::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Now try calling this function:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">sequence</span> <span class="o">=</span> <span class="s">&quot;GTTTATCCATCGTGCGTC&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">sequence</span> <span class="o">=</span> <span class="s2">&quot;GTTTATCCATCGTGCGTC&quot;</span>
 <span class="n">rc_sequence</span> <span class="o">=</span> <span class="n">reverse_complement</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Notice that we didn&#8217;t get any information printed to the screen here. We were previously calling print on the resulting sequence, but here we&#8217;re setting a new variable with that sequence. To see the result you can do the following:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">rc_sequence</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">rc_sequence</span>
 </pre></div>
 </div>
 <p>Note that you can also call print directly on the return value of the function:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">print</span> <span class="n">reverse_complement</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">reverse_complement</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This is because <code class="docutils literal"><span class="pre">reverse_complement</span></code> returns a string, and <code class="docutils literal"><span class="pre">print</span></code> takes a string as an argument.</p>
@@ -183,12 +183,12 @@ sequence
 <p class="last"><strong>The reverse complement function that we implemented here is incomplete and dangerous.</strong> The reason for this is that it doesn&#8217;t do anything with characters other than <code class="docutils literal"><span class="pre">A</span></code>, <code class="docutils literal"><span class="pre">C</span></code>, <code class="docutils literal"><span class="pre">G</span></code>, and <code class="docutils literal"><span class="pre">T</span></code>. Try passing a <code class="docutils literal"><span class="pre">M</span></code> somewhere in your sequence. What happens? The reason why this is dangerous is because <code class="docutils literal"><span class="pre">M</span></code> (and several other characters) are often used in nucleic acid sequences, despite not being one of the four DNA bases. These other characters are known as <cite>degenerate bases</cite>, and represent more than one possible choice of a base. For example, you may see a sequence that looks like <code class="docutils literal"><span class="pre">GTTMATCCATCGTGCGTC</span></code>. This means that the fourth base can either be an <code class="docutils literal"><span class="pre">A</span></code> or a <code class="docutils literal"><span class="pre">C</span></code>, so the correct reverse complement of <code class="docutils literal"><span class="pre">M</span></code> is actually <code class="docutils literal"><span class="pre">K</span></code> (the degenerate base representing <code class="docutils literal"><span class="pre">T</span></code> or <code class="docutils literal"><span class="pre">G</span></code>). Review this list of the <a class="reference external" href="http://www.bioinformatics.org/sms/iupac.html">IUPAC nucleotide bases</a>. What&#8217;s the reverse complement of <code class="docutils literal"><span class="pre">H</span></code>? How about <code class="docutils literal"><span class="pre">W</span></code>? <strong>We&#8217;ll soon implement a safer version of reverse complement.</strong></p>
 </div>
 <p>We can also define a <code class="docutils literal"><span class="pre">transcribe</span></code> function to simulate the process of transcription. That one is pretty simple - it looks like this:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">transcribe</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
-    <span class="k">return</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">&#39;T&#39;</span><span class="p">,</span><span class="s">&#39;U&#39;</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">transcribe</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">sequence</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;T&#39;</span><span class="p">,</span><span class="s1">&#39;U&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>You can now transcribe sequences as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">transcribe</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">transcribe</span><span class="p">(</span><span class="n">sequence</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Soon we&#8217;ll build a script that can apply any of these functions to one or more input sequences in a fasta file and write the results to a new fasta file. There&#8217;s a bit more learning to do before we get there.</p>
@@ -211,9 +211,9 @@ sequence
       </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2012, J Gregory Caporaso.
-      Last updated on Jan 16, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+        &#169; Copyright 2012, J Gregory Caporaso.
+      Last updated on Jan 24, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>

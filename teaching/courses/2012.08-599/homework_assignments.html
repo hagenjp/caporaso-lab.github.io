@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Homework assignments &mdash; bioinformatics@nau</title>
+    <title>Homework assignments &#8212; bioinformatics@nau</title>
     
     <link rel="stylesheet" href="../../static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -17,13 +17,14 @@
         VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../static/jquery.js"></script>
     <script type="text/javascript" src="../../static/underscore.js"></script>
     <script type="text/javascript" src="../../static/doctools.js"></script>
-    <link rel="top" title="bioinformatics@nau" href="../../index.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
   </head>
   <body role="document">
       <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
@@ -54,8 +55,8 @@
 <div class="section" id="turning-in-your-homework-via-the-cluster">
 <h2>Turning in your homework via the cluster<a class="headerlink" href="#turning-in-your-homework-via-the-cluster" title="Permalink to this headline">¶</a></h2>
 <p>You can also turn in your programming assignments by placing them in a specific location on the cluster. If your assignment file is called <code class="docutils literal"><span class="pre">jgc53_translate.py</span></code> you could do this as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>chmod o-rwx jgc53_translate.py
-cp jgc53_translate.py /mnt/assignments/translate/
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">chmod</span> <span class="n">o</span><span class="o">-</span><span class="n">rwx</span> <span class="n">jgc53_translate</span><span class="o">.</span><span class="n">py</span>
+<span class="n">cp</span> <span class="n">jgc53_translate</span><span class="o">.</span><span class="n">py</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/</span><span class="n">assignments</span><span class="o">/</span><span class="n">translate</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Note that the directory that you&#8217;re turning your files in to will always be <code class="docutils literal"><span class="pre">/mnt/assignments/&lt;homework_id&gt;/</span></code>, where <code class="docutils literal"><span class="pre">&lt;homework_id&gt;</span></code> is replaced with the current <code class="docutils literal"><span class="pre">homework_id</span></code>. You should <code class="docutils literal"><span class="pre">cp</span></code>, not <code class="docutils literal"><span class="pre">mv</span></code>, the file so you retain a backup of it (and on that note, also remember to copy the file to your local hard drive as a backup).</p>
@@ -63,11 +64,11 @@ cp jgc53_translate.py /mnt/assignments/translate/
 <div class="section" id="accessing-the-cluster">
 <h2>Accessing the cluster<a class="headerlink" href="#accessing-the-cluster" title="Permalink to this headline">¶</a></h2>
 <p>For the remaining assignments this semester we&#8217;ll use an Amazon Cloud based cluster. You should have received a key file (<code class="docutils literal"><span class="pre">&lt;nau-id&gt;.rsa</span></code>) and ip address by email. (I won&#8217;t post the ip address here for security reasons.) Use the key file and the ip address to connect as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>ssh -i &lt;key-file&gt; &lt;nau-id&gt;@&lt;ip-address&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">i</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">-</span><span class="n">file</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">nau</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;@&lt;</span><span class="n">ip</span><span class="o">-</span><span class="n">address</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>For example, I would connect as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>ssh -i jgc53.rsa jgc53@&lt;ip-address&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">i</span> <span class="n">jgc53</span><span class="o">.</span><span class="n">rsa</span> <span class="n">jgc53</span><span class="o">@&lt;</span><span class="n">ip</span><span class="o">-</span><span class="n">address</span><span class="o">&gt;</span>
 </pre></div>
 </div>
 <p>Where <code class="docutils literal"><span class="pre">&lt;ip-address&gt;</span></code> is replaced with the IP address that was provided by email.</p>
@@ -124,24 +125,24 @@ cp jgc53_translate.py /mnt/assignments/translate/
 4. the filepath where the output pdf should be written;
 5. an optional parameter <code class="docutils literal"><span class="pre">n</span></code> which defines how many randomly chosen query results should be chosen for each of the queries. The default value for <code class="docutils literal"><span class="pre">n</span></code> should be 5.</p>
 <p>Your <code class="docutils literal"><span class="pre">obtain_sequences_and_build_tree</span></code> function must return a phylogenetic tree derived from <code class="docutils literal"><span class="pre">n</span></code> aligned representatives of each of the queries passed via parameter 1. Your function definition should look exactly like this, where you replace <code class="docutils literal"><span class="pre">#</span> <span class="pre">do</span> <span class="pre">a</span> <span class="pre">bunch</span> <span class="pre">of</span> <span class="pre">work</span></code> with your code:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="k">def</span> <span class="nf">obtain_sequences_and_build_tree</span><span class="p">(</span><span class="n">queries</span><span class="p">,</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">obtain_sequences_and_build_tree</span><span class="p">(</span><span class="n">queries</span><span class="p">,</span>
                                     <span class="n">query_labels</span><span class="p">,</span>
                                     <span class="n">output_newick_fp</span><span class="p">,</span>
                                     <span class="n">output_pdf_fp</span><span class="p">,</span>
                                     <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">):</span>
-    <span class="c"># do a bunch of work</span>
+    <span class="c1"># do a bunch of work</span>
     <span class="k">return</span> <span class="n">tree</span>
 </pre></div>
 </div>
 <p>As part of your analysis, you should filter any sequences that have one or more <code class="docutils literal"><span class="pre">N</span></code> characters in them. Each sequence label in the output tree should begin with the query label corresponding to that sequence. <code class="docutils literal"><span class="pre">tree</span></code> should be a PyCogent <code class="docutils literal"><span class="pre">PhyloNode</span></code> object (the output of <code class="docutils literal"><span class="pre">cogent.app.fasttree.build_tree_from_alignment</span></code>).</p>
 <p>In your script, you should call the function you define as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">obtain_sequences_and_build_tree</span><span class="p">(</span>
-     <span class="p">[</span><span class="s">&#39;&quot;small subunit rRNA&quot;[ti] AND archaea[orgn]&#39;</span><span class="p">,</span>
-      <span class="s">&#39;&quot;small subunit rRNA&quot;[ti] AND bacteria[orgn]&#39;</span><span class="p">,</span>
-      <span class="s">&#39;&quot;small subunit rRNA&quot;[ti] AND eukarya[orgn]&#39;</span><span class="p">],</span>
-     <span class="p">[</span><span class="s">&#39;A: &#39;</span><span class="p">,</span><span class="s">&#39;B: &#39;</span><span class="p">,</span><span class="s">&#39;E: &#39;</span><span class="p">],</span>
-     <span class="s">&quot;&lt;nau-id&gt;_tol.tre&quot;</span><span class="p">,</span>
-     <span class="s">&quot;&lt;nau-id&gt;_tol.pdf&quot;</span><span class="p">,</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">obtain_sequences_and_build_tree</span><span class="p">(</span>
+     <span class="p">[</span><span class="s1">&#39;&quot;small subunit rRNA&quot;[ti] AND archaea[orgn]&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;&quot;small subunit rRNA&quot;[ti] AND bacteria[orgn]&#39;</span><span class="p">,</span>
+      <span class="s1">&#39;&quot;small subunit rRNA&quot;[ti] AND eukarya[orgn]&#39;</span><span class="p">],</span>
+     <span class="p">[</span><span class="s1">&#39;A: &#39;</span><span class="p">,</span><span class="s1">&#39;B: &#39;</span><span class="p">,</span><span class="s1">&#39;E: &#39;</span><span class="p">],</span>
+     <span class="s2">&quot;&lt;nau-id&gt;_tol.tre&quot;</span><span class="p">,</span>
+     <span class="s2">&quot;&lt;nau-id&gt;_tol.pdf&quot;</span><span class="p">,</span>
      <span class="n">n</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -167,7 +168,7 @@ cp jgc53_translate.py /mnt/assignments/translate/
 <h2>Programming Assignment 3 (4 Dec 2012)<a class="headerlink" href="#programming-assignment-3-4-dec-2012" title="Permalink to this headline">¶</a></h2>
 <p>You will write a program that extracts latitude and longitude information from a <a class="reference external" href="http://qiime.org/documentation/file_formats.html#metadata-mapping-files">QIIME-compatible mapping file</a>, and writes that to a <a class="reference external" href="https://developers.google.com/kml/documentation/kml_tut">Keyhole Markup Language (kml) file</a>, which can be opened in <a class="reference external" href="http://www.google.com/earth/index.html">Google Earth</a>. To achieve this you&#8217;ll need to understand the QIIME mapping file format so you can parse it, the <code class="docutils literal"><span class="pre">kml</span></code> file format so you can write it, and the basics of file reading and writing in python so you can read the mapping file, process the input, and write the kml file.</p>
 <p>Your script should take two command line arguments: the input mapping file, and the name of the output file to write. For example, I would call my script as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>jgc53_coordinates.py glen_canyon_map.tsv jgc53_coordinates.kml
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">jgc53_coordinates</span><span class="o">.</span><span class="n">py</span> <span class="n">glen_canyon_map</span><span class="o">.</span><span class="n">tsv</span> <span class="n">jgc53_coordinates</span><span class="o">.</span><span class="n">kml</span>
 </pre></div>
 </div>
 <p>You can obtain the mapping file from <a class="reference external" href="https://docs.google.com/spreadsheet/ccc?key=0AvglGXLayhG7dDNCWnUwSHhWNmxKODZISWx6VzBqU0E">here</a> (choose &#8216;File &gt; Download as &gt; Plain text&#8217; to save as tab-separated text). You can see an example of what the output file should look like <a class="reference external" href="https://gist.github.com/4121975">here</a>.</p>
@@ -193,25 +194,25 @@ cp jgc53_translate.py /mnt/assignments/translate/
 <p class="last">Homework id: <code class="docutils literal"><span class="pre">translate</span></code>; Extension: <code class="docutils literal"><span class="pre">py</span></code>; For this assignment, the file I turn in would be named <code class="docutils literal"><span class="pre">jgc53_translate.py</span></code>.</p>
 </div>
 <p>To get every third base, you can build a for loop that looks like the following. Use a variation on this to identify each codon:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="n">s</span> <span class="o">=</span> <span class="s">&quot;ACCTTTAGGACCCGG&quot;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s2">&quot;ACCTTTAGGACCCGG&quot;</span>
 <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span><span class="mi">3</span><span class="p">):</span>
-        <span class="k">print</span> <span class="n">s</span><span class="p">[</span><span class="n">e</span><span class="p">]</span>
+        <span class="nb">print</span> <span class="n">s</span><span class="p">[</span><span class="n">e</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Example input 1:</p>
-<div class="highlight-python"><div class="highlight"><pre>Enter a DNA sequence:
-ACCGGGTTACCC
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Enter</span> <span class="n">a</span> <span class="n">DNA</span> <span class="n">sequence</span><span class="p">:</span>
+<span class="n">ACCGGGTTACCC</span>
 </pre></div>
 </div>
 <p>Example output 1:</p>
-<div class="highlight-python"><div class="highlight"><pre>Forward orientation:
-TGLP
-Reverse orientation:
-PIGP
-Forward complement orientation:
-WPNG
-Reverse complement orientation:
-G*PG
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">Forward</span> <span class="n">orientation</span><span class="p">:</span>
+<span class="n">TGLP</span>
+<span class="n">Reverse</span> <span class="n">orientation</span><span class="p">:</span>
+<span class="n">PIGP</span>
+<span class="n">Forward</span> <span class="n">complement</span> <span class="n">orientation</span><span class="p">:</span>
+<span class="n">WPNG</span>
+<span class="n">Reverse</span> <span class="n">complement</span> <span class="n">orientation</span><span class="p">:</span>
+<span class="n">G</span><span class="o">*</span><span class="n">PG</span>
 </pre></div>
 </div>
 <div class="admonition note">
@@ -273,18 +274,18 @@ G*PG
 </dd>
 </dl>
 <p>The following commands will get you started. Run these after logging in to your cluster account.</p>
-<div class="highlight-python"><div class="highlight"><pre># CHANGE TO YOUR SCRATCH DIRECTORY (remember &lt;nau-id&gt; should be replaced by your NAU identifier)!!!
-cd /mnt/&lt;nau-id&gt;
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># CHANGE TO YOUR SCRATCH DIRECTORY (remember &lt;nau-id&gt; should be replaced by your NAU identifier)!!!</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">mnt</span><span class="o">/&lt;</span><span class="n">nau</span><span class="o">-</span><span class="nb">id</span><span class="o">&gt;</span>
 
-# download the Fierer data
-curl -O https://s3.amazonaws.com/s3-caporaso-share/fierer_forensic_keyboard_assignment.tgz &gt; fierer_forensic_keyboard_assignment.tgz
+<span class="c1"># download the Fierer data</span>
+<span class="n">curl</span> <span class="o">-</span><span class="n">O</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">s3</span><span class="o">.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">s3</span><span class="o">-</span><span class="n">caporaso</span><span class="o">-</span><span class="n">share</span><span class="o">/</span><span class="n">fierer_forensic_keyboard_assignment</span><span class="o">.</span><span class="n">tgz</span> <span class="o">&gt;</span> <span class="n">fierer_forensic_keyboard_assignment</span><span class="o">.</span><span class="n">tgz</span>
 
-# unpack the tgz file and change to the resulting directory
-tar -xvzf fierer_forensic_keyboard_assignment.tgz
-cd fierer_forensic_keyboard_assignment
+<span class="c1"># unpack the tgz file and change to the resulting directory</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xvzf</span> <span class="n">fierer_forensic_keyboard_assignment</span><span class="o">.</span><span class="n">tgz</span>
+<span class="n">cd</span> <span class="n">fierer_forensic_keyboard_assignment</span>
 
-# generate .fna and .qual files from the sff file
-process_sff.py -i ./
+<span class="c1"># generate .fna and .qual files from the sff file</span>
+<span class="n">process_sff</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">i</span> <span class="o">./</span>
 </pre></div>
 </div>
 <p>The steps in the <a class="reference external" href="http://qiime.org/svn_documentation/tutorials/tutorial.html">QIIME Overview Tutorial</a> are the next place to go from here... Good luck!</p>
@@ -325,7 +326,7 @@ process_sff.py -i ./
 </div>
 <div class="section" id="regular-expressions-due-18-sept-2012">
 <h2>Regular Expressions (due 18 Sept 2012)<a class="headerlink" href="#regular-expressions-due-18-sept-2012" title="Permalink to this headline">¶</a></h2>
-<p>Download the EMP minimal mapping file <a class="reference download internal" href="../../_downloads/emp_11sept2012_minimal_mapping_file.txt.gz"><code class="xref download docutils literal"><span class="pre">here</span></code></a> - you&#8217;ll need to unzip that file to get started. You can read about the <a class="reference external" href="http://qiime.org/documentation/file_formats.html#metadata-mapping-files">file format here</a>.</p>
+<p>Download the EMP minimal mapping file <a class="reference download internal" href="../../_downloads/emp_11sept2012_minimal_mapping_file.txt.gz" download=""><code class="xref download docutils literal"><span class="pre">here</span></code></a> - you&#8217;ll need to unzip that file to get started. You can read about the <a class="reference external" href="http://qiime.org/documentation/file_formats.html#metadata-mapping-files">file format here</a>.</p>
 <p>Perform the reformatting steps described below. You&#8217;ll turn in two metadata mapping files, one for the human-associated samples and one for all other samples (this splitting is one of the formatting steps described below). You&#8217;ll also turn in a <em>patterns file</em>, which will be a text file containing list of the search and replace patterns that were applied to perform the reformatting, including &#8220;comment&#8221; lines before each pair of patterns describing what the following pattern does. Comment lines <em>must</em> begin with the <code class="docutils literal"><span class="pre">#</span></code> symbol so they can be computationally differentiated from non-comment lines.</p>
 <p>Each line in your <em>patterns file</em> should contain exactly one regular expression pattern: for each task you should have the search pattern on one line, followed by the replace pattern on the next line. These patterns must work in either TextWrangler or jEdit (I don&#8217;t care which, but your patterns must work in one of the two).</p>
 <p>The tasks you must achieve are as follows:</p>
@@ -373,9 +374,9 @@ process_sff.py -i ./
       </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2012, J Gregory Caporaso.
-      Last updated on Jan 16, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+        &#169; Copyright 2012, J Gregory Caporaso.
+      Last updated on Jan 24, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>

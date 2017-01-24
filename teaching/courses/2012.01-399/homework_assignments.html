@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Homework assignments &mdash; bioinformatics@nau</title>
+    <title>Homework assignments &#8212; bioinformatics@nau</title>
     
     <link rel="stylesheet" href="../../static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../static/pygments.css" type="text/css" />
@@ -17,13 +17,14 @@
         VERSION:     '',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="../../static/jquery.js"></script>
     <script type="text/javascript" src="../../static/underscore.js"></script>
     <script type="text/javascript" src="../../static/doctools.js"></script>
-    <link rel="top" title="bioinformatics@nau" href="../../index.html" /> 
+    <link rel="search" title="Search" href="../../search.html" /> 
   </head>
   <body role="document">
       <div class="header" role="banner"><h1 class="heading"><a href="../../index.html">
@@ -125,7 +126,7 @@
 <div class="section" id="pyunit-homework-test-buggy-translate-py-due-23-feb-2012-25-points">
 <h2>PyUnit Homework: Test buggy_translate.py: Due 23 Feb 2012 (25 points)<a class="headerlink" href="#pyunit-homework-test-buggy-translate-py-due-23-feb-2012-25-points" title="Permalink to this headline">¶</a></h2>
 <p>For this assignment you will write unit tests for the <code class="docutils literal"><span class="pre">buggy_translate.py</span></code> script. There are (at least) 3 bugs in this code, and you will identify those bugs using unit tests and turn in your test code and a brief write up of your results.</p>
-<p>Download <a class="reference download internal" href="../../_downloads/pyunit.tgz"><code class="xref download docutils literal"><span class="pre">this</span> <span class="pre">file</span></code></a> to get started. You&#8217;ll find the <code class="docutils literal"><span class="pre">buggy_translate.py</span></code> file in that directory as well as a template for the unit tests that you should use for your assignment.</p>
+<p>Download <a class="reference download internal" href="../../_downloads/pyunit.tgz" download=""><code class="xref download docutils literal"><span class="pre">this</span> <span class="pre">file</span></code></a> to get started. You&#8217;ll find the <code class="docutils literal"><span class="pre">buggy_translate.py</span></code> file in that directory as well as a template for the unit tests that you should use for your assignment.</p>
 <dl class="docutils">
 <dt>These are the specifications for the function.</dt>
 <dd><ul class="first last simple">
@@ -138,9 +139,9 @@
 </dd>
 </dl>
 <p>Example usage:</p>
-<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">buggy_translate</span>
-<span class="n">buggy_translate</span><span class="o">.</span><span class="n">buggy_translate</span><span class="p">(</span><span class="s">&#39;AAACGGATGACCTACCTATGACCA&#39;</span><span class="p">)</span>
-<span class="s">&#39;MTYL&#39;</span>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">buggy_translate</span>
+<span class="n">buggy_translate</span><span class="o">.</span><span class="n">buggy_translate</span><span class="p">(</span><span class="s1">&#39;AAACGGATGACCTACCTATGACCA&#39;</span><span class="p">)</span>
+<span class="s1">&#39;MTYL&#39;</span>
 </pre></div>
 </div>
 <dl class="docutils">
@@ -178,9 +179,9 @@
 <h2>QIIME tutorial on Fierer et al data: Due 2 Feb 2012 (25 points)<a class="headerlink" href="#qiime-tutorial-on-fierer-et-al-data-due-2-feb-2012-25-points" title="Permalink to this headline">¶</a></h2>
 <p>For this assignment you will use the 1.4.0-dev version of QIIME (AMI: <code class="docutils literal"><span class="pre">ami-792bfd10</span></code>).</p>
 <p>To update the latest version of QIIME you should run the following commands after booting and logging in to your instance:</p>
-<div class="highlight-python"><div class="highlight"><pre>cd /software/app-deploy-qiime-1.4.0-repository/
-python app-deploy.py /software/ -f etc/qiime_1.4.0_repository.conf --force-remove-failed-dirs --force-remove-previous-repos
-cd
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">software</span><span class="o">/</span><span class="n">app</span><span class="o">-</span><span class="n">deploy</span><span class="o">-</span><span class="n">qiime</span><span class="o">-</span><span class="mf">1.4</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="n">repository</span><span class="o">/</span>
+<span class="n">python</span> <span class="n">app</span><span class="o">-</span><span class="n">deploy</span><span class="o">.</span><span class="n">py</span> <span class="o">/</span><span class="n">software</span><span class="o">/</span> <span class="o">-</span><span class="n">f</span> <span class="n">etc</span><span class="o">/</span><span class="n">qiime_1</span><span class="o">.</span><span class="mf">4.0</span><span class="n">_repository</span><span class="o">.</span><span class="n">conf</span> <span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">remove</span><span class="o">-</span><span class="n">failed</span><span class="o">-</span><span class="n">dirs</span> <span class="o">--</span><span class="n">force</span><span class="o">-</span><span class="n">remove</span><span class="o">-</span><span class="n">previous</span><span class="o">-</span><span class="n">repos</span>
+<span class="n">cd</span>
 </pre></div>
 </div>
 <p>You should have already read the <a class="reference external" href="http://www.pnas.org/content/107/14/6477.long">Fierer et al paper</a> (due 31 Jan 2012) before beginning this assignment.</p>
@@ -194,19 +195,19 @@ cd
 </dd>
 </dl>
 <p>The following commands will get you started. Run these after logging in to your AWS instance.</p>
-<div class="highlight-python"><div class="highlight"><pre># download the Fierer data
-wget https://s3.amazonaws.com/s3-public_ssu_data/fierer_forensic_keyboard.tgz
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># download the Fierer data</span>
+<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">s3</span><span class="o">.</span><span class="n">amazonaws</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">s3</span><span class="o">-</span><span class="n">public_ssu_data</span><span class="o">/</span><span class="n">fierer_forensic_keyboard</span><span class="o">.</span><span class="n">tgz</span>
 
-# unpack the tgz file and change to the resulting directory
-tar -xvzf fierer_forensic_keyboard.tgz
-cd fierer_forensic_keyboard
+<span class="c1"># unpack the tgz file and change to the resulting directory</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xvzf</span> <span class="n">fierer_forensic_keyboard</span><span class="o">.</span><span class="n">tgz</span>
+<span class="n">cd</span> <span class="n">fierer_forensic_keyboard</span>
 
-# unpack the sff file and the mapping file
-tar -xvzf study_232_FFCKVMW.sff.tgz
-unzip study_232_run_FFCKVMW_mapping.txt.zip
+<span class="c1"># unpack the sff file and the mapping file</span>
+<span class="n">tar</span> <span class="o">-</span><span class="n">xvzf</span> <span class="n">study_232_FFCKVMW</span><span class="o">.</span><span class="n">sff</span><span class="o">.</span><span class="n">tgz</span>
+<span class="n">unzip</span> <span class="n">study_232_run_FFCKVMW_mapping</span><span class="o">.</span><span class="n">txt</span><span class="o">.</span><span class="n">zip</span>
 
-# generate .fna and .qual files from the sff file
-process_sff.py -i ./
+<span class="c1"># generate .fna and .qual files from the sff file</span>
+<span class="n">process_sff</span><span class="o">.</span><span class="n">py</span> <span class="o">-</span><span class="n">i</span> <span class="o">./</span>
 </pre></div>
 </div>
 <dl class="docutils">
@@ -218,9 +219,9 @@ process_sff.py -i ./
 </dd>
 </dl>
 <p>Turn your results in by email (<a class="reference external" href="mailto:gregcaporaso&#37;&#52;&#48;gmail&#46;com">gregcaporaso<span>&#64;</span>gmail<span>&#46;</span>com</a>) before class on 2 Feb 2012. Name your files as follows:</p>
-<div class="highlight-python"><div class="highlight"><pre>- &lt;userid&gt;_otu_table_even.biom
-- &lt;userid&gt;_unweighted_unifrac_pcoa.png or &lt;userid&gt;_unweighted_unifrac_pcoa.pdf
-- &lt;userid&gt;_analysis_notes.txt
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="o">&lt;</span><span class="n">userid</span><span class="o">&gt;</span><span class="n">_otu_table_even</span><span class="o">.</span><span class="n">biom</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">userid</span><span class="o">&gt;</span><span class="n">_unweighted_unifrac_pcoa</span><span class="o">.</span><span class="n">png</span> <span class="ow">or</span> <span class="o">&lt;</span><span class="n">userid</span><span class="o">&gt;</span><span class="n">_unweighted_unifrac_pcoa</span><span class="o">.</span><span class="n">pdf</span>
+<span class="o">-</span> <span class="o">&lt;</span><span class="n">userid</span><span class="o">&gt;</span><span class="n">_analysis_notes</span><span class="o">.</span><span class="n">txt</span>
 </pre></div>
 </div>
 <p>In all cases, <code class="docutils literal"><span class="pre">&lt;userid&gt;</span></code> should be replaced by your NAU user id. For example, my OTU table would be named <code class="docutils literal"><span class="pre">jgc53__otu_table_even.biom</span></code>. <strong>Name you files exactly as described here!</strong></p>
@@ -254,9 +255,9 @@ process_sff.py -i ./
       </div>
 
     <div class="footer" role="contentinfo">
-        &copy; Copyright 2012, J Gregory Caporaso.
-      Last updated on Jan 16, 2017.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.1.
+        &#169; Copyright 2012, J Gregory Caporaso.
+      Last updated on Jan 24, 2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
     </div>
   </body>
 </html>
