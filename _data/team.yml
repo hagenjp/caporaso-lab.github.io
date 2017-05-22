@@ -50,29 +50,22 @@
       - database design
       - ux/ui
 
-- name: Jorden Kreps
+- name: Kestrel Gorlick
   title: Student Research Software Engineer
-  pic: jorden.png
-  twitter: JordenKreps
-  github: jakereps
-  site: http://jordenkreps.com
-  cv: http://linkedin.com/in/jordenkreps
-  interests:
-      - backend engineering
-      - data science
-      - machine learning
+  pic: kestrel.png
+  github: kleptobismol
 
-- name: Anders Pitman
-  title: Student Bioinformatics Software Engineer
-  pic: anders-pitman.png
-  twitter: anderspitman
-  github: anderspitman
-  site: http://anderspitman.com
+- name: Max von Hippel
+  title: Student Research Software Engineer
+  pic: Max.png
+  github: maxvonhippel
+  site: http://mxvh.pl
   interests:
-      - bioinformatics
-      - data visualization
-      - parallel computing
-
+      - security
+      - pure mathematics
+      - theory of computation
+      - informatics & statistics
+      
 - name: Jai Ram Rideout
   title: Research Software Engineer
   pic: jai-ram-rideout.png
@@ -91,14 +84,3 @@
       - bioinformatics
       - excercise
       - microbiome
-
-- name: Max von Hippel
-  title: Student Research Software Engineer
-  pic: Max.png
-  github: maxvonhippel
-  site: http://mxvh.pl
-  interests:
-      - security
-      - pure mathematics
-      - theory of computation
-      - informatics & statistics
