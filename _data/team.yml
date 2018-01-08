@@ -45,13 +45,14 @@
   pic: dillon.jpg
   github: thermokarst
   twitter: matthewrdillon
+  cv: https://linkedin.com/in/thermokarst
   interests:
       - web applications
       - database design
       - ux/ui
 
 - name: Jorden Kreps
-  title: Student Research Software Engineer
+  title: Research Software Engineer
   pic: jorden.png
   twitter: JordenKreps
   github: jakereps
@@ -62,19 +63,8 @@
       - data science
       - machine learning
 
-- name: Anders Pitman
-  title: Student Bioinformatics Software Engineer
-  pic: anders-pitman.png
-  twitter: anderspitman
-  github: anderspitman
-  site: http://anderspitman.com
-  interests:
-      - bioinformatics
-      - data visualization
-      - parallel computing
-
 - name: Jai Ram Rideout
-  title: Research Software Engineer
+  title: Senior Research Software Engineer
   pic: jai-ram-rideout.png
   twitter: jairideout
   github: jairideout

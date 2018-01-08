@@ -9,6 +9,20 @@
 - name: Software
   default-icon: fa-code
   projects:
+      - name: QIIME 2
+        summary: >
+            QIIME 2 is an open source, extensible, and decentralized microbiome analysis
+            package with a focus on data and analysis transparency. QIIME 2 enables
+            researchers to start an analysis with raw DNA sequence data and finish
+            with publication-quality figures and statistical results. QIIME 2 is
+            the successor to QIIME 1 and has been completely redesigned and rewritten
+            from the ground up.
+        github: qiime2
+        twitter: qiime2
+        pic: qiime2.png
+
+        site: https://qiime2.org
+        paper: http://www.ncbi.nlm.nih.gov/pubmed/20383131
       - name: scikit-bio
         summary: >
             scikit-bio is an open-source, BSD-licensed Python package providing
@@ -20,16 +34,16 @@
         site: http://scikit-bio.org
         pic: skbio.png
 
-      - name: QIIME
+      - name: QIIME 1
         summary: >
-            QIIME is an open-source, GPL-licensed platform for the analysis and
+            QIIME 1 is an open-source, GPL-licensed platform for the analysis and
             comparison of microbial communities (or microbiomes) based on DNA
-            sequence data. QIIME is very widely used, having been cited over
+            sequence data. QIIME 1 is very widely used, having been cited over
             3200 times since its publication in 2010.
         github: biocore/qiime
         site: http://qiime.org
         paper: http://www.ncbi.nlm.nih.gov/pubmed/20383131
-        pic: qiime.png
+        pic: qiime1.png
 
       - name: Keemei
         summary: >
