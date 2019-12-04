@@ -1,0 +1,120 @@
+# available tags:
+# site: <url>
+# video: <url>
+# slides: <url>
+# paper: <url>
+# github: <github-id>
+# twitter: <twitter-id>
+
+- name: Undergraduate Research Opportunities
+  default-icon: fa-code
+  subsections:
+
+      - name: Software Development
+        summary: >
+            Undergraduate Researchers in the Caporaso Lab develop and support
+            QIIME 2, a leading microbiome bioinformatics platform. 
+
+
+            Typically students will: 
+
+              * contribute to the [QIIME 2 ecosystem](https://github.com/qiime2) (Python)
+              * design and build interactive data visualizations (JavaScript, various frameworks)
+              * develop bioinformatics plugins (Various languages)
+              * create and manage product documentation (Jinja2, Sphinx)
+              * provide user support (Discourse)
+              * explore DevOps and build pipelines (Concourse CI)
+
+        github: qiime2
+        pic: qiime2.png
+        site: https://qiime2.org
+
+      - name: Microbiome Bioinformatics
+        summary: >
+            As members of the Center for Applied Microbiome Science, undergraduates
+            perform bioinformatics analysis on contemporary studies. These
+            contributions yield published work, experience with research design,
+            and valuable collaborative relationships.
+        twitter: qiime2
+        icon: fa-flask
+
+      - name: Publications & Research Travel
+        summary: >
+            In addition to a strong portfolio of GitHub contributions, undergraduate
+            researchers are supported in developing conference posters, presentations,
+            collaborative, and independent research publications. Contributions to lab
+            publications are often welcome, and students are cited for their contributions.
+
+
+            Fully-funded opportunities to travel in support of research products
+            are also frequent. Caporaso Lab students have presented at:
+
+              - 3rd Workshop on Statistical and Algorithmic Challenges in Microbiome Data Analysis ([SACMDA](https://www.simonsfoundation.org/event/3rd-workshop-on-statistical-and-algorithmic-challenges-in-microbiome-data-analysis/)) in New York, NY
+              - The International Conference for High Performance Computing, Networking, Storage, and Analysis ([SC18](https://sc18.supercomputing.org/)) in Dallas, TX
+              - QIIME 2 workshops in Phoenix and Las Vegas
+
+        icon: fa-plane
+
+      - name: Flexible Work Schedule
+        summary: >
+            Undergraduates balance diverse responsibilities, and academic
+            performance is top priority. Students are asked to work 15-20 hours
+            per week while school is in session, and may work up to 40 hours during
+            breaks (subject to Northern Arizona University employment policies). 
+            Flexible scheduling accommodates coursework and exam requirements.
+
+        icon: fa-clock-o
+
+- name: Apply
+  default-icon: fa-pencil-square-o
+  subsections:
+      - name: Apply to PMI...
+        summary: >
+            To work with the Caporaso Lab, students must complete an [application](https://nau.edu/pmi/pathogen-microbiome-institute/undergraduate-employment-opportunities/)
+            to the Pathogen and Microbiome Institute, print it,
+            and hand-deliver to PMI during business hours at: Applied Research &
+            Development ([building #56](http://www2.nau.edu/nau-map/)). Please drop in the blue application box
+            on the east side of the third floor.
+        site: https://nau.edu/pmi/pathogen-microbiome-institute/undergraduate-employment-opportunities/
+        pic: pmi_blk.png
+
+      - name: ... then get in touch!
+        summary: >
+            After delivering your application, notify [Matthew Dillon](mailto: matthew.dillon@nau.edu)
+            by email. This will help us access and review your application in a timely manner.
+        icon: fa-envelope
+
+      - name: Application Deadlines
+        summary: >
+            Applications are reviewed three times annually, as follows:
+
+              |           |  Spring | Summer |  Fall |
+              |-----------|---------|--------|-------|
+              | Apply by: |   1/15  |  5/15  |  9/1  |
+              | Start on: |   2/1   |  6/1   |  9/15 |
+
+              <br>
+        icon: fa-calendar
+
+- name: Contribute Informally
+  default-icon: fa-pencil-square-o
+  subsections:
+      - name: QIIME 2 on GitHub
+        summary: >
+            QIIME 2 is free, open, community-driven software. Pull requests are
+            always welcome! If you're not available for a formal position but would
+            like to contribute, notify the team in a post to our
+            [developer discussion](https://forum.qiime2.org/c/dev-discussion),
+            then check out our list of [good first issues](http://bit.ly/good_first_issues).
+        site: https://github.com/qiime2/
+        icon: fa-github
+
+      - name: An Introduction to Applied Bioinformatics (IAB)
+        summary: >
+            A free, open source interactive text that introduces readers to core
+            concepts of bioinformatics in the context of their implementation
+            and application. [IAB](http://readiab.org) is available as a learning resource, and also
+            welcomes [community contributions](https://github.com/applied-bioinformatics/An-Introduction-to-Applied-Bioinformatics/blob/master/CONTRIBUTING.md)
+            as GitHub pull requests.
+        site: http://readiab.org
+        pic: iab.png

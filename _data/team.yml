@@ -26,7 +26,7 @@
       - education
 
 - name: Evan Bolyen
-  title: Research Software Engineer
+  title: Senior Research Software Engineer
   pic: evan.png
   twitter: ebolyen
   github: ebolyen
@@ -36,7 +36,7 @@
       - PL design
 
 - name: Matthew Dillon
-  title: Research Software Engineer
+  title: Senior Research Software Engineer
   pic: dillon.jpg
   github: thermokarst
   twitter: matthewrdillon
@@ -52,9 +52,9 @@
   github: ChrisKeefe
   cv: https://www.linkedin.com/in/CRKeefe/
   interests:
-      - Wildlife Biology
-      - Human-Computer Interaction
-      - Foraging/Traditional Foodways
+      - Ecology
+      - Code
+      - Wild Foods
 
 - name: David Rodriguez
   title: Student Research Software Engineer

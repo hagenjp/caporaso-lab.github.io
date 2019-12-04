@@ -1,0 +1,42 @@
+---
+layout: page
+title: UG Research
+subtitle: Cutting-edge science and software development
+permalink: /undergrad/
+color: MediumVioletRed
+---
+{% for section in site.data.undergrad %}
+    <h1 id="{{section.name | downcase | replace:' ','_' }}">{{section.name}}</h1>
+    {% for subsection in section.subsections %}
+        <div class="ug">
+            <div class="ug__container">
+                <div class="ug__header">
+                    <span class="ug__title">
+                        {% if subsection.site %}
+                            <a href="{{subsection.site}}" target="_blank">{{subsection.name}}</a>
+                        {% else %}
+                            {{subsection.name}}
+                        {% endif %}
+                    </span>
+                    <span class="ug__social">
+                    {% include functions/get_social_icons.html content_block=subsection %}
+                    </span>
+                </div>
+                <div class="ug__summary">
+                    {{subsection.summary | markdownify}}
+                </div>
+            </div>
+        {% if subsection.pic %}
+            <img class="ug__image" src="/assets/undergrad/{{ subsection.pic }}" />
+        {% else if subsection.icon %}
+            <div class="ug__image">
+                <a class='fa {{subsection.icon}} fa-icon-black'></a>
+            </div>
+        {% else %}
+            <div class="ug__image">
+                <a class='fa {{section.default-icon}}'></a>
+            </div>
+        {% endif %}
+        </div>
+    {% endfor %}
+{% endfor %}
