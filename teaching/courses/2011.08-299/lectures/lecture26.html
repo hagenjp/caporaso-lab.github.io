@@ -1,34 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+    <meta charset="utf-8" />
     <title>Lecture 26: Genome assembly and annotation &#8212; bioinformatics@nau</title>
-    
     <link rel="stylesheet" href="../../../static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../../static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../../static/jquery.js"></script>
-    <script type="text/javascript" src="../../../static/underscore.js"></script>
-    <script type="text/javascript" src="../../../static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../../" src="../../../static/documentation_options.js"></script>
+    <script src="../../../static/jquery.js"></script>
+    <script src="../../../static/underscore.js"></script>
+    <script src="../../../static/doctools.js"></script>
+    <script src="../../../static/language_data.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Course schedule" href="../course_schedule.html" />
     <link rel="prev" title="Lecutre 25: Genome assembly" href="lecture25.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Lecture 26: Genome assembly and annotation</span></h2>
@@ -44,28 +31,26 @@
         </p>
 
       </div>
-      <div class="content">
+      <div class="content" role="main">
         
         
   <div class="section" id="lecture-26-genome-assembly-and-annotation">
 <h1>Lecture 26: Genome assembly and annotation<a class="headerlink" href="#lecture-26-genome-assembly-and-annotation" title="Permalink to this headline">¶</a></h1>
-<p>Redundant coverage in genome sequencing (in an <code class="docutils literal"><span class="pre">Nx</span></code> coverage genome sequencing project, each nucleotide is sequenced <code class="docutils literal"><span class="pre">N</span></code> times on average).</p>
-<dl class="docutils">
-<dt>Deeper coverage helps with:</dt>
-<dd><ul class="first last simple">
-<li>Error detection/correction: probability of an erroneous base when you have (say) eight overlapping calls of that base is very low.</li>
-<li>Sequencing polymorphic alleles in diploid or polyploid genomes.</li>
+<p>Redundant coverage in genome sequencing (in an <code class="docutils literal notranslate"><span class="pre">Nx</span></code> coverage genome sequencing project, each nucleotide is sequenced <code class="docutils literal notranslate"><span class="pre">N</span></code> times on average).</p>
+<dl class="simple">
+<dt>Deeper coverage helps with:</dt><dd><ul class="simple">
+<li><p>Error detection/correction: probability of an erroneous base when you have (say) eight overlapping calls of that base is very low.</p></li>
+<li><p>Sequencing polymorphic alleles in diploid or polyploid genomes.</p></li>
 </ul>
 </dd>
 </dl>
-<p>Deeper coverage can&#8217;t help with resolving repeats that are longer than the read length. Paired reads can help with this.</p>
+<p>Deeper coverage can’t help with resolving repeats that are longer than the read length. Paired reads can help with this.</p>
 <p>Genome annotation: the process of identifying genes and other functional regions, and ideally assigning function to those regions. This is related to the process of ORF calling (see my lecture slides).</p>
-<dl class="docutils">
-<dt>Minimum genome sizes:</dt>
-<dd><ul class="first last simple">
-<li>Mycoplasma (a non-free-living bacterium) with around 500 genes. Through systematic mutatgenesis, estimated that 250-300 are necessary for a viable cell.</li>
-<li>Bacillus subtilis has around 4100 genes, and similar results were found (around 270 genes were essential) but only when growing in a very rich media.</li>
-<li>Most essential genes are typically present in bacteria, and ~70% are also present in archaea and eukaryotes.</li>
+<dl class="simple">
+<dt>Minimum genome sizes:</dt><dd><ul class="simple">
+<li><p>Mycoplasma (a non-free-living bacterium) with around 500 genes. Through systematic mutatgenesis, estimated that 250-300 are necessary for a viable cell.</p></li>
+<li><p>Bacillus subtilis has around 4100 genes, and similar results were found (around 270 genes were essential) but only when growing in a very rich media.</p></li>
+<li><p>Most essential genes are typically present in bacteria, and ~70% are also present in archaea and eukaryotes.</p></li>
 </ul>
 </dd>
 </dl>
@@ -73,12 +58,12 @@
 <p>To check out some existing genomes and associated metadata and annotations, follow these steps:</p>
 <blockquote>
 <div><ul class="simple">
-<li>Go to the <a class="reference external" href="http://img.jgi.doe.gov/">Integrated Microbial Genomes (IMG site)</a>.</li>
-<li>Click <code class="docutils literal"><span class="pre">IMG</span></code></li>
-<li>Click <code class="docutils literal"><span class="pre">Find</span> <span class="pre">Genomes</span></code></li>
-<li>Choose a genome and click it&#8217;s name</li>
-<li>Click <code class="docutils literal"><span class="pre">Browse</span> <span class="pre">Genome</span></code></li>
-<li>Click <code class="docutils literal"><span class="pre">Download</span> <span class="pre">Gene</span> <span class="pre">Information</span></code></li>
+<li><p>Go to the <a class="reference external" href="http://img.jgi.doe.gov/">Integrated Microbial Genomes (IMG site)</a>.</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">IMG</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Find</span> <span class="pre">Genomes</span></code></p></li>
+<li><p>Choose a genome and click it’s name</p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Browse</span> <span class="pre">Genome</span></code></p></li>
+<li><p>Click <code class="docutils literal notranslate"><span class="pre">Download</span> <span class="pre">Gene</span> <span class="pre">Information</span></code></p></li>
 </ul>
 </div></blockquote>
 <p>N50 value: a metric of the quality of assembly: 50% of the reads are contained in contigs of length N or greater</p>
@@ -100,8 +85,8 @@
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J Gregory Caporaso.
-      Last updated on Feb 25, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
+      Last updated on Mar 10, 2020.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0.
     </div>
   </body>
 </html>

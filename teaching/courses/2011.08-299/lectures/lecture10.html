@@ -1,34 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+    <meta charset="utf-8" />
     <title>Lecture 10: Sequence alignment algorithms (continued) &#8212; bioinformatics@nau</title>
-    
     <link rel="stylesheet" href="../../../static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../../static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../../static/jquery.js"></script>
-    <script type="text/javascript" src="../../../static/underscore.js"></script>
-    <script type="text/javascript" src="../../../static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../../" src="../../../static/documentation_options.js"></script>
+    <script src="../../../static/jquery.js"></script>
+    <script src="../../../static/underscore.js"></script>
+    <script src="../../../static/doctools.js"></script>
+    <script src="../../../static/language_data.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Lecture 11: Alignments and phylogenetic trees" href="lecture11.html" />
     <link rel="prev" title="Lecture 9: Sequence alignment algorithms" href="lecture9.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Lecture 10: Sequence alignment algorithms (continued)</span></h2>
@@ -44,41 +31,41 @@
         </p>
 
       </div>
-      <div class="content">
+      <div class="content" role="main">
         
         
   <div class="section" id="lecture-10-sequence-alignment-algorithms-continued">
 <h1>Lecture 10: Sequence alignment algorithms (continued)<a class="headerlink" href="#lecture-10-sequence-alignment-algorithms-continued" title="Permalink to this headline">¶</a></h1>
-<p>The following coding examples will cover the various features and tools in python that you&#8217;ve learned about (or will very shortly) and how they can be applied to implement the Needleman-Wunsch alignment algorithm. This same lesson can be applied to the Smith-Waterman alignment algorithm.</p>
+<p>The following coding examples will cover the various features and tools in python that you’ve learned about (or will very shortly) and how they can be applied to implement the Needleman-Wunsch alignment algorithm. This same lesson can be applied to the Smith-Waterman alignment algorithm.</p>
 <div class="section" id="two-dimensional-lists">
 <h2>Two dimensional lists<a class="headerlink" href="#two-dimensional-lists" title="Permalink to this headline">¶</a></h2>
-<p>You&#8217;ve been introduced to lists in python, but it&#8217;s common that you need to represent multi-dimensional data such as a matrix. To do this, you can use a list where each entry in the list is a list. For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>
+<p>You’ve been introduced to lists in python, but it’s common that you need to represent multi-dimensional data such as a matrix. To do this, you can use a list where each entry in the list is a list. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],[</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">]]</span>
 </pre></div>
 </div>
 <p>You can then access entries in this list by indicating their index in order from the top-most list to the deeper lists. For example:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># access the second entry of the second list</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># access the second entry of the second list</span>
 <span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>Try accessing some different values. You can also access one of the full inner lists in the usual way:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">matrix</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="dictionaries">
 <h2>Dictionaries<a class="headerlink" href="#dictionaries" title="Permalink to this headline">¶</a></h2>
-<p>A key concept is introduced in LPTHW exercise 40: the dictionary or <code class="docutils literal"><span class="pre">dict</span></code>. These allow for efficient look-ups of <cite>values</cite> associated with a <cite>key</cite>, and are used constantly in python.</p>
+<p>A key concept is introduced in LPTHW exercise 40: the dictionary or <code class="docutils literal notranslate"><span class="pre">dict</span></code>. These allow for efficient look-ups of <cite>values</cite> associated with a <cite>key</cite>, and are used constantly in python.</p>
 <p>Some of the key features associated with dictionaries include creating dictionaries, setting and resetting the values for certain keys, and looking up the values of certain keys. Dictionaries are created as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">base_comps</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;G&#39;</span><span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">base_comps</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;T&#39;</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="s1">&#39;G&#39;</span><span class="p">}</span>
 </pre></div>
 </div>
-<p>This <code class="docutils literal"><span class="pre">dict</span></code> would be said to <cite>map</cite> each of the four DNA bases to its complement. You can do <cite>lookups</cite> on this dictionary as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">base_comps</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
+<p>This <code class="docutils literal notranslate"><span class="pre">dict</span></code> would be said to <cite>map</cite> each of the four DNA bases to its complement. You can do <cite>lookups</cite> on this dictionary as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">base_comps</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
 <p>If you want to add or reset a value after dictionary creation you can do so as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># add a lookup for uracil</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># add a lookup for uracil</span>
 <span class="n">base_comps</span><span class="p">[</span><span class="s1">&#39;U&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;A&#39;</span>
 <span class="c1"># remap the lookup for adenine</span>
 <span class="n">base_comps</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;U&#39;</span>
@@ -86,22 +73,22 @@
 <span class="k">del</span> <span class="n">base_comps</span><span class="p">[</span><span class="s1">&#39;T&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>You can also check whether a key is contained in a dictionary using <code class="docutils literal"><span class="pre">in</span></code>. For example, try these:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s1">&#39;A&#39;</span> <span class="ow">in</span> <span class="n">base_comps</span>
+<p>You can also check whether a key is contained in a dictionary using <code class="docutils literal notranslate"><span class="pre">in</span></code>. For example, try these:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s1">&#39;A&#39;</span> <span class="ow">in</span> <span class="n">base_comps</span>
 
 <span class="s1">&#39;W&#39;</span> <span class="ow">in</span> <span class="n">base_comps</span>
 </pre></div>
 </div>
-<p>You&#8217;ll notice that if you access an entry that is not in a dictionary you&#8217;ll get a <code class="docutils literal"><span class="pre">KeyError</span></code>. The error messages that you get when a <code class="docutils literal"><span class="pre">KeyError</span></code> is <cite>thrown</cite> may not always be very intuitive so adding a little additional error handling is a good idea. One way to do this is with an if/else statement, where you check for the presence of a key in a dictionary:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">base_comps</span><span class="p">:</span>
+<p>You’ll notice that if you access an entry that is not in a dictionary you’ll get a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code>. The error messages that you get when a <code class="docutils literal notranslate"><span class="pre">KeyError</span></code> is <cite>thrown</cite> may not always be very intuitive so adding a little additional error handling is a good idea. One way to do this is with an if/else statement, where you check for the presence of a key in a dictionary:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">base_comps</span><span class="p">:</span>
     <span class="k">return</span> <span class="n">base_comps</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="k">else</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is not in the base complement lookup dictionary&quot;</span> <span class="o">%</span> <span class="n">key</span>
     <span class="n">exit</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>More commonly, expert python users will <cite>catch</cite> and handle the error if it happens using a <code class="docutils literal"><span class="pre">try/except</span></code>. The following is a very common python idiom, so I want to introduce it in case you run into it in other code. Don&#8217;t worry about integrating into your code too much for now - wait until you learn a little about <code class="docutils literal"><span class="pre">Exceptions</span></code> in python:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
+<p>More commonly, expert python users will <cite>catch</cite> and handle the error if it happens using a <code class="docutils literal notranslate"><span class="pre">try/except</span></code>. The following is a very common python idiom, so I want to introduce it in case you run into it in other code. Don’t worry about integrating into your code too much for now - wait until you learn a little about <code class="docutils literal notranslate"><span class="pre">Exceptions</span></code> in python:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">try</span><span class="p">:</span>
     <span class="nb">print</span> <span class="n">base_comps</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
 <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
     <span class="nb">print</span> <span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is not in the base complement lookup dictionary&quot;</span> <span class="o">%</span> <span class="n">key</span>
@@ -110,8 +97,8 @@
 </div>
 <div class="section" id="using-a-dictionary-to-simplify-our-reverse-complementing-code">
 <h3>Using a dictionary to simplify our reverse complementing code<a class="headerlink" href="#using-a-dictionary-to-simplify-our-reverse-complementing-code" title="Permalink to this headline">¶</a></h3>
-<p>Here&#8217;s an example that will simplify our reverse complementing code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">argv</span>
+<p>Here’s an example that will simplify our reverse complementing code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">argv</span>
 <span class="n">script_name</span><span class="p">,</span> <span class="n">sequence</span> <span class="o">=</span> <span class="n">argv</span>
 
 <span class="n">complements</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="s1">&#39;T&#39;</span><span class="p">,</span>
@@ -134,7 +121,7 @@
 <div class="section" id="implementing-substitution-matrices-with-dictionaries">
 <h3>Implementing substitution matrices with dictionaries<a class="headerlink" href="#implementing-substitution-matrices-with-dictionaries" title="Permalink to this headline">¶</a></h3>
 <p>As with lists, you can create nested dictionaries, where each entry in the dictionary is a dictionary. One application of this is defining substitution matrices for use in sequence alignment. If you wanted to score different base substitutions differently, for example, you could define a substitution matrix as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">substitution_matrix</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">},</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">substitution_matrix</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">},</span>
                        <span class="s1">&#39;C&#39;</span><span class="p">:{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">},</span>
                        <span class="s1">&#39;G&#39;</span><span class="p">:{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">},</span>
                        <span class="s1">&#39;T&#39;</span><span class="p">:{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;C&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span><span class="s1">&#39;G&#39;</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="s1">&#39;T&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}}</span>
@@ -142,7 +129,7 @@
 </div>
 <p>This scoring matrix is scoring all substitutions events with negative scores, but differentiating between <cite>transition</cite> and <cite>transversion</cite> substitutions. If these terms are unfamiliar, look them up. Why might you score these differently?</p>
 <p>A commonly used scoring matrix for protein alignments is the BLOSUM50. To define the BLOSUM50 substitution matrix as a dictionary you could run the following:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span>   <span class="n">blosum50</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">},</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>   <span class="n">blosum50</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">},</span>
 <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mf">13.0</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">},</span>
 <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mf">8.0</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">5.0</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">},</span>
 <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">{</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="mf">6.0</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;H&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;I&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.0</span><span class="p">,</span> <span class="s1">&#39;K&#39;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;L&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;M&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;N&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;P&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;Q&#39;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">,</span> <span class="s1">&#39;R&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span> <span class="s1">&#39;S&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;T&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">1.0</span><span class="p">,</span> <span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;W&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">3.0</span><span class="p">,</span> <span class="s1">&#39;Y&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.0</span><span class="p">},</span>
@@ -165,19 +152,19 @@
 </pre></div>
 </div>
 <p>After defining this, you can look up scores in the 2D dictionary as follows:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">blosum50</span><span class="p">[</span><span class="s1">&#39;Y&#39;</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">]</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="n">blosum50</span><span class="p">[</span><span class="s1">&#39;Y&#39;</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">]</span>
 <span class="nb">print</span> <span class="n">blosum50</span><span class="p">[</span><span class="s1">&#39;D&#39;</span><span class="p">][</span><span class="s1">&#39;W&#39;</span><span class="p">]</span>
 <span class="nb">print</span> <span class="n">blosum50</span><span class="p">[</span><span class="s1">&#39;A&#39;</span><span class="p">][</span><span class="s1">&#39;A&#39;</span><span class="p">]</span>
 </pre></div>
 </div>
-<p>We&#8217;ll use this matrix to score some alignments and to explore the Needleman-Wunsch and Smith-Waterman alignment algorithms.</p>
+<p>We’ll use this matrix to score some alignments and to explore the Needleman-Wunsch and Smith-Waterman alignment algorithms.</p>
 </div>
 </div>
 <div class="section" id="nested-for-loops">
 <h2>Nested for loops<a class="headerlink" href="#nested-for-loops" title="Permalink to this headline">¶</a></h2>
-<p>Sometimes one for loop isn&#8217;t enough. For example, maybe you have you two lists and you need to perform some operation on all pairs of elements in those two lists. One application of this is in sequence alignment, where we need to compare all pairs of positions to compute alignment scores. In this example we&#8217;ll look at how that might be computed.</p>
-<p>Imagine we&#8217;re starting with two sequences and we want to compute a scoring matrix to use for aligning those two sequences:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># Define the sequences we want to align</span>
+<p>Sometimes one for loop isn’t enough. For example, maybe you have you two lists and you need to perform some operation on all pairs of elements in those two lists. One application of this is in sequence alignment, where we need to compare all pairs of positions to compute alignment scores. In this example we’ll look at how that might be computed.</p>
+<p>Imagine we’re starting with two sequences and we want to compute a scoring matrix to use for aligning those two sequences:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define the sequences we want to align</span>
 <span class="n">seq1</span> <span class="o">=</span> <span class="s2">&quot;HEAGAWGHEE&quot;</span>
 <span class="n">seq2</span> <span class="o">=</span> <span class="s2">&quot;PAWHEAE&quot;</span>
 
@@ -198,13 +185,13 @@
     <span class="n">match_matrix</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">current_row</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>You can now print out <code class="docutils literal"><span class="pre">match_matrix</span></code>. You can do that in a simply way with the following code:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">match_matrix</span><span class="p">:</span>
+<p>You can now print out <code class="docutils literal notranslate"><span class="pre">match_matrix</span></code>. You can do that in a simply way with the following code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">match_matrix</span><span class="p">:</span>
     <span class="nb">print</span> <span class="n">row</span>
 </pre></div>
 </div>
 <p>Or you can get fancy and print it in a prettier way:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="c1"># define a format string that will be used to format each line -</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># define a format string that will be used to format each line -</span>
 <span class="c1"># since seq1 is the &#39;horizontal&#39; sequence in our matrix we&#39;ll</span>
 <span class="c1"># have len(seq1) + 1 entries on each line to print the scores and</span>
 <span class="c1"># seq2 base associated with each row</span>
@@ -219,7 +206,7 @@
     <span class="nb">print</span> <span class="n">line_format</span> <span class="o">%</span> <span class="nb">tuple</span><span class="p">([</span><span class="n">base</span><span class="p">]</span> <span class="o">+</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span><span class="n">row</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>The formatting sting <code class="docutils literal"><span class="pre">%6s</span></code> prints a string using exactly six characters (padded with spaces), so that allows us to nicely align the columns.</p>
+<p>The formatting sting <code class="docutils literal notranslate"><span class="pre">%6s</span></code> prints a string using exactly six characters (padded with spaces), so that allows us to nicely align the columns.</p>
 </div>
 </div>
 
@@ -239,8 +226,8 @@
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J Gregory Caporaso.
-      Last updated on Feb 25, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
+      Last updated on Mar 10, 2020.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0.
     </div>
   </body>
 </html>

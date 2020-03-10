@@ -1,34 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+    <meta charset="utf-8" />
     <title>Lecutre 25: Genome assembly &#8212; bioinformatics@nau</title>
-    
     <link rel="stylesheet" href="../../../static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../../static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../../static/jquery.js"></script>
-    <script type="text/javascript" src="../../../static/underscore.js"></script>
-    <script type="text/javascript" src="../../../static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../../" src="../../../static/documentation_options.js"></script>
+    <script src="../../../static/jquery.js"></script>
+    <script src="../../../static/underscore.js"></script>
+    <script src="../../../static/doctools.js"></script>
+    <script src="../../../static/language_data.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Lecture 26: Genome assembly and annotation" href="lecture26.html" />
     <link rel="prev" title="Lecutre 23: Sequence covariation and methods comparisons in bioinformatics" href="lecture23.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Lecutre 25: Genome assembly</span></h2>
@@ -44,41 +31,36 @@
         </p>
 
       </div>
-      <div class="content">
+      <div class="content" role="main">
         
         
   <div class="section" id="lecutre-25-genome-assembly">
 <h1>Lecutre 25: Genome assembly<a class="headerlink" href="#lecutre-25-genome-assembly" title="Permalink to this headline">¶</a></h1>
-<dl class="docutils">
-<dt>What is genome sequencing?</dt>
-<dd><ul class="first last simple">
-<li>The determination of the full order of bases (As, Cs, Gs, and Ts) in an organism&#8217;s genome.</li>
+<dl class="simple">
+<dt>What is genome sequencing?</dt><dd><ul class="simple">
+<li><p>The determination of the full order of bases (As, Cs, Gs, and Ts) in an organism’s genome.</p></li>
 </ul>
 </dd>
-<dt>How do we sequence genomes?</dt>
-<dd><ul class="first last simple">
-<li>Current DNA sequencing technologies generate sequencing reads that are much shorter than the full genomic sequences we&#8217;re interested in. We therefore must sequence fragments of the genome and <code class="docutils literal"><span class="pre">assemble</span></code> them into the full length sequence of interest.</li>
-<li>To achieve this, we must sequence in great depth so we observe each base multiple times. During the human genome project, the human genome was sequenced to <cite>8x</cite> coverage, meaning that on average every base was sequenced 8 times. This can help with sequencing error detection and correction, but also provides many overlapping reads which are necessary for assembly.</li>
+<dt>How do we sequence genomes?</dt><dd><ul class="simple">
+<li><p>Current DNA sequencing technologies generate sequencing reads that are much shorter than the full genomic sequences we’re interested in. We therefore must sequence fragments of the genome and <code class="docutils literal notranslate"><span class="pre">assemble</span></code> them into the full length sequence of interest.</p></li>
+<li><p>To achieve this, we must sequence in great depth so we observe each base multiple times. During the human genome project, the human genome was sequenced to <cite>8x</cite> coverage, meaning that on average every base was sequenced 8 times. This can help with sequencing error detection and correction, but also provides many overlapping reads which are necessary for assembly.</p></li>
 </ul>
 </dd>
-<dt>Why is assembly hard?</dt>
-<dd><ul class="first last simple">
-<li><cite>Repeat elements</cite>, or fragments of DNA with identical sequences, can make a genome appear to fit together in multiple different ways. When the same sequence is observed many times, an assmebler (or program that performs genome assembly) will generally tag that sequence as a repeat.</li>
-<li>Very short reads cause more of a repeat problem than longer reads. As you get shorter, repeats are more likely; as you get longer repeats are less likely. Note that genome sequence is not random though, so the probability of a repeat doesn&#8217;t just decrease exponentially with increasing read length (i.e., probability of a repeat is not 0.25**read_length).</li>
-<li>Good discussion of the problems with assembly from short reads can be found <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/20508146">here</a>.</li>
+<dt>Why is assembly hard?</dt><dd><ul class="simple">
+<li><p><cite>Repeat elements</cite>, or fragments of DNA with identical sequences, can make a genome appear to fit together in multiple different ways. When the same sequence is observed many times, an assmebler (or program that performs genome assembly) will generally tag that sequence as a repeat.</p></li>
+<li><p>Very short reads cause more of a repeat problem than longer reads. As you get shorter, repeats are more likely; as you get longer repeats are less likely. Note that genome sequence is not random though, so the probability of a repeat doesn’t just decrease exponentially with increasing read length (i.e., probability of a repeat is not 0.25**read_length).</p></li>
+<li><p>Good discussion of the problems with assembly from short reads can be found <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/20508146">here</a>.</p></li>
 </ul>
 </dd>
-<dt>How do we assemble genomes:</dt>
-<dd><ul class="first last simple">
-<li>Create <cite>contigs</cite> by identifying overlapping reads segments and merging into contiguous segments.</li>
-<li>In any complex genome, contigs will be interrupted by repeat regions or regions that do not get sequenced by chance. These can be assembled using <cite>paired end</cite> or <cite>mate pair</cite> reads. This involves sequencing both ends of sequences of known length, so for certain pairs of reads which would be incorporated into contigs, you&#8217;d know the length of sequence separating those reads. You can use this information to create <cite>scaffolds</cite>, which are contigs that are interrupted by gaps that represent unknown sequence.</li>
-<li>Description of different approaches for genome assembly can be found <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/20211242">here</a>.</li>
+<dt>How do we assemble genomes:</dt><dd><ul class="simple">
+<li><p>Create <cite>contigs</cite> by identifying overlapping reads segments and merging into contiguous segments.</p></li>
+<li><p>In any complex genome, contigs will be interrupted by repeat regions or regions that do not get sequenced by chance. These can be assembled using <cite>paired end</cite> or <cite>mate pair</cite> reads. This involves sequencing both ends of sequences of known length, so for certain pairs of reads which would be incorporated into contigs, you’d know the length of sequence separating those reads. You can use this information to create <cite>scaffolds</cite>, which are contigs that are interrupted by gaps that represent unknown sequence.</p></li>
+<li><p>Description of different approaches for genome assembly can be found <a class="reference external" href="http://www.ncbi.nlm.nih.gov/pubmed/20211242">here</a>.</p></li>
 </ul>
 </dd>
-<dt>Finished versus draft genomes:</dt>
-<dd><ul class="first last simple">
-<li>Finished genome requires the full sequencing of the entire genome; draft allows small gaps due to missing coverage or segments that cannot be accurately determined due to repeat elements.</li>
-<li>Generating the draft is a lot cheaper than generating the finished genome (the former is heavily automated, while the latter is not) so many projects stop at the draft.</li>
+<dt>Finished versus draft genomes:</dt><dd><ul class="simple">
+<li><p>Finished genome requires the full sequencing of the entire genome; draft allows small gaps due to missing coverage or segments that cannot be accurately determined due to repeat elements.</p></li>
+<li><p>Generating the draft is a lot cheaper than generating the finished genome (the former is heavily automated, while the latter is not) so many projects stop at the draft.</p></li>
 </ul>
 </dd>
 </dl>
@@ -100,8 +82,8 @@
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J Gregory Caporaso.
-      Last updated on Feb 25, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
+      Last updated on Mar 10, 2020.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0.
     </div>
   </body>
 </html>

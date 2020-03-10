@@ -1,34 +1,21 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
+<!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    
+    <meta charset="utf-8" />
     <title>Lecture 5: DNA to Protein; part 2: mRNA to Protein &#8212; bioinformatics@nau</title>
-    
     <link rel="stylesheet" href="../../../static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../../static/pygments.css" type="text/css" />
-    
-    <script type="text/javascript">
-      var DOCUMENTATION_OPTIONS = {
-        URL_ROOT:    '../../../',
-        VERSION:     '',
-        COLLAPSE_INDEX: false,
-        FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true,
-        SOURCELINK_SUFFIX: '.txt'
-      };
-    </script>
-    <script type="text/javascript" src="../../../static/jquery.js"></script>
-    <script type="text/javascript" src="../../../static/underscore.js"></script>
-    <script type="text/javascript" src="../../../static/doctools.js"></script>
+    <script id="documentation_options" data-url_root="../../../" src="../../../static/documentation_options.js"></script>
+    <script src="../../../static/jquery.js"></script>
+    <script src="../../../static/underscore.js"></script>
+    <script src="../../../static/doctools.js"></script>
+    <script src="../../../static/language_data.js"></script>
     <link rel="search" title="Search" href="../../../search.html" />
     <link rel="next" title="Lecture 6: Molecular evolution" href="lecture6.html" />
     <link rel="prev" title="Lecture 4: From DNA to protein (part1, continued), and python programming" href="lecture4.html" /> 
-  </head>
-  <body role="document">
+  </head><body>
       <div class="header" role="banner"><h1 class="heading"><a href="../../../index.html">
           <span>bioinformatics@nau</span></a></h1>
         <h2 class="heading"><span>Lecture 5: DNA to Protein; part 2: mRNA to Protein</span></h2>
@@ -44,7 +31,7 @@
         </p>
 
       </div>
-      <div class="content">
+      <div class="content" role="main">
         
         
   <div class="section" id="lecture-5-dna-to-protein-part-2-mrna-to-protein">
@@ -58,17 +45,17 @@
 <h2>Coding discussion<a class="headerlink" href="#coding-discussion" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="using-boolean-logic-to-generalize-our-reverse-complement-script">
 <h3>Using boolean logic to generalize our reverse complement script<a class="headerlink" href="#using-boolean-logic-to-generalize-our-reverse-complement-script" title="Permalink to this headline">¶</a></h3>
-<p>The homework for tonight starts with boolean logic: primarily understanding and evaluating boolean expressions. Logic in your programs is about determining if a statement (possibly composed of simpler statements) evaluates to       <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code>. This framework is at the base of programming, and allows you to incorporate logic into your code, which in turn lets you increase the complexity of what your scripts can do.</p>
+<p>The homework for tonight starts with boolean logic: primarily understanding and evaluating boolean expressions. Logic in your programs is about determining if a statement (possibly composed of simpler statements) evaluates to       <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>. This framework is at the base of programming, and allows you to incorporate logic into your code, which in turn lets you increase the complexity of what your scripts can do.</p>
 <p>One type of comparison that you can do is a string comparison, where you test the equality of two strings. For example, try these:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="s2">&quot;A&quot;</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;A&quot;</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span>
 <span class="s2">&quot;A&quot;</span> <span class="o">==</span> <span class="s2">&quot;B&quot;</span>
 <span class="s2">&quot;A&quot;</span> <span class="o">!=</span> <span class="s2">&quot;B&quot;</span>
 </pre></div>
 </div>
-<p>The <cite>operators</cite> used here are equal (<code class="docutils literal"><span class="pre">==</span></code>) and not equal (<code class="docutils literal"><span class="pre">!=</span></code>). Comparisons with these operators always return a boolean value: either <code class="docutils literal"><span class="pre">True</span></code> or <code class="docutils literal"><span class="pre">False</span></code>.</p>
-<p>Let&#8217;s jump in by making use of string comparisons to generalize our reverse complement script to perform some additional functions.</p>
+<p>The <cite>operators</cite> used here are equal (<code class="docutils literal notranslate"><span class="pre">==</span></code>) and not equal (<code class="docutils literal notranslate"><span class="pre">!=</span></code>). Comparisons with these operators always return a boolean value: either <code class="docutils literal notranslate"><span class="pre">True</span></code> or <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p>
+<p>Let’s jump in by making use of string comparisons to generalize our reverse complement script to perform some additional functions.</p>
 <p>Last time we wrote the following script which allowed us to reverse complement a sequence:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">argv</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">argv</span>
 <span class="n">script_name</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">sequence_name</span><span class="p">,</span> <span class="n">output_fasta_fp</span> <span class="o">=</span> <span class="n">argv</span>
 
 <span class="n">output_file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">output_fasta_fp</span><span class="p">,</span><span class="s1">&#39;w&#39;</span><span class="p">)</span>
@@ -79,8 +66,8 @@
 <span class="n">output_file</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
-<p id="sequence-processing-script">Let&#8217;s add the <code class="docutils literal"><span class="pre">reverse_complement</span></code> and <code class="docutils literal"><span class="pre">transcribe</span></code> functions that we added last time, and then add a flag to this script that allows the user to either reverse complement or transcribe a sequence using the same script:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">argv</span>
+<p id="sequence-processing-script">Let’s add the <code class="docutils literal notranslate"><span class="pre">reverse_complement</span></code> and <code class="docutils literal notranslate"><span class="pre">transcribe</span></code> functions that we added last time, and then add a flag to this script that allows the user to either reverse complement or transcribe a sequence using the same script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sys</span> <span class="k">import</span> <span class="n">argv</span>
 <span class="n">script_name</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">sequence_name</span><span class="p">,</span> <span class="n">output_fasta_fp</span><span class="p">,</span> <span class="n">function</span> <span class="o">=</span> <span class="n">argv</span>
 
 <span class="k">def</span> <span class="nf">reverse_complement</span><span class="p">(</span><span class="n">sequence</span><span class="p">):</span>
@@ -105,8 +92,8 @@
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">Warning</p>
-<p class="last"><strong>The reverse complement function that we implemented here is incomplete and dangerous.</strong> The reason for this is that it doesn&#8217;t do anything with characters other than <code class="docutils literal"><span class="pre">A</span></code>, <code class="docutils literal"><span class="pre">C</span></code>, <code class="docutils literal"><span class="pre">G</span></code>, and <code class="docutils literal"><span class="pre">T</span></code>. See the note in the <a class="reference external" href="./lecture4.html">Lecture 4 outline</a> for more of a discussion of this point.</p>
+<p class="admonition-title">Warning</p>
+<p><strong>The reverse complement function that we implemented here is incomplete and dangerous.</strong> The reason for this is that it doesn’t do anything with characters other than <code class="docutils literal notranslate"><span class="pre">A</span></code>, <code class="docutils literal notranslate"><span class="pre">C</span></code>, <code class="docutils literal notranslate"><span class="pre">G</span></code>, and <code class="docutils literal notranslate"><span class="pre">T</span></code>. See the note in the <a class="reference external" href="./lecture4.html">Lecture 4 outline</a> for more of a discussion of this point.</p>
 </div>
 </div>
 </div>
@@ -128,8 +115,8 @@
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J Gregory Caporaso.
-      Last updated on Feb 25, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
+      Last updated on Mar 10, 2020.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0.
     </div>
   </body>
 </html>
