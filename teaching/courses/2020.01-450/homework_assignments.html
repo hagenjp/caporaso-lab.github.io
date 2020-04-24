@@ -197,6 +197,46 @@
 <p>All students in a group will receive the same grade on this assignment unless there is clear evidence that some student(s) didn’t contribute, in which case the rest of the group should e-mail me to discuss the issue.</p>
 <p>Before choosing a tool/script/workflow to present on, you should look at several in the list. Some of these have higher quality descriptions and examples than others.</p>
 </div>
+<div class="section" id="final-project-microbiome-based-forensics-with-qiime-2">
+<h2>Final project: Microbiome-based forensics with QIIME 2<a class="headerlink" href="#final-project-microbiome-based-forensics-with-qiime-2" title="Permalink to this headline">¶</a></h2>
+<p>The final project is made up of three parts that you will work on in order. In this assignment, you’ll be using <a class="reference external" href="https://qiime2.org">QIIME 2</a> version 2020.2 to analyze two data sets. The objective of this assignment is to learn a bioinformatics tool from its documentation (Part 1), apply it to answer a specific question (Part 2), and report your findings (Part 3).</p>
+<p>In <strong>Part 1</strong>, you’ll read and run the QIIME 2 <a class="reference external" href="https://docs.qiime2.org/2020.2/tutorials/moving-pictures/">Moving Pictures of the Human Microbiome tutorial</a>, a tutorial that is designed to be a first entry point into the QIIME 2 microbiome bioinformatics platform. This will familiarize you with running QIIME 2 and interpreting QIIME 2 output. In <strong>Part 2</strong>, you’ll adapt the commands from that tutorial to analyze another data set, where human-associated microbial communities were explored for their forensic potential. In <strong>Part 3</strong>, you’ll interpret and write up your results from <strong>Part 2</strong> in a three-page report. Before starting this assignment, you should read <a class="reference external" href="http://www.pnas.org/content/early/2010/03/01/1000162107.full.pdf">Fierer et al (2010)</a>, where this forensic study was initially published. This will help you understand the study.</p>
+<p><strong>IMPORTANT</strong>: This assignment includes some steps that will take time to run (possibly up to 20 minutes). You should avoid starting this assignment close to the deadline - if the server is backlogged because many people are using it, it may take time for your notebook server to be accessible. You are responsible for starting this in a timely manner!</p>
+<p>For <strong>Part 1</strong>, you will run analyses in the Jupyter Notebook provided <a class="reference external" href="https://www.dropbox.com/s/igtz8go7gwaxg2j/qiime2-assignment-part1.ipynb?dl=0">here</a>. Note: Due to a configuration error on the server, at the <a class="reference external" href="https://docs.qiime2.org/2020.2/tutorials/moving-pictures/#sequence-quality-control-and-feature-table-construction">Sequence Quality Control … step</a>, use Option 2 (deblur).</p>
+<p>For <strong>Part 2</strong>, you will run analyses in the Jupyter Notebook provided <a class="reference external" href="https://www.dropbox.com/s/uw7782lpotoc915/qiime2-assignment-part2.ipynb?dl=0">here</a>, and answer the questions posted <a class="reference external" href="https://docs.google.com/document/d/1hhoRNohnCWtfE_z_cVb3Zti5BLf1mOzSQoNiY4wZjWw/edit?usp=sharing">here</a>.</p>
+<p>For <strong>Part 3</strong>, you will write a 2.5 to 3 page paper describing your analysis (details are provided below).</p>
+<p>Download each of the notebooks from the links provided above. Log into the class Jupyter Notebook server, and create two new folders: one for assignment part 1, and one for assignment part 2. Upload each of the notebooks to it’s corresponding folder. (Creating these folders is important - otherwise it’ll be very easy to mix up the files from these two parts, which will lead to all sorts of confusing error messages.) Each notebook contains empty cells for you to work in.</p>
+<div class="section" id="items-to-turn-in-by-email">
+<h3>Items to turn in by email<a class="headerlink" href="#items-to-turn-in-by-email" title="Permalink to this headline">¶</a></h3>
+<p>For <strong>Part 1</strong>, you’ll turn in the notebook containing the commands that you ran. Append your NAU ID to the beginning of the file name. For example, the file I turn in would be named <cite>jgc53-qiime2-assignment-part1.ipynb</cite>.</p>
+<p>For <strong>Part 2</strong>, you’ll turn in the notebook containing the commands that you ran, as well as a completed question sheet (linked above), and the <cite>.qza</cite> or <cite>.qzv</cite> files that you reference in your answers in the question sheet (with the exception of any <cite>.qza</cite> or <cite>.qzv</cite> files that I’m providing for you). Append your NAU ID to the beginning of each file name. For example, the files I turn in would be named: <cite>jgc53-qiime2-assignment-part2.ipynb</cite>, <cite>jgc53-qiime2-assignment-part2-questions.pdf</cite>, and multiple files with names like <cite>jgc53-*.qzv</cite> (where the <cite>*</cite> is replaced with a descriptive name for each file, such as <cite>jgc53-taxonomy-barplot.qzv</cite>). Don’t try to submit artifacts that I’ve provided for you, such as <cite>gg-13-8-99-nb-classifier.qza</cite>. Some will be too large to send by email, and I already have them.</p>
+<p>For <strong>Part 3</strong>, you will write a 2.5 to 3 page paper describing your analysis. <strong>Your paper should not be any shorter than 2.5 pages nor any longer than 3 pages. It must have 1.5 line spacing, 0.5” margins, and be written in 12 point Times New Roman font. Figures and tables are included in the page count, though the total space taken by these should be a maximum of one page.</strong></p>
+<p>Write this as if you’re submitting to a journal, so your paper should contain:</p>
+<ul class="simple">
+<li><p>A title and list of authors (just you, in this case). This should be in no more than 14 point font, and follow the margin/spacing requirements listed above.</p></li>
+<li><p>An <em>Introduction</em> section describing the goals of the study (you can refer to <a class="reference external" href="http://www.pnas.org/content/early/2010/03/01/1000162107.full.pdf">Fierer et al (2010)</a>);</p></li>
+<li><p>A <em>Methods</em> section containing a brief description of your bioinformatics methods (e.g., what version of QIIME, what commands were used), and how the data was generated (e.g., sequencing platform);</p></li>
+<li><p>And a <em>Results and Conclusions</em> section describing the results of your analysis.</p></li>
+</ul>
+<p>You should address several specific questions in your <em>Results and Conclusions</em>:</p>
+<ul class="simple">
+<li><p>Which keyboard belonged to each of the human subjects? Back this up with figures and statistics that support your answer. Describe what each of your figures tells you.</p></li>
+<li><p>Which bacterial phyla appear to be most useful for matching each individual to their keyboard? Refer to <em>Taxonomic barplots</em> to address this.</p></li>
+<li><p>Which features were most different in abundance across the subjects? Refer to the <em>Taxonomic barplots</em> to address this. Present a table containing the most differentially abundant features and their taxonomy.</p></li>
+<li><p>Which subject had the most features (i.e., the highest microbial community richness) in their skin microbiome, on average? Was the number of features across subjects significantly different?</p></li>
+</ul>
+<p>Please turn all of this in by e-mail to <a class="reference external" href="mailto:greg&#46;caporaso&#37;&#52;&#48;nau&#46;edu">greg<span>&#46;</span>caporaso<span>&#64;</span>nau<span>&#46;</span>edu</a> with subject: _final <a href="#id6"><span class="problematic" id="id7">assignment_</span></a>.</p>
+</div>
+<div class="section" id="troubleshooting">
+<h3>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p>If you receive a <cite>SyntaxError</cite>, confirm that you’re using the Bash kernel, as instructed at the top of both notebooks.</p></li>
+<li><p>If you receive an error <cite>Plugin error from dada2</cite>, switch to using Option 2 (deblur) at the <a class="reference external" href="https://docs.qiime2.org/2020.2/tutorials/moving-pictures/#sequence-quality-control-and-feature-table-construction">Sequence Quality Control … step</a> in Part 1.</p></li>
+<li><p>If one of your commands fails with the message <cite>Killed!</cite>, save your work and start a new server with 8000 MB of memory (8GB). See Dr. Caporaso’s video for for details.</p></li>
+<li><p>Be sure that each of your notebooks is running in it’s own folder.</p></li>
+</ul>
+</div>
+</div>
 </div>
 
 
@@ -211,7 +251,7 @@
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J Gregory Caporaso.
-      Last updated on Apr 03, 2020.
+      Last updated on Apr 24, 2020.
       Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0.
     </div>
   </body>
