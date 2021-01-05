@@ -1,12 +1,13 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lecture 13: Introduction to PyCogent: Building a tree of life &#8212; bioinformatics@nau</title>
-    <link rel="stylesheet" href="../../../static/haiku.css" type="text/css" />
     <link rel="stylesheet" href="../../../static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../static/haiku.css" type="text/css" />
     <script id="documentation_options" data-url_root="../../../" src="../../../static/documentation_options.js"></script>
     <script src="../../../static/jquery.js"></script>
     <script src="../../../static/underscore.js"></script>
@@ -60,8 +61,8 @@
 <h3>matplotlib<a class="headerlink" href="#matplotlib" title="Permalink to this headline">¶</a></h3>
 <p>matplotlib is a graphing module that is not included in the Python Standard Library. To use matplotlib you’ll need to install it.</p>
 <p>This module provides a good illustration of the functionality that is available to you via python which you don’t have to implement yourself. This code here allows you to visualize a set of randomly generated scatter plots - look through the plots that are generated and think about how many you would consider the x and the y values to appear correlated. I find it alarming how many of these randomly generated plots look correlated. Keep this in mind as you read papers and analyze data.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="k">import</span> <span class="n">scatter</span><span class="p">,</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
-<span class="kn">from</span> <span class="nn">random</span> <span class="k">import</span> <span class="n">randrange</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pylab</span> <span class="kn">import</span> <span class="n">scatter</span><span class="p">,</span> <span class="n">figure</span><span class="p">,</span> <span class="n">show</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randrange</span>
 
 <span class="k">def</span> <span class="nf">get_n_random_values</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="n">range_min</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">range_max</span><span class="o">=</span><span class="mi">200</span><span class="p">):</span>
     <span class="n">result</span> <span class="o">=</span> <span class="p">[]</span>
@@ -102,8 +103,8 @@
 
     <div class="footer" role="contentinfo">
         &#169; Copyright 2019, J Gregory Caporaso.
-      Last updated on May 08, 2020.
-      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 2.4.0.
+      Last updated on Jan 05, 2021.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.3.1.
     </div>
   </body>
 </html>
