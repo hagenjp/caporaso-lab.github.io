@@ -38,15 +38,9 @@ We'll use the monsoon supercomputer housed at NAU over the course of the semeste
 Office Hours
 ============
 
-Office hours for Professor Greg Caporaso, Teaching Assistant Chris Keefe, and Teaching Assistant Chloe Herman are held weekly (one hour per week each). You can find our office hours on the calendar below. While our office hours will typically be held at the same time each week, please check the calendar as we may occasionally need to reschedule office hours due to conflicts. 
+Office hours for Professor Greg Caporaso, Teaching Assistant Chris Keefe, and Teaching Assistant Chloe Herman are held weekly (one hour per week each). `You can find our office hours on the calendar here <https://calendar.google.com/calendar/embed?src=49fk5nt75q2j7f7sma4br11nic%40group.calendar.google.com&ctz=America%2FPhoenix>`_. While our office hours will typically be held at the same time each week, please check the calendar as we may occasionally need to reschedule office hours due to conflicts. 
 
 To minimize risk during the COVID-19 pandemic, all office hours will be held via Zoom. The office hours Zoom link is https://nau.zoom.us/j/84540437901, and the meeting ID is 845 4043 7901. The password for this Zoom meeting will be provided to you by email. 
-
-.. raw:: html
-
-<embed>
-<iframe src="https://calendar.google.com/calendar/embed?src=49fk5nt75q2j7f7sma4br11nic%40group.calendar.google.com&ctz=America%2FPhoenix" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-</embed>
 
 Other information
 =================
