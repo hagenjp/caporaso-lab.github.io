@@ -1,0 +1,49 @@
+.. _2021.01-450:
+
+==========================================================================================
+BIO 450/599 - Spring 2021
+==========================================================================================
+
+General information
+===================
+
+The **course schedule** (subject to updates through-out the semester) is `here <https://docs.google.com/spreadsheets/d/e/2PACX-1vStlLT6uetdx7aYEUSowYLcdOQiKlLgCfM2ZWn7U0mAf5vly8JQtzQI9cWRkws_kjExJHtp8a-VgvlM/pubhtml?gid=0&single=true>`_.
+
+Find information on **homework assignments** `here <./homework_assignments.html>`_.
+
+Find information on in-class exercises `here <./in_class_assignments.html>`_.
+
+Schedule: Tu/Th 11:10am-12:25pm, Science and Health, Room 433
+
+Course materials
+================
+
+Syllabi
+-------
+
+`BIO 450 course syllabus <https://docs.google.com/document/d/e/2PACX-1vR2czqGyO0XbHLTV0p4nM9DhH8pjw3Y2Z-Eb2TQXpMKHpFhwXqpMkM4-o7QGlrZgJauknScaPQhQxas/pub>`_
+
+`BIO 599 course syllabus <https://docs.google.com/document/d/e/2PACX-1vTEA2phqvOrJlbVbALG7Eafge05BSL71O1Ouf7I4xhTcTOagKHDtbHum7IMaXXjxZRY82bKN95gNIh-/pub>`_
+
+Text book
+---------
+
+The text book for this class is `An Introduction to Applied Bioinformatics <http://readIAB.org>`_. This is a free, online book. Currently there is no paper copy available.
+
+Jupyter Notebook
+----------------
+
+We'll use the monsoon supercomputer housed at NAU over the course of the semester. You can access this `here <https://ondemand.hpc.nau.edu/>`_.
+
+Office Hours
+============
+
+Office hours for Professor Greg Caporaso, Teaching Assistant Chris Keefe, and Teaching Assistant Chloe Herman are held weekly (one hour per week each). You can find our office hours on the calendar below. While our office hours will typically be held at the same time each week, please check the calendar as we may occasionally need to reschedule office hours due to conflicts. 
+
+To minimize risk during the COVID-19 pandemic, all office hours will be held via Zoom. The office hours Zoom link is https://nau.zoom.us/j/84540437901, and the meeting ID is 845 4043 7901. The password for this Zoom meeting will be provided to you by email. 
+
+
+Other information
+=================
+
+BIO 450 counts as a major elective for the Biology degree programs.
