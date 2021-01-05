@@ -42,6 +42,11 @@ Office hours for Professor Greg Caporaso, Teaching Assistant Chris Keefe, and Te
 
 To minimize risk during the COVID-19 pandemic, all office hours will be held via Zoom. The office hours Zoom link is https://nau.zoom.us/j/84540437901, and the meeting ID is 845 4043 7901. The password for this Zoom meeting will be provided to you by email. 
 
+.. raw:: html
+
+<embed>
+<iframe src="https://calendar.google.com/calendar/embed?src=49fk5nt75q2j7f7sma4br11nic%40group.calendar.google.com&ctz=America%2FPhoenix" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+</embed>
 
 Other information
 =================
