@@ -13,7 +13,7 @@ Find information on **homework assignments** `here <./homework_assignments.html>
 
 Find information on in-class exercises `here <./in_class_assignments.html>`_.
 
-Schedule: Tu/Th 11:10am-12:25pm, Science and Health, Room 433
+Schedule: Tu/Th 11:10am-12:25pm, online (see BBLearn for Zoom link and password - you must be authenticated with your nau.edu address to join).
 
 Course materials
 ================
@@ -25,11 +25,6 @@ Syllabi
 
 `BIO 599 course syllabus <https://docs.google.com/document/d/e/2PACX-1vTEA2phqvOrJlbVbALG7Eafge05BSL71O1Ouf7I4xhTcTOagKHDtbHum7IMaXXjxZRY82bKN95gNIh-/pub>`_
 
-Text book
----------
-
-The text book for this class is `An Introduction to Applied Bioinformatics <http://readIAB.org>`_. This is a free, online book. Currently there is no paper copy available.
-
 Jupyter Notebook
 ----------------
 
@@ -40,7 +35,7 @@ Office Hours
 
 Office hours for Professor Greg Caporaso, Teaching Assistant Chris Keefe, and Teaching Assistant Chloe Herman are held weekly (one hour per week each). `You can find our office hours on the calendar here <https://calendar.google.com/calendar/embed?src=49fk5nt75q2j7f7sma4br11nic%40group.calendar.google.com&ctz=America%2FPhoenix>`_. While our office hours will typically be held at the same time each week, please check the calendar as we may occasionally need to reschedule office hours due to conflicts. 
 
-To minimize risk during the COVID-19 pandemic, all office hours will be held via Zoom. The office hours Zoom link is https://nau.zoom.us/j/84540437901, and the meeting ID is 845 4043 7901. The password for this Zoom meeting will be provided to you by email. 
+To minimize risk during the COVID-19 pandemic, all office hours will be held via Zoom. The office hours Zoom link is the same as the link for our class meetings, and is provided in BBLearn. Any student in the class can join the office hours Zoom while in session. If you need to have a private discussion with any of the instructors let us know and we will arrange that. 
 
 Other information
 =================
