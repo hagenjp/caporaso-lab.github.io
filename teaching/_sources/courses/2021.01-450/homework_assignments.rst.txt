@@ -2,27 +2,5 @@
 Homework assignments
 ==========================================================================================
 
-.. important:: I encourage you to discuss homework assignments with each other, but you may not view other student's assignments or share your assignment with others.
-
-Homework assignments will be listed here as they are assigned.
-
-Turning in your homework
-------------------------
-
-Your homework must always be turned in with a standardized file name. That name should be ``<nau_id>-<homework_id>.<extension>``, where ``<nau_id>`` is your NAU identifier (for example, mine is ``jgc53``), and ``<homework_id>`` and ``<extension>`` are provided on a per-assignment basis. **Assignments that are not turned in according to these specifications will lose 10%.**
-
-Instructions will be provided on how to submit each assignment.
-
-Assignment 1: GC content (see schedule for due date, 20 points)
----------------------------------------------------------------
-In this assignment you'll download several genomes, compute their GC content, and provide some other information about them. Copy or download the assignment template (link coming soon), fill in your answers, and turn the assignment in as a PDF. You will get started on this assignment in small groups in class, but you will complete the questions in assignment yourself.
-
-There are various ways that you can look up the GC content. I'm asking you to _compute_ it, not just look it up, and you're being graded on your description of how you achieved that. Getting the right answer is a bonus (i.e., if you spend a couple of hours trying, and get it wrong, you'll be graded on your well-documented effort, not your final answer).
-
-Hints: Start with the `NCBI Genome Browser <http://www.ncbi.nlm.nih.gov/genome>`_, and begin with a bacterial, archaeal or viral genome. You can also work with a eukaryote genome, but it may be quite a bit more challenging.
-
-Be creative - there are many ways to achieve this.
-
-.. important::
-	Homework id: ``gc-content``; Extension: ``pdf``; For this first assignment, the file I turn in would be named ``jgc53-gc-content.pdf``.
+Homework assignments will be posted to BBLearn in the *Assignments* folder. Instructions for turning in each assignment will be included in the assignment description in BBLearn.
 
