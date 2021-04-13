@@ -12,7 +12,7 @@ software engineers, post-doctoral scholars, and graduate and undergraduate
 students. Undergraduates should review [undergraduate job information](/undergrad/). All others, e-mail [Dr. Caporaso](mailto:greg.caporaso@nau.edu) to inquire about a position.
 
 # Office hours
-Due to COVID-19, during the summer of 2020 all office hours will be held by video conference, and by appointment only. To schedule office hours, please contact lab members by e-mail or Slack.
+Due to the COVID-19 global pandemic, we have suspended our public office hours. For help with QIIME 2, please visit the [QIIME 2 forum](https://forum.qiime2.org).
 
 # FedEx and UPS
 J. Gregory Caporaso, Ph.D.<br>
