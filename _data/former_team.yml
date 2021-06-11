@@ -79,6 +79,17 @@
   github: anderspitman
   site: http://anderspitman.com
 
+- name: Andrew Sanchez
+  title: Research Software Engineer
+  pic: Andrew_Sanchez.png
+  github: andrewsanchez
+  site: http://andrewsanchez.me/
+  cv: https://www.linkedin.com/in/andrewasanchez/
+  interests:
+      - travel
+      - aerial arts
+      - effective altruism
+
 - name: Arron Shiffer
   title: PhD Student
   pic: Shiffer.png
