@@ -36,43 +36,41 @@
       - PL design
 
 - name: Keegan Evans
-  title: Research Software Engineer
+  title: Research Software Engineer, Intermediate
   pic: keegan.jpeg
   github: Keegan-Evans
-  site: https://keeganevans.com
   interests:
       - skiing
       - naval history
       - bikes
 
 - name: Liz Gehret
-  title: Research Software Engineer
+  title: Research Software Engineer, Intermediate
   pic: LizG.jpeg
   github: lizgehret
   cv: https://www.linkedin.com/in/elizabeth-gehret-a28732174
   interests:
       - aerial rope
       - rock climbing
-      - plants & bones
+      - whitewater rafting
 
 - name: Chloe Herman
   title: PhD Student
   pic: ChloeHerman.png
+  twitter: chloeroseherman
   github: cherman2
   interests:
-      - Bioinformatics
-      - Hiking
-      - Bread Baking
+      - metadata standardization
+      - hiking
+      - bread baking
 
-- name: Chris Keefe
-  title: Student Research Software Engineer
-  pic: ChrisKeefe.png
-  github: ChrisKeefe
-  cv: https://www.linkedin.com/in/CRKeefe/
+- name: Jeff Meilander
+  title: PhD Student
+  pic: JeffMeilander.png
   interests:
-      - Ecology
-      - Code
-      - Wild Foods
+      - sustainable agriculture
+      - hockey
+      - hiking/backpacking
 
 - name: Anthony Simard
   title: Research Software Engineer
