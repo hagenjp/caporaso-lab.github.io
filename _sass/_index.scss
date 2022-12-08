@@ -9,21 +9,11 @@
 .index__bumper {
     font-size: 20px;
     line-height: 26px;
-    max-width: 450px;
+    max-width: none;
     float: left;
 }
 
-.index__twitter {
-    float: right;
-    height: 250px;
-    overflow: auto;
-}
-
 @media (max-width: 800px) {
-    .index__twitter {
-        display: none;
-    }
-
     .index__bumper {
         text-align: justify;
         max-width: none;
