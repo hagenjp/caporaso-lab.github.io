@@ -15,10 +15,9 @@
 #       - Thing 3
 
 - name: Greg Caporaso
-  title: Associate Professor
+  title: Professor
   pic: greg.png
   cv: https://docs.google.com/document/d/18TA9AzwRloj4RFNwxgVyxYeQEiJGuWNwCDSJhdoParQ/pub
-  twitter: gregcaporaso
   github: gregcaporaso
   interests:
       - bioinformatics
