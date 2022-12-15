@@ -10,26 +10,26 @@
   default-icon: fa-code
   subsections:
 
-      - name: Software Development
+      - name: Software Engineering
         summary: >
             Undergraduate Researchers in the Caporaso Lab develop and support
-            QIIME 2, a leading microbiome bioinformatics platform. 
+            QIIME 2, a leading microbiome bioinformatics platform.
 
 
-            Typically students will: 
+            Typically students will:
 
               * contribute to the [QIIME 2 ecosystem](https://github.com/qiime2) (Python)
-              * design and build interactive data visualizations (JavaScript, various frameworks)
-              * develop bioinformatics plugins (Various languages)
-              * create and manage product documentation (Jinja2, Sphinx)
-              * provide user support (Discourse)
-              * explore DevOps and build pipelines (Concourse CI)
+              * [design and build interactive data visualizations](https://view.qiime2.org) (JavaScript, various frameworks)
+              * [develop bioinformatics plugins](https://library.qiime2.org) (Various languages)
+              * [create and manage product documentation](https://docs.qiime2.org) (Jinja2, Sphinx)
+              * [provide user support](https://forum.qiime2.org) (Discourse)
+              * explore DevOps and build pipelines (GitHub Actions)
 
         github: qiime2
         pic: qiime2.png
         site: https://qiime2.org
 
-      - name: Microbiome Bioinformatics
+      - name: Microbiome Data Science
         summary: >
             As members of the Center for Applied Microbiome Science, undergraduates
             perform bioinformatics analysis on contemporary studies. These
@@ -43,12 +43,14 @@
             In addition to a strong portfolio of GitHub contributions, undergraduate
             researchers are supported in developing conference posters, presentations,
             collaborative, and independent research publications. Contributions to lab
-            publications are often welcome, and students are cited for their contributions.
+            publications are often welcome, and students co-author publications that they
+            contribute to.
 
 
             Fully-funded opportunities to travel in support of research products
             are also frequent. Caporaso Lab students have presented at:
 
+              - Rocky Mountain Bioinformatics Conference
               - 3rd Workshop on Statistical and Algorithmic Challenges in Microbiome Data Analysis ([SACMDA](https://www.simonsfoundation.org/event/3rd-workshop-on-statistical-and-algorithmic-challenges-in-microbiome-data-analysis/)) in New York, NY
               - The International Conference for High Performance Computing, Networking, Storage, and Analysis ([SC18](https://sc18.supercomputing.org/)) in Dallas, TX
               - QIIME 2 workshops in Phoenix and Las Vegas
@@ -58,9 +60,9 @@
       - name: Flexible Work Schedule
         summary: >
             Undergraduates balance diverse responsibilities, and academic
-            performance is top priority. Students are asked to work 15-20 hours
+            performance is top priority. Students are asked to work 10-20 hours
             per week while school is in session, and may work up to 40 hours during
-            breaks (subject to Northern Arizona University employment policies). 
+            breaks (subject to Northern Arizona University employment policies).
             Flexible scheduling accommodates coursework and exam requirements.
 
         icon: fa-clock-o
@@ -73,8 +75,8 @@
             To work with the Caporaso Lab, students must complete an [application](https://nau.edu/pmi/pathogen-microbiome-institute/undergraduate-employment-opportunities/)
             to the Pathogen and Microbiome Institute, print it,
             and hand-deliver to PMI during business hours at: Applied Research &
-            Development ([building #56](http://www2.nau.edu/nau-map/)). Please drop in the blue application box
-            on the east side of the third floor.
+            Development ([building #56](http://www2.nau.edu/nau-map/)).
+            Please deliver your application to the front desk of the PMI Administrative Suite (ARD Suite 210).
         site: https://nau.edu/pmi/pathogen-microbiome-institute/undergraduate-employment-opportunities/
         pic: pmi_blk.png
 
