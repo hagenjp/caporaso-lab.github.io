@@ -16,7 +16,7 @@
 
 - name: Greg Caporaso
   title: Professor
-  pic: greg.png
+  pic: greg.jpeg
   cv: https://docs.google.com/document/d/18TA9AzwRloj4RFNwxgVyxYeQEiJGuWNwCDSJhdoParQ/pub
   github: gregcaporaso
   interests:
@@ -82,9 +82,9 @@
 
 - name: Colin Wood
   title: Research Software Engineer
-  pic: ColinWood.png 
+  pic: ColinWood.png
   github: colinvwood
   interests:
       - bundesliga
-      - snowboarding 
+      - snowboarding
       - german
