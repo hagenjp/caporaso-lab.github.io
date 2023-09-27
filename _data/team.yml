@@ -2,11 +2,11 @@
 # - name: Your Name
 #   title: Your Position
 # # optional, but recommended:
-# # picture should be 200x200px
+# # picture should be 200x200px (or dimensions should be a square)
 # # put it in /assets/team/your-name.png
 #   pic: yourface.png
-#   twitter: yourtwitter
-#   github: yourgithub
+#   twitter: yourtwitterusername
+#   github: yourgithubusername
 #   site: http://example.com
 #   cv: http://example.com/my-cv.pdf
 #   interests:
@@ -25,7 +25,7 @@
       - education
 
 - name: Evan Bolyen
-  title: Senior Research Software Engineer
+  title: Research Software Engineer V
   pic: evan.png
   twitter: ebolyen
   github: ebolyen
@@ -34,17 +34,17 @@
       - API design
       - PL design
 
-- name: Keegan Evans
-  title: Research Software Engineer, Intermediate
-  pic: keegan.jpeg
-  github: Keegan-Evans
+- name: Anthony Simard
+  title: Research Software Engineer IV
+  pic: AnthonySimard.png
+  github: Oddant1
   interests:
-      - skiing
-      - naval history
-      - bikes
+      - programming
+      - video games
+      - guitar
 
 - name: Liz Gehret
-  title: Research Software Engineer, Intermediate
+  title: Research Software Engineer IV
   pic: LizG.jpg
   github: lizgehret
   cv: https://www.linkedin.com/in/elizabeth-gehret-a28732174
@@ -53,8 +53,26 @@
       - rock climbing
       - whitewater rafting
 
+- name: Keegan Evans
+  title: Research Software Engineer III
+  pic: keegan.jpeg
+  github: Keegan-Evans
+  interests:
+      - skiing
+      - naval history
+      - bikes
+
+- name: Colin Wood
+  title: Research Software Engineer I
+  pic: ColinWood.png
+  github: colinvwood
+  interests:
+      - bundesliga
+      - snowboarding
+      - german
+
 - name: Chloe Herman
-  title: PhD Student
+  title: PhD Candidate
   pic: ChloeHerman.png
   twitter: chloeroseherman
   github: cherman2
@@ -64,27 +82,9 @@
       - bread baking
 
 - name: Jeff Meilander
-  title: PhD Student
+  title: PhD Candidate
   pic: JeffMeilander.png
   interests:
       - sustainable agriculture
       - hockey
       - hiking/backpacking
-
-- name: Anthony Simard
-  title: Research Software Engineer
-  pic: AnthonySimard.png
-  github: Oddant1
-  interests:
-      - programming
-      - video games
-      - guitar
-
-- name: Colin Wood
-  title: Research Software Engineer
-  pic: ColinWood.png
-  github: colinvwood
-  interests:
-      - bundesliga
-      - snowboarding
-      - german
