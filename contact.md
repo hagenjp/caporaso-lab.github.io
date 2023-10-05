@@ -19,7 +19,8 @@ You can also find microbiome, bioinformatics, and QIIME 2 employment opportuniti
 # FedEx and UPS
 J. Gregory Caporaso, Ph.D.<br>
 Northern Arizona University<br>
-1350 S Knoles Drive<br>
+1395 S Knoles Drive<br>
+ARD Bldg 56, Ste 210<br>
 Flagstaff, AZ 86011, USA.
 
 # US Postal Service
