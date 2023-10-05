@@ -71,6 +71,15 @@
       - snowboarding
       - german
 
+- name: Hannah Hagen
+  title: Research Software Engineer I
+  pic: HannahHagen.png
+  github: hagenjp
+  interests:
+      - outdoor adventuring
+      - gardening
+      - wellness
+     
 - name: Chloe Herman
   title: PhD Candidate
   pic: ChloeHerman.png
