@@ -1,6 +1,6 @@
 title: Caporaso Lab
 description: >
-  Developing production-quality software products to study our microbial world.
+  Developing production-quality software tools to study our microbial world.
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://cap-lab.bio" # the base hostname & protocol for your site
