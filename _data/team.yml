@@ -53,15 +53,6 @@
       - rock climbing
       - whitewater rafting
 
-- name: Keegan Evans
-  title: Research Software Engineer III
-  pic: keegan.jpeg
-  github: Keegan-Evans
-  interests:
-      - skiing
-      - naval history
-      - bikes
-
 - name: Colin Wood
   title: Research Software Engineer III
   pic: ColinWood.png
@@ -79,7 +70,7 @@
       - outdoor adventuring
       - gardening
       - wellness
-     
+
 - name: Chloe Herman
   title: PhD Candidate
   pic: ChloeHerman.png
@@ -97,7 +88,7 @@
       - sustainable agriculture
       - hockey
       - hiking/backpacking
-      
+
 - name: Isaiah Raspet
   title: Graduate Research Assistant
   pic: IsaiahRaspet.jpg
