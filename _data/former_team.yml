@@ -64,23 +64,6 @@
   site: http://jordenkreps.com
   cv: http://linkedin.com/in/jordenkreps
 
-- name: Jai Ram Rideout
-  title: Senior Research Software Engineer
-  pic: jai-ram-rideout.png
-  twitter: jairideout
-  github: jairideout
-
-- name: David Rodriguez
-  title: Student Research Software Engineer
-  pic: DavidRodriguez.jpg
-  github: Davrod29
-
-- name: Karen Schwarzberg Lipson
-  title: Postdoctoral Scholar
-  pic: schwarzberg.png
-  twitter: SnurpsNotSmurfs
-  github: kschwarzberg
-
 - name: William Mercurio
   title: Student Research Scientist
   github: wmercurio
@@ -92,6 +75,10 @@
   twitter: turan_naimey
   cv: https://linkedin.com/in/turannaimey
 
+- name: Andrew Orm
+  title: Student Researcher
+  cv: https://www.linkedin.com/in/andrew-orm-24201b31a/
+
 - name: Anders Pitman
   title: Student Bioinformatics Software Engineer
   pic: anders-pitman.png
@@ -99,11 +86,33 @@
   github: anderspitman
   site: http://anderspitman.com
 
+- name: Isaiah Raspet
+  title: Graduate Research Assistant
+  pic: IsaiahRaspet.jpg
+  github: Clockwork-Rat
+
+- name: Jai Ram Rideout
+  title: Senior Research Software Engineer
+  pic: jai-ram-rideout.png
+  twitter: jairideout
+  github: jairideout
+
+- name: David Rodriguez
+  title: Student Research Software Engineer
+  pic: DavidRodriguez.jpg
+  github: Davrod29
+
 - name: Andrew Sanchez
   title: Research Software Engineer
   pic: Andrew_Sanchez.png
   github: andrewsanchez
   cv: https://www.linkedin.com/in/andrewasanchez/
+
+- name: Karen Schwarzberg-Lipson
+  title: Postdoctoral Scholar
+  pic: schwarzberg.png
+  twitter: SnurpsNotSmurfs
+  github: kschwarzberg
 
 - name: Arron Shiffer
   title: PhD Student
